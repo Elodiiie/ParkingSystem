@@ -6,12 +6,16 @@ import com.example.demo.entity.ResultResponse;
 import com.example.demo.repository.CarRepository;
 import com.example.demo.repository.ParkingRepository;
 import com.example.demo.utils.Constants;
+import com.zhenzi.sms.ZhenziSmsClient;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @Author: Elodie
@@ -25,6 +29,7 @@ public class ParkingHandle {
     private ParkingRepository parkingRepository;
     @Autowired
     private CarRepository carRepository;
+    ZhenziSmsClient client = new ZhenziSmsClient("https://sms_developer.zhenzikj.com", "110280", "90e77681-d2e7-4b9a-8f81-f90694ff2c5e");
     /***
      * 获取正在使用中的车位
      * @return
@@ -60,9 +65,17 @@ public class ParkingHandle {
         }
     }
     @PostMapping("/addParkingRecord")
-    public ResultResponse addParkingRecord(@RequestBody Parking parking){
+    public ResultResponse addParkingRecord(@RequestBody Parking parking) throws Exception {
         ResultResponse resultResponse = new ResultResponse();
         Integer carid =carRepository.getCarid(parking.getCarlicense());
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("number", "17521344145");
+        params.put("templateId", "7168");
+        String[] templateParams = new String[3];
+        templateParams[0] = parking.getCarlicense();
+        templateParams[1] = String.valueOf(parking.getEntrancetime().toLocaleString()).substring(5,9);
+        templateParams[2] = String.valueOf(parking.getEntrancetime().toLocaleString()).substring(10);
+        params.put("templateParams", templateParams);
         if(carid == null){
             resultResponse.setMessage("车牌不存在");
             resultResponse.setData("fail");
@@ -71,6 +84,7 @@ public class ParkingHandle {
         }else{
             Parking result = parkingRepository.save(parking);
             if(result != null){
+                String result_email = client.send(params);
                 resultResponse.setMessage("success");
                 resultResponse.setData("success");
                 resultResponse.setCode(Constants.STATUS_OK);

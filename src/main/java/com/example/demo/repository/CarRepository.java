@@ -17,6 +17,8 @@ import java.util.Map;
 public interface CarRepository extends JpaRepository<Car,Integer> {
     @Query("select carid from Car car where car.Carlicense=?1")
     Integer getCarid(String license);
+    @Query(value = "select carlicense from car where carid=?1",nativeQuery = true)
+    String getLicense(int carid);
     @Query("select userid from Car where carid=?1")
     Integer getUserid(int carid);
     @Query(value = "select carid,username,carlicense,vip from Car,User where user.userid=car.userid and carid=?1",nativeQuery = true)

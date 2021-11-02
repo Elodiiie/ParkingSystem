@@ -86,7 +86,7 @@ public class KaptchaController {
         String rightCode = (String) httpServletRequest.getSession(false).getAttribute("rightCode");
         System.out.println("rightCode"+rightCode);
         System.out.println("tryCode"+tryCode);
-        if (!rightCode.equals(tryCode)) {
+        if (!rightCode.equalsIgnoreCase(tryCode)) {
             logger.error("验证码错误=======>>>>>> ");
             return false;
         } else {
