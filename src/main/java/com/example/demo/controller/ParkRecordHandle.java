@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
 import org.springframework.web.bind.annotation.*;
@@ -59,8 +60,10 @@ public class ParkRecordHandle {
     @ResponseBody
     public Boolean save(@RequestBody ParkRecord parkRecord){
         try {
-            int userid=carRepository.getUserid(parkRecord.getCarid());
-            System.out.println(userid);
+            Integer userid=carRepository.getUserid(parkRecord.getCarid());
+            if(userid ==null){
+                return false;
+            }
             BigDecimal old_balance=userRepository.getBalance(userid);
             System.out.println(old_balance);
             BigDecimal new_balance = old_balance.subtract(parkRecord.getFare());
@@ -69,20 +72,7 @@ public class ParkRecordHandle {
             if(new_balance.compareTo(zero)>-1){
                 ParkRecord result = parkRecordRepository.save(parkRecord);
                 Integer res = userRepository.updateBalance(userid,new_balance);
-                Map<String, Object> params = new HashMap<String, Object>();
-                params.put("number", "17521344145");
-                params.put("templateId", "7166");
-                String[] templateParams = new String[6];
-                templateParams[0] = carRepository.getLicense(parkRecord.getCarid());
-                templateParams[1] = String.valueOf(parkRecord.getEntrancetime().toLocaleString()).substring(5,9);
-                templateParams[2] = String.valueOf(parkRecord.getEntrancetime().toLocaleString()).substring(10);
-                templateParams[3] = String.valueOf(parkRecord.getExittime().toLocaleString()).substring(5,9);
-                templateParams[4] = String.valueOf(parkRecord.getExittime().toLocaleString()).substring(10);
-                templateParams[5] = String.valueOf(parkRecord.getFare());
-                params.put("templateParams", templateParams);
                 if(result != null&&res!=0){
-                    String result_email = client.send(params);
-                    System.out.println("result_email"+result_email);
                     return true;
                 }else{
                     return false;
@@ -119,7 +109,12 @@ public class ParkRecordHandle {
     @PutMapping("/updateParkRecord")
     public ResultResponse update(@RequestBody ParkRecord parkRecord) throws Exception {
         ResultResponse resultResponse = new ResultResponse();
-        int userid=carRepository.getUserid(parkRecord.getCarid());
+        Integer userid=carRepository.getUserid(parkRecord.getCarid());
+        if(userid == null){
+            resultResponse.setMessage("车牌号不存在");
+            resultResponse.setData("fail");
+            resultResponse.setCode(Constants.STATUS_FAIL);
+        }
         BigDecimal old_balance=userRepository.getBalance(userid);
         BigDecimal minux = parkRecord.getFare().subtract(parkRecordRepository.getFareByParkrecordid(parkRecord.getParkrecordid()));
         BigDecimal new_balance = old_balance.subtract(minux);
@@ -131,20 +126,7 @@ public class ParkRecordHandle {
         if(new_balance.compareTo(zero)>-1){
             ParkRecord result = parkRecordRepository.save(parkRecord);
             Integer res = userRepository.updateBalance(userid,new_balance);
-            Map<String, Object> params = new HashMap<String, Object>();
-            params.put("number", "17521344145");
-            params.put("templateId", "7174");
-            String[] templateParams = new String[6];
-            templateParams[0] = carRepository.getLicense(parkRecord.getCarid());
-            templateParams[1] = String.valueOf(parkRecord.getEntrancetime().toLocaleString()).substring(5,9);
-            templateParams[2] = String.valueOf(parkRecord.getEntrancetime().toLocaleString()).substring(10);
-            templateParams[3] = String.valueOf(parkRecord.getExittime().toLocaleString()).substring(5,9);
-            templateParams[4] = String.valueOf(parkRecord.getExittime().toLocaleString()).substring(10);
-            templateParams[5] = String.valueOf(parkRecord.getFare());
             if(result != null&&res!=0){
-                params.put("templateParams", templateParams);
-                String result_email = client.send(params);
-                System.out.println("result_email"+result_email);
                 resultResponse.setMessage("success");
                 resultResponse.setData("success");
                 resultResponse.setCode(Constants.STATUS_OK);
@@ -159,6 +141,29 @@ public class ParkRecordHandle {
             resultResponse.setCode(Constants.STATUS_FAIL);
         }
         return resultResponse;
+    }
+    @Async
+    @PostMapping("sendMess")
+    public void sendMess(@RequestBody ParkRecord parkRecord) throws Exception {
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("number", "17521344145");
+        if(parkRecord.getParkrecordid()!=null){
+            params.put("templateId", "7174");
+            System.out.println("7174");
+        }else{
+            params.put("templateId", "7166");
+            System.out.println("7166");
+        }
+        String[] templateParams = new String[6];
+        templateParams[0] = carRepository.getLicense(parkRecord.getCarid());
+        templateParams[1] = String.valueOf(parkRecord.getEntrancetime().toLocaleString()).substring(5,9);
+        templateParams[2] = String.valueOf(parkRecord.getEntrancetime().toLocaleString()).substring(10);
+        templateParams[3] = String.valueOf(parkRecord.getExittime().toLocaleString()).substring(5,9);
+        templateParams[4] = String.valueOf(parkRecord.getExittime().toLocaleString()).substring(10);
+        templateParams[5] = String.valueOf(parkRecord.getFare().toString());
+        params.put("templateParams", templateParams);
+        String result_email = client.send(params);
+        System.out.println("result_email"+result_email);
     }
     /**
      * 根据记录id删除车辆信息

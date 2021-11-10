@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.example.demo.annotation.SystemLog;
 import com.example.demo.entity.Car;
 import com.example.demo.entity.CarDetail;
 import com.example.demo.repository.CarRepository;
@@ -17,6 +18,7 @@ import java.util.List;
  * @Author: Elodie
  * @Date: 2021/6/20 13:52
  */
+
 @Api(description = "车辆信息")
 @RestController
 @RequestMapping("/car")
@@ -28,11 +30,13 @@ public class CarHandle {
      * 返回所有车辆数据
      * @return
      */
+    @SystemLog("返回所有车辆数据")
     @GetMapping("/findAll/{page}/{size}")
     public Page<Car> findAll(@PathVariable("page") Integer page, @PathVariable("size") Integer size){
         Pageable pageable= PageRequest.of(page,size);
         return carRepository.findAll(pageable);
     }
+    @SystemLog("获取车辆记录信息1")
     @ApiOperation(value = "获取车辆记录信息1",notes ="多表查询，返回CarDetail")
     @GetMapping("/findAll1/{page}/{size}")
     public Page<CarDetail> findAll1(@PathVariable("page") Integer page, @PathVariable("size") Integer size){

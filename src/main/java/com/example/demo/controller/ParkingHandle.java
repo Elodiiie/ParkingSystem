@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
@@ -68,14 +69,6 @@ public class ParkingHandle {
     public ResultResponse addParkingRecord(@RequestBody Parking parking) throws Exception {
         ResultResponse resultResponse = new ResultResponse();
         Integer carid =carRepository.getCarid(parking.getCarlicense());
-        Map<String, Object> params = new HashMap<String, Object>();
-        params.put("number", "17521344145");
-        params.put("templateId", "7168");
-        String[] templateParams = new String[3];
-        templateParams[0] = parking.getCarlicense();
-        templateParams[1] = String.valueOf(parking.getEntrancetime().toLocaleString()).substring(5,9);
-        templateParams[2] = String.valueOf(parking.getEntrancetime().toLocaleString()).substring(10);
-        params.put("templateParams", templateParams);
         if(carid == null){
             resultResponse.setMessage("车牌不存在");
             resultResponse.setData("fail");
@@ -84,7 +77,6 @@ public class ParkingHandle {
         }else{
             Parking result = parkingRepository.save(parking);
             if(result != null){
-                String result_email = client.send(params);
                 resultResponse.setMessage("success");
                 resultResponse.setData("success");
                 resultResponse.setCode(Constants.STATUS_OK);
@@ -98,6 +90,20 @@ public class ParkingHandle {
         }
 
 
+    }
+    @Async
+    @PostMapping("sendMess")
+    public void sendMess(@RequestBody Parking parking) throws Exception {
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("number", "17521344145");
+        params.put("templateId", "7168");
+        String[] templateParams = new String[3];
+        templateParams[0] = parking.getCarlicense();
+        templateParams[1] = String.valueOf(parking.getEntrancetime().toLocaleString()).substring(5,9);
+        templateParams[2] = String.valueOf(parking.getEntrancetime().toLocaleString()).substring(10);
+        params.put("templateParams", templateParams);
+        String result_email = client.send(params);
+        System.out.println("result_email"+result_email);
     }
     @DeleteMapping("/deleteById/{id}")
     public void deletecarById(@PathVariable("id") Integer id){

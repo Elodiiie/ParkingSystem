@@ -24,7 +24,7 @@ import java.util.Date;
 @AllArgsConstructor
 @ToString
 @ApiModel(value = "用户对象")
-public class User implements java.io.Serializable{
+public class User implements java.io.Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer userid;

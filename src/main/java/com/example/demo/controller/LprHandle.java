@@ -9,6 +9,7 @@ import com.example.demo.repository.UserRepository;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -32,6 +33,7 @@ import java.util.HashMap;
 public class LprHandle {
     @ApiOperation(value = "车牌识别",notes = "调用本地python识别")
     @PostMapping("/lpr")
+    @Async
     public int main(String[] args){
         try{
             System.out.println("start");
