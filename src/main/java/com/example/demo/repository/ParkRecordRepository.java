@@ -64,4 +64,7 @@ public interface ParkRecordRepository extends JpaRepository<ParkRecord,Integer> 
             " FROM (SELECT * FROM parkrecord WHERE DATE_SUB( CURDATE( ), INTERVAL 6 MONTH ) <= date( exittime) )as t " +
             "GROUP BY months" ,nativeQuery = true)
     List<FareCount> getFareCount();
+    @Query(value = "select sum(fare) from car,user,parkrecord where parkrecord.carid = car.carid " +
+            "and car.userid = user.userid and user.userid=?1" ,nativeQuery = true)
+    Double getFareByUserid(int userid);
 }

@@ -186,4 +186,10 @@ public class ParkRecordHandle {
 
     @GetMapping("/getExitCount")
     public List<ExitCount> getExitCount() { return parkRecordRepository.getExitCount(); }
+
+    @ApiOperation(value="根据用户id查找总计消费")
+    @GetMapping("/getNumByUserid/{id}")
+    public Double getNumByUserid(@PathVariable("id") Integer id){
+        return parkRecordRepository.getFareByUserid(id);
+    }
 }

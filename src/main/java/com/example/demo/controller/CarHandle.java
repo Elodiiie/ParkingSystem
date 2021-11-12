@@ -47,10 +47,15 @@ public class CarHandle {
 //    public List<Car> findAll(){
 //        return carRepository.findAll();
 //    }
-    @ApiOperation(value="根据id查找",notes ="<多表>")
+    @ApiOperation(value="根据车辆id查找",notes ="<多表>")
     @GetMapping("/findDetailByCarid/{id}")
     public CarDetail findDetailByCarid(@PathVariable("id") Integer id){
         return carRepository.findDetailByCarid(id);
+    }
+    @ApiOperation(value="根据用户id查找所拥有的车辆数")
+    @GetMapping("/getNumByUserid/{id}")
+    public Integer getNumByUserid(@PathVariable("id") Integer id){
+        return carRepository.countByUserid(id);
     }
     @ApiOperation(value="根据车牌号查找",notes ="<多表>")
     @GetMapping("/findByCarlicense/{license}")

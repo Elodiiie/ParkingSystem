@@ -34,8 +34,36 @@ public class LoginHandle {
 
         return res;
     }
+    @ApiOperation(value = "获取用户基本信息2",notes = "包括姓名，头像，角色，个人简介/微信小程序使用")
+    @PostMapping("/user/info2")
+    public ResultResponse info2(@RequestBody String token){
+        return getInfo(token);
+    }
 
-    public UserInfo getUserInfo(String username){
+    private ResultResponse getInfo(@RequestBody String token) {
+        ResultResponse res = new ResultResponse();
+        // 验证token的合法和有效性
+        String tokenValue = JwtUtil.verity(token);// success:zhangsan1
+        if (tokenValue != null && tokenValue.startsWith(JwtUtil.TOKEN_SUCCESS)) {
+            // 如果ok-》返回需要的用户信息
+            // zhangsan1
+            String username = tokenValue.replaceFirst(JwtUtil.TOKEN_SUCCESS, "");
+
+            UserInfo info = getUserInfo(username);
+            System.out.println(info);
+            res.setData(info);
+            res.setMessage(Constants.MESSAGE_OK);
+            res.setCode(Constants.STATUS_OK);
+        } else {
+            // 否则：500
+            res.setCode(Constants.STATUS_FAIL);
+            res.setMessage(Constants.MESSAGE_FAIL);
+        }
+
+        return res;
+    }
+
+    public UserInfo getUserInfo(@RequestBody String username){
         UserInfo userInfo = new UserInfo();
         userInfo.setName(username);
         userInfo.setUserid(userRepository.findUseridByUsername(username));
@@ -53,26 +81,7 @@ public class LoginHandle {
     @ApiOperation(value = "获取用户基本信息",notes = "包括姓名，头像，角色，个人简介")
     @GetMapping("/user/info")
     public ResultResponse info(@RequestParam("token") String token){
-        ResultResponse res = new ResultResponse();
-        // 验证token的合法和有效性
-        String tokenValue = JwtUtil.verity(token);// success:zhangsan1
-        if(tokenValue != null && tokenValue.startsWith(JwtUtil.TOKEN_SUCCESS)) {
-            // 如果ok-》返回需要的用户信息
-            // zhangsan1
-            String username = tokenValue.replaceFirst(JwtUtil.TOKEN_SUCCESS, "");
-
-            UserInfo info = getUserInfo(username);
-            System.out.println(info);
-            res.setData(info);
-            res.setMessage(Constants.MESSAGE_OK);
-            res.setCode(Constants.STATUS_OK);
-        }else {
-            // 否则：500
-            res.setCode(Constants.STATUS_FAIL);
-            res.setMessage(Constants.MESSAGE_FAIL);
-        }
-
-        return res;
+        return getInfo(token);
     }
     @ApiOperation("用户登录")
     @PostMapping("/user/login")

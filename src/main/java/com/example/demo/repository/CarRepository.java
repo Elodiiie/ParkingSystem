@@ -29,4 +29,9 @@ public interface CarRepository extends JpaRepository<Car,Integer> {
     CarDetail findDetailByCarlicense(String carlicense);
     @Query(value = "select count(distinct carlicense) from car" , nativeQuery = true)
     Integer getCount();
+    //查看用户车辆
+    List<Car> findByUserid(int userid);
+    //查看用户车辆数
+    @Query(value = "select count(distinct carid) from car where userid=?1",nativeQuery = true)
+    Integer countByUserid(int userid);
 }
