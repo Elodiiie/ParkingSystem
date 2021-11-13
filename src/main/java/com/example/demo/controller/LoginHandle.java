@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.example.demo.annotation.SystemLog;
 import com.example.demo.entity.*;
 import com.example.demo.repository.UserRepository;
 import com.example.demo.utils.Constants;
@@ -83,6 +84,7 @@ public class LoginHandle {
     public ResultResponse info(@RequestParam("token") String token){
         return getInfo(token);
     }
+    @SystemLog("用户登录")
     @ApiOperation("用户登录")
     @PostMapping("/user/login")
     public ResultResponse login(@RequestBody UserAndPasswd user  ){

@@ -63,4 +63,8 @@ class CarRepositoryTest {
     }
     @Test
     void getCount(){System.out.println(carRepository.getCount());}
+    @Test
+    void findByUserid(){
+        System.out.println(carRepository.findByUserid(1));
+    }
 }

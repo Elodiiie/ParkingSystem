@@ -90,6 +90,7 @@ public class CarHandle {
      * @param car
      * @return
      */
+    @SystemLog("更新车辆信息")
     @PutMapping("/updatecar")
     public Boolean update(@RequestBody Car car){
         Car result = carRepository.save(car);
@@ -113,6 +114,7 @@ public class CarHandle {
      * 获取车辆数量
      * @return
      */
+    @SystemLog("获取车辆数量")
     @ApiOperation(value = "获取车辆数量")
     @GetMapping("/getCount")
     public Integer getCount(){ return carRepository.getCount(); }

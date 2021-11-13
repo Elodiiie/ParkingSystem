@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.example.demo.annotation.SystemLog;
 import com.example.demo.entity.EntranceCount;
 import com.example.demo.entity.ExitCount;
 import com.example.demo.entity.FareCount;
@@ -28,6 +29,7 @@ public class EchartsHandle {
     private ParkRecordRepository parkRecordRepository;
     @Autowired
     private PayRepository payRepository;
+
     @ApiOperation(value = "获取当前日期的前六个月")
     @GetMapping("/getSixMonths")
     public List<String> currentMonth6(){
@@ -45,6 +47,7 @@ public class EchartsHandle {
         Collections.reverse(rqList);
         return rqList;
     }
+    @SystemLog("获取图数据进场车辆信息")
     @ApiOperation(value = "获取图数据进场车辆信息")
     @GetMapping("/recordentrancecount")
     public List<Integer> findEntranceCount(){
@@ -62,6 +65,7 @@ public class EchartsHandle {
         }
         return countlist;
     }
+    @SystemLog("获取图数据离场车辆信息")
     @ApiOperation(value = "获取图数据离场车辆信息")
     @GetMapping("/recordexitcount")
     public List<Integer> findExitCount(){
@@ -79,11 +83,13 @@ public class EchartsHandle {
         }
         return countlist;
     }
+    @SystemLog("获取图数据财务扣费信息")
     @ApiOperation(value = "获取图数据财务扣费信息")
     @GetMapping("/recordfarecount")
     public List<Integer> findFareCount(){
         return getfarecount(parkRecordRepository.getFareCount());
     }
+    @SystemLog("获取图数据财务用户缴费信息")
     @ApiOperation(value = "获取图数据财务用户缴费信息")
     @GetMapping("/recordpaycount")
     public List<Integer> findPayCount(){

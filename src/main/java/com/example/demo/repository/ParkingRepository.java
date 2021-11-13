@@ -1,6 +1,7 @@
 package com.example.demo.repository;
 
 
+import com.example.demo.entity.CarDetail_devtool;
 import com.example.demo.entity.Parking;
 import com.example.demo.entity.ParkingDetail;
 import org.springframework.data.domain.Page;
@@ -30,4 +31,10 @@ public interface ParkingRepository extends JpaRepository<Parking,Integer> {
     ParkingDetail findParkingDetailByCarlicense(String carlicense);
     @Query(value = "select username from user,car where user.userid=car.userid and phone=?1 and carlicense =?2",nativeQuery = true)
     String findUsernameByPhoneAndAndCarlicense(String phone,String carlicense);
+    //微信小程序。用户得到本人车辆车牌，是否在停车场，在的话具体时间，不在的话返回最后离开时间
+    @Query(value = "select car.carid,car.carlicense,COUNT(parkingid) as exist,if(COUNT(parkingid)=1,parking.entranceTime,(select exittime from parkrecord,car where car.CarId=parkrecord.carid and CarLicense = ?1 ORDER BY exittime desc limit 1)) as time" +
+            " from parking,car where car.carlicense=parking.carlicense" +
+            " and car.carlicense = ?1",nativeQuery = true)
+    CarDetail_devtool getCarDetialBywx_overall (String carlicense);
+
 }

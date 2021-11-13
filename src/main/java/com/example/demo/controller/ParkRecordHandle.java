@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.example.demo.annotation.SystemLog;
 import com.example.demo.entity.*;
 import com.example.demo.repository.CarRepository;
 import com.example.demo.repository.ParkRecordRepository;
@@ -36,6 +37,7 @@ public class ParkRecordHandle {
     private UserRepository userRepository;
     @Autowired
     private CarRepository carRepository;
+    //短信
     ZhenziSmsClient client = new ZhenziSmsClient("https://sms_developer.zhenzikj.com", "110280", "90e77681-d2e7-4b9a-8f81-f90694ff2c5e");
     @ApiOperation(value = "获取停车记录信息")
     @GetMapping("/findAll/{page}/{size}")
@@ -54,6 +56,7 @@ public class ParkRecordHandle {
      * @param parkRecord
      * @return
      */
+    @SystemLog("添加停车记录")
     @ApiOperation(value = "添加停车记录")
     @PostMapping("/addRecord")
     @Transactional(rollbackFor = Exception.class)
@@ -96,6 +99,21 @@ public class ParkRecordHandle {
     @ApiOperation(value="根据车牌号查找",notes ="<多表>")
     @GetMapping("/findDetailByCarid/{carid}")
     public List<ParkRecordDetail> findDetailByCarid(@PathVariable("carid") Integer carid){ return parkRecordRepository.findDetailByCarid(carid); }
+    @ApiOperation(value="根据车牌号和月份查找",notes ="微信小程序")
+    @GetMapping("/findDetailByCaridAndMonth/{carid}/{date}")
+    public List<ParkRecordDetail> findDetailByCaridAndMonth(@PathVariable("carid") Integer carid,@PathVariable("date") String date){
+        String starttime = date+"-01";
+        String year = date.substring(0,4);
+        String endtime="";
+        int month=Integer.parseInt(date.substring(5))+1;
+        if(month==12){
+            int year_int = Integer.parseInt(year)+1;
+            endtime= year_int+"-01-01";
+        }else{
+            endtime=year+month+"-01";
+        }
+        return parkRecordRepository.findDetailByCaridAndMonth(carid,starttime,endtime);
+    }
     @ApiOperation(value="根据车牌查找",notes ="<多表>")
     @GetMapping("/findDetailByCarlicense/{carlicense}")
     public List<ParkRecordDetail> findDetailByCarlicense(@PathVariable("carlicense") String carlicense){ return parkRecordRepository.findDetailByCarlicense(carlicense); }
@@ -105,6 +123,7 @@ public class ParkRecordHandle {
         Pageable pageable1= PageRequest.of(page,size);
         return parkRecordRepository.findDetailByCarlicense_Page(pageable1,carlicense);
     }
+    @SystemLog("修改停车记录")
     @ApiOperation(value = "修改停车记录")
     @PutMapping("/updateParkRecord")
     public ResultResponse update(@RequestBody ParkRecord parkRecord) throws Exception {
@@ -169,6 +188,7 @@ public class ParkRecordHandle {
      * 根据记录id删除车辆信息
      * @param id
      */
+    @SystemLog("删除停车记录")
     @DeleteMapping("/deleteById/{id}")
     public void deletecarById(@PathVariable("id") Integer id){
         parkRecordRepository.deleteById(id);

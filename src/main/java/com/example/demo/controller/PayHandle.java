@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.example.demo.annotation.SystemLog;
 import com.example.demo.entity.Pay;
 import com.example.demo.entity.ResultResponse;
 import com.example.demo.repository.PayRepository;
@@ -37,6 +38,7 @@ public class PayHandle {
         Pageable pageable= PageRequest.of(page,size);
         return payRepository.findAll(pageable);
     }
+    @SystemLog("添加缴费记录")
     @ApiOperation(value = "添加缴费记录")
     @PostMapping("/addRecord")
     @Transactional(rollbackFor = Exception.class)
@@ -62,6 +64,7 @@ public class PayHandle {
         resultResponse.setCode(Constants.STATUS_OK);
         return resultResponse;
     }
+    @SystemLog("修改缴费记录")
     @ApiOperation(value = "修改缴费记录")
     @PostMapping("/updateRecord")
     @Transactional(rollbackFor = Exception.class)

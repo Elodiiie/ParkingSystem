@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.example.demo.annotation.SystemLog;
 import com.example.demo.entity.User;
 import com.example.demo.entity.UserAndPhone;
 import com.example.demo.repository.UserRepository;
@@ -23,6 +24,7 @@ import java.util.List;
 public class UserHandle {
     @Autowired
     private UserRepository userRepository;
+    @SystemLog("分页查找user信息")
     @ApiOperation("分页查找")
     @GetMapping("/findAll/{page}/{size}")
     public Page<User> findAll(@PathVariable("page") Integer page, @PathVariable("size") Integer size){

@@ -107,4 +107,11 @@ class ParkRecordRepositoryTest {
 //        System.out.println(countlist);
 
     }
+    @Test
+    public void findDetailByCaridAndMonth(){
+        List<ParkRecordDetail> list = parkRecordRepository.findDetailByCaridAndMonth(5,"2021-08-01","2021-12-01");
+        for(ParkRecordDetail li:list){
+            System.out.println(li.getExittime());
+        }
+    }
 }

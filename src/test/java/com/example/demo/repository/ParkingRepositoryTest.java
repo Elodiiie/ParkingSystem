@@ -92,4 +92,8 @@ class ParkingRepositoryTest {//!车牌数据设为unique
     void findUsernameByPhoneAndAndCarlicense(){
         System.out.println(parkingRepository.findUsernameByPhoneAndAndCarlicense("17521344145","粤B78ALW"));
     }
+    @Test
+    void getCarDetialBywx_overall(){
+        System.out.println(parkingRepository.getCarDetialBywx_overall("粤C546WA").getTime());
+    }
 }

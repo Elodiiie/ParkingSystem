@@ -1,8 +1,7 @@
 package com.example.demo.controller;
 
-import com.example.demo.entity.Parking;
-import com.example.demo.entity.ParkingDetail;
-import com.example.demo.entity.ResultResponse;
+import com.example.demo.annotation.SystemLog;
+import com.example.demo.entity.*;
 import com.example.demo.repository.CarRepository;
 import com.example.demo.repository.ParkingRepository;
 import com.example.demo.utils.Constants;
@@ -15,7 +14,9 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -35,6 +36,7 @@ public class ParkingHandle {
      * 获取正在使用中的车位
      * @return
      */
+    @SystemLog("获取正在使用中的车位数")
     @ApiOperation(value = "获取正在使用中的车位数")
     @GetMapping("/getCount")
     public Integer getCount(){ return parkingRepository.getCount(); }
@@ -65,6 +67,7 @@ public class ParkingHandle {
             return resultResponse;
         }
     }
+    @SystemLog("添加停车记录")
     @PostMapping("/addParkingRecord")
     public ResultResponse addParkingRecord(@RequestBody Parking parking) throws Exception {
         ResultResponse resultResponse = new ResultResponse();
@@ -108,6 +111,15 @@ public class ParkingHandle {
     @DeleteMapping("/deleteById/{id}")
     public void deletecarById(@PathVariable("id") Integer id){
         parkingRepository.deleteById(id);
+    }
+    @GetMapping("/getCarDetialBywx_overall/{userid}")
+    public List<CarDetail_devtool> getCarDetialBywx_overall(@PathVariable("userid") Integer userid){
+        List<CarDetail_devtool> list = new ArrayList<>();
+        List<Car> car_list = carRepository.findByUserid(userid);
+        for(Car car : car_list){
+            list.add(parkingRepository.getCarDetialBywx_overall(car.getCarlicense()));
+        }
+        return list;
     }
 
 }

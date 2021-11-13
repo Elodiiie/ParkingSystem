@@ -35,6 +35,10 @@ public interface ParkRecordRepository extends JpaRepository<ParkRecord,Integer> 
     @Query(value = "select parkrecordid,user.username,car.carlicense,entrancetime,exittime,fare from car,user,parkrecord where parkrecord.carid = car.carid " +
             "and car.userid = user.userid and parkrecord.carid = ?1",nativeQuery = true)
     List<ParkRecordDetail> findDetailByCarid(int carid);
+    // 在carid基础上 判断月份
+    @Query(value = "select parkrecordid,user.username,car.carlicense,entrancetime,exittime,fare from car,user,parkrecord where parkrecord.carid = car.carid " +
+            "and car.userid = user.userid and parkrecord.carid = ?1 and DATE_FORMAT(exittime,'%Y-%m') between ?2 and ?3",nativeQuery = true)
+    List<ParkRecordDetail> findDetailByCaridAndMonth(int carid,String starttime,String endtime);
     @Query(value = "select parkrecordid,user.username,car.carlicense,entrancetime,exittime,fare from car,user,parkrecord where parkrecord.carid = car.carid " +
             "and car.userid = user.userid and car.carlicense = ?1",nativeQuery = true)
     List<ParkRecordDetail> findDetailByCarlicense(String carlicense);
