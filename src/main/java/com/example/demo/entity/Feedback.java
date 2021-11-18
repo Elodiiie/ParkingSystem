@@ -20,5 +20,5 @@ public class Feedback {
     private Integer userid;
     private String content;
     private String imageUrl;
-    private Integer read;
+    private Integer isRead;
 }
