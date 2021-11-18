@@ -1,7 +1,8 @@
 package com.example.demo.repository;
 
-import com.example.demo.entity.FareCount;
+import com.example.demo.vo.FareCount;
 import com.example.demo.entity.Pay;
+import com.example.demo.vo.PayDetail;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
@@ -20,4 +21,7 @@ public interface PayRepository extends JpaRepository<Pay,Integer> {
     // 根据payid获取fare
     @Query(value = "select fare from pay where payid=?1",nativeQuery = true)
     Double getFareByPayid(int payid);
+    //获取用户的所有缴费记录
+    @Query(value = "select payid,time,fare,username from pay,user where user.userid=pay.userid and user.userid=?1",nativeQuery = true)
+    List<PayDetail> getByUserid(int userid);
 }

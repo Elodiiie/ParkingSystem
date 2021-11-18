@@ -1,18 +1,14 @@
 package com.example.demo.repository;
 
-import com.example.demo.entity.EntranceCount;
-import com.example.demo.entity.ParkRecordDetail;
+import com.example.demo.vo.EntranceCount;
+import com.example.demo.vo.ParkRecordDetail;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import org.springframework.web.bind.annotation.PathVariable;
 
-import java.text.SimpleDateFormat;
 import java.util.*;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * @Author: Elodie

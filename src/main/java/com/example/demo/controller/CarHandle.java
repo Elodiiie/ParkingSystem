@@ -1,8 +1,8 @@
 package com.example.demo.controller;
 
 import com.example.demo.annotation.SystemLog;
+import com.example.demo.vo.CarDetail;
 import com.example.demo.entity.Car;
-import com.example.demo.entity.CarDetail;
 import com.example.demo.repository.CarRepository;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -11,8 +11,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 /**
  * @Author: Elodie

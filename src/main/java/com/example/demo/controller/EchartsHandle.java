@@ -1,16 +1,15 @@
 package com.example.demo.controller;
 
 import com.example.demo.annotation.SystemLog;
-import com.example.demo.entity.EntranceCount;
-import com.example.demo.entity.ExitCount;
-import com.example.demo.entity.FareCount;
+import com.example.demo.vo.EntranceCount;
+import com.example.demo.vo.ExitCount;
+import com.example.demo.vo.FareCount;
 import com.example.demo.repository.ParkRecordRepository;
 import com.example.demo.repository.PayRepository;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

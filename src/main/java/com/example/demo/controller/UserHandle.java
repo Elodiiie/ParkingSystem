@@ -2,8 +2,12 @@ package com.example.demo.controller;
 
 import com.example.demo.annotation.SystemLog;
 import com.example.demo.entity.User;
-import com.example.demo.entity.UserAndPhone;
+import com.example.demo.vo.Balance;
+import com.example.demo.vo.Password;
+import com.example.demo.vo.ResultResponse;
+import com.example.demo.vo.UserAndPhone;
 import com.example.demo.repository.UserRepository;
+import com.example.demo.utils.Constants;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +16,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 /**
@@ -59,10 +64,38 @@ public class UserHandle {
     public User findByPhone(@PathVariable("phone") String phone){
         return userRepository.findByPhone(phone);
     }
+    @GetMapping("/getBalance/{userid}")
+    public BigDecimal findByPhone(@PathVariable("userid") int userid){
+        return userRepository.getBalance(userid);
+    }
+    @PostMapping("/updateBalance")
+    public ResultResponse updateBalance(@RequestBody Balance balance) {
+        ResultResponse res = new ResultResponse();
+        int result = userRepository.updateBalance(balance.getUserid(),balance.getBalance());
+        if(result==1){
+            res.setCode(Constants.STATUS_OK);
+            res.setMessage(Constants.MESSAGE_OK);
+            res.setData("true");
+        }else{
+            res.setCode(Constants.STATUS_OK);
+            res.setMessage(Constants.MESSAGE_OK);
+            res.setData(false);
+        }
+        return res;
+    }
     @PutMapping("/updateuser")
     public Boolean update(@RequestBody User user){
         User result = userRepository.save(user);
         if(result != null){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    @PostMapping("/updateuser_password")
+    public Boolean updateuser_password(@RequestBody Password password){
+        Integer result = userRepository.updatePassword(password.getUserid(),password.getPassword());
+        if(result == 1){
             return true;
         }else{
             return false;

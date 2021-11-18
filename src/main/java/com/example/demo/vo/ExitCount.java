@@ -1,6 +1,4 @@
-package com.example.demo.entity;
-
-import java.util.Date;
+package com.example.demo.vo;
 
 /**
  * @Author: Elodie

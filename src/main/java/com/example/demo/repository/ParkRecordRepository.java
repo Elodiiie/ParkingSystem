@@ -1,15 +1,17 @@
 package com.example.demo.repository;
 
-import com.example.demo.entity.*;
+import com.example.demo.vo.EntranceCount;
+import com.example.demo.vo.ExitCount;
+import com.example.demo.vo.FareCount;
+import com.example.demo.entity.ParkRecord;
+import com.example.demo.vo.ParkRecordDetail;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import java.math.BigDecimal;
-import java.util.Date;
 import java.util.List;
-import java.util.Map;
 
 /**
  * @Author: Elodie
@@ -35,10 +37,18 @@ public interface ParkRecordRepository extends JpaRepository<ParkRecord,Integer> 
     @Query(value = "select parkrecordid,user.username,car.carlicense,entrancetime,exittime,fare from car,user,parkrecord where parkrecord.carid = car.carid " +
             "and car.userid = user.userid and parkrecord.carid = ?1",nativeQuery = true)
     List<ParkRecordDetail> findDetailByCarid(int carid);
-    // 在carid基础上 判断月份
+    // 再判断月份
     @Query(value = "select parkrecordid,user.username,car.carlicense,entrancetime,exittime,fare from car,user,parkrecord where parkrecord.carid = car.carid " +
-            "and car.userid = user.userid and parkrecord.carid = ?1 and DATE_FORMAT(exittime,'%Y-%m') between ?2 and ?3",nativeQuery = true)
+            "and car.userid = user.userid and parkrecord.carid = ?1 and DATE_FORMAT(exittime,'%Y-%m-%d') between ?2 and ?3",nativeQuery = true)
     List<ParkRecordDetail> findDetailByCaridAndMonth(int carid,String starttime,String endtime);
+    //修改 根据userid得到所有car
+    @Query(value = "select parkrecordid,user.username,car.carlicense,entrancetime,exittime,fare from car,user,parkrecord where parkrecord.carid = car.carid " +
+            "and car.userid = user.userid and user.userid = ?1 order by exittime desc",nativeQuery = true)
+    List<ParkRecordDetail> findDetailByUserid(int userid);
+    //再判断月份
+    @Query(value = "select parkrecordid,user.username,car.carlicense,entrancetime,exittime,fare from car,user,parkrecord where parkrecord.carid = car.carid " +
+            "and car.userid = user.userid and user.userid = ?1 and DATE_FORMAT(exittime,'%Y-%m-%d') between ?2 and ?3 order by exittime desc",nativeQuery = true)
+    List<ParkRecordDetail> findDetailByUseridAndMonth(int userid,String starttime,String endtime);
     @Query(value = "select parkrecordid,user.username,car.carlicense,entrancetime,exittime,fare from car,user,parkrecord where parkrecord.carid = car.carid " +
             "and car.userid = user.userid and car.carlicense = ?1",nativeQuery = true)
     List<ParkRecordDetail> findDetailByCarlicense(String carlicense);

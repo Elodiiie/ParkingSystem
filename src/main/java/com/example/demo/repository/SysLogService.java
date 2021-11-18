@@ -1,6 +1,6 @@
 package com.example.demo.repository;
 
-import com.example.demo.entity.SysLog;
+import com.example.demo.vo.SysLog;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 

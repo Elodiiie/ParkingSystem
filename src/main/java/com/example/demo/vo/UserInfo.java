@@ -1,11 +1,10 @@
-package com.example.demo.entity;
+package com.example.demo.vo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import javax.persistence.Entity;
 import java.util.List;
 
 

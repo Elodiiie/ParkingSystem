@@ -1,6 +1,6 @@
 package com.example.demo.annotation;
 
-import com.example.demo.entity.SysLog;
+import com.example.demo.vo.SysLog;
 import com.example.demo.repository.SysLogService;
 import com.google.gson.Gson;
 import org.aspectj.lang.ProceedingJoinPoint;

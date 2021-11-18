@@ -1,11 +1,14 @@
 package com.example.demo.controller;
 
 import com.example.demo.annotation.SystemLog;
-import com.example.demo.entity.*;
+import com.example.demo.vo.ResultResponse;
+import com.example.demo.vo.UserAndPasswd;
+import com.example.demo.vo.UserInfo;
 import com.example.demo.repository.UserRepository;
 import com.example.demo.utils.Constants;
 
 import com.example.demo.utils.JwtUtil;
+import com.example.demo.vo.VoToken;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -87,7 +90,7 @@ public class LoginHandle {
     @SystemLog("用户登录")
     @ApiOperation("用户登录")
     @PostMapping("/user/login")
-    public ResultResponse login(@RequestBody UserAndPasswd user  ){
+    public ResultResponse login(@RequestBody UserAndPasswd user ){
         ResultResponse res = new ResultResponse();
         try {
             int flag = userRepository.verifyPassword(user.getUsername(),user.getPassword());
@@ -112,5 +115,28 @@ public class LoginHandle {
         }
         return res;
     }
-
+    @SystemLog("验证旧密码正确")
+    @ApiOperation("验证旧密码正确")
+    @PostMapping("/user/verifyPassword")
+    public ResultResponse verifyPassword(@RequestBody UserAndPasswd user ){
+        ResultResponse res = new ResultResponse();
+        try {
+            int flag = userRepository.verifyPassword(user.getUsername(),user.getPassword());
+            if(flag != 0){
+                res.setCode(Constants.STATUS_OK);
+                res.setMessage(Constants.MESSAGE_OK);
+                res.setData(true);
+            }else{
+                res.setCode(Constants.STATUS_FAIL);
+                res.setMessage(Constants.MESSAGE_FAIL+"password_error");
+                res.setData("fail");
+            }
+        }catch(Exception e){
+            res.setCode(Constants.STATUS_FAIL);
+            res.setMessage(Constants.MESSAGE_FAIL+e.getMessage());
+            res.setData("Fail");
+            e.printStackTrace();
+        }
+        return res;
+    }
 }

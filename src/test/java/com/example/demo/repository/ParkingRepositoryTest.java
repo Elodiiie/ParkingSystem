@@ -1,15 +1,13 @@
 package com.example.demo.repository;
 
 import com.example.demo.entity.Parking;
-import com.example.demo.entity.ParkingDetail;
+import com.example.demo.vo.ParkingDetail;
 import lombok.Data;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.Date;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * @Author: Elodie

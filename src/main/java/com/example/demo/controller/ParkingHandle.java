@@ -1,7 +1,11 @@
 package com.example.demo.controller;
 
 import com.example.demo.annotation.SystemLog;
-import com.example.demo.entity.*;
+import com.example.demo.entity.Car;
+import com.example.demo.vo.CarDetail_devtool;
+import com.example.demo.entity.Parking;
+import com.example.demo.vo.ParkingDetail;
+import com.example.demo.vo.ResultResponse;
 import com.example.demo.repository.CarRepository;
 import com.example.demo.repository.ParkingRepository;
 import com.example.demo.utils.Constants;

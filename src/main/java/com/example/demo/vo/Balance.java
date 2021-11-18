@@ -1,20 +1,22 @@
-package com.example.demo.entity;
+package com.example.demo.vo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import java.math.BigDecimal;
+
 /**
  * @Author: Elodie
- * @Date: 2021/9/17 21:50
+ * @Date: 2021/11/14 17:00
  */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class UserAndPasswd {
-    private String username;
+public class Balance {
+    private Integer userid;
     //@JsonIgnore// 序列化成json的时候，该属性不能序列化
-    private String password;
+    private BigDecimal Balance;
 }

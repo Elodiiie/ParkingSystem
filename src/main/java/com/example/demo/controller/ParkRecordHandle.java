@@ -1,7 +1,11 @@
 package com.example.demo.controller;
 
 import com.example.demo.annotation.SystemLog;
-import com.example.demo.entity.*;
+import com.example.demo.vo.EntranceCount;
+import com.example.demo.vo.ExitCount;
+import com.example.demo.entity.ParkRecord;
+import com.example.demo.vo.ParkRecordDetail;
+import com.example.demo.vo.ResultResponse;
 import com.example.demo.repository.CarRepository;
 import com.example.demo.repository.ParkRecordRepository;
 import com.example.demo.repository.UserRepository;
@@ -103,17 +107,39 @@ public class ParkRecordHandle {
     @GetMapping("/findDetailByCaridAndMonth/{carid}/{date}")
     public List<ParkRecordDetail> findDetailByCaridAndMonth(@PathVariable("carid") Integer carid,@PathVariable("date") String date){
         String starttime = date+"-01";
-        String year = date.substring(0,4);
-        String endtime="";
-        int month=Integer.parseInt(date.substring(5))+1;
-        if(month==12){
-            int year_int = Integer.parseInt(year)+1;
-            endtime= year_int+"-01-01";
-        }else{
-            endtime=year+month+"-01";
-        }
+        String endtime = getEndTime(date);
+        System.out.println(starttime+endtime);
         return parkRecordRepository.findDetailByCaridAndMonth(carid,starttime,endtime);
     }
+    @ApiOperation(value="根据用户号查找",notes ="<多表>")
+    @GetMapping("/findDetailByUserid/{userid}")
+    public List<ParkRecordDetail> findDetailByUserid(@PathVariable("userid") Integer userid){ return parkRecordRepository.findDetailByUserid(userid); }
+    @ApiOperation(value="根据用户号和月份查找",notes ="微信小程序")
+    @GetMapping("/findDetailByUseridAndMonth/{userid}/{date}")
+    public List<ParkRecordDetail> findDetailByUseridAndMonth(@PathVariable("userid") Integer carid,@PathVariable("date") String date){
+        String starttime = date+"-01";
+        String endtime = getEndTime(date);
+        System.out.println(starttime+endtime);
+        return parkRecordRepository.findDetailByUseridAndMonth(carid,starttime,endtime);
+    }
+
+    private String getEndTime(@PathVariable("date") String date) {
+        String year = date.substring(0, 4);
+        String endtime = "";
+        int month = Integer.parseInt(date.substring(5)) + 1;
+        if (month == 12) {
+            int year_int = Integer.parseInt(year) + 1;
+            endtime = year_int + "-01-01";
+        } else {
+            if(month<10){
+                endtime = year + "-0"+month + "-01";
+            }else{
+                endtime = year + "-"+month + "-01";
+            }
+        }
+        return endtime;
+    }
+
     @ApiOperation(value="根据车牌查找",notes ="<多表>")
     @GetMapping("/findDetailByCarlicense/{carlicense}")
     public List<ParkRecordDetail> findDetailByCarlicense(@PathVariable("carlicense") String carlicense){ return parkRecordRepository.findDetailByCarlicense(carlicense); }

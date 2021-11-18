@@ -1,17 +1,12 @@
 package com.example.demo.repository;
 
 import com.example.demo.entity.User;
-import com.example.demo.entity.UserInfo;
 import lombok.Data;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.math.BigDecimal;
-import java.util.Arrays;
-import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * @Author: Elodie
@@ -92,5 +87,8 @@ class UserRepositoryTest {
     }
     @Test
     void getCount(){System.out.println(userRepository.getCount());}
-
+    @Test
+    void updatePasswd(){
+        System.out.println(userRepository.updatePassword(0,"useri12"));
+    }
 }

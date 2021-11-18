@@ -1,11 +1,9 @@
 package com.example.demo.repository;
 
 import com.example.demo.entity.User;
-import com.example.demo.entity.UserInfo;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
@@ -67,6 +65,9 @@ public interface UserRepository extends JpaRepository<User,Integer> {
 //    public int updateUser(User user);
 //    //修改邮箱
 //    public int updateUserEmail(User user);
-//    //更改密码
-//    public int updatePassword(User user);
+//    更改密码
+    @Modifying
+    @Transactional
+    @Query(value = "update User set password = ?2 where userid=?1",nativeQuery = true)
+    public Integer updatePassword(int userid,String password);
 }

@@ -1,8 +1,9 @@
 package com.example.demo.controller;
 
 import com.example.demo.annotation.SystemLog;
+import com.example.demo.vo.PayDetail;
+import com.example.demo.vo.ResultResponse;
 import com.example.demo.entity.Pay;
-import com.example.demo.entity.ResultResponse;
 import com.example.demo.repository.PayRepository;
 import com.example.demo.repository.UserRepository;
 import com.example.demo.utils.Constants;
@@ -17,9 +18,7 @@ import org.springframework.transaction.interceptor.TransactionAspectSupport;
 import org.springframework.web.bind.annotation.*;
 
 import java.math.BigDecimal;
-import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
-import java.util.Date;
+import java.util.List;
 
 /**
  * @Author: Elodie
@@ -46,7 +45,7 @@ public class PayHandle {
         ResultResponse resultResponse = new ResultResponse();
         try {
             Pay result = payRepository.save(pay);
-            int userid= userRepository.findUseridByUsername(pay.getUsername());
+            int userid= pay.getUserid();
             BigDecimal old_balance=userRepository.getBalance(userid);
             BigDecimal new_balance=old_balance.add(new BigDecimal(pay.getFare()));
             Integer res = userRepository.updateBalance(userid,new_balance);
@@ -72,7 +71,7 @@ public class PayHandle {
         ResultResponse resultResponse = new ResultResponse();
         try {
             double old_fare=payRepository.getFareByPayid(pay.getPayid());
-            int userid= userRepository.findUseridByUsername(pay.getUsername());
+            int userid= pay.getUserid();
             BigDecimal old_balance=userRepository.getBalance(userid);
             BigDecimal new_balance=old_balance.add(new BigDecimal(pay.getFare()-old_fare));
             BigDecimal zero=new BigDecimal(0);
@@ -106,5 +105,7 @@ public class PayHandle {
     public Pay findById(@PathVariable("id") Integer id){
         return payRepository.findById(id).get();
     }
+    @GetMapping("/getPayDetialBywx_overall/{userid}")
+    public List<PayDetail> getPayDetialBywx_overall(@PathVariable("userid") Integer userid){return payRepository.getByUserid(userid);}
 
 }
