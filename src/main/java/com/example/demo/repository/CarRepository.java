@@ -23,7 +23,7 @@ public interface CarRepository extends JpaRepository<Car,Integer> {
     @Query(value = "select carid,username,carlicense,vip from Car,User where user.userid=car.userid and carid=?1",nativeQuery = true)
     CarDetail findDetailByCarid(int carid);
     @Query(value = "select carid,username,carlicense,vip from Car,User where user.userid=car.userid ",nativeQuery = true)
-    Page<CarDetail> findAll1(Pageable pageable1);
+    Page<CarDetail> findAll1(Pageable pageable);
     @Query(value = "select carid,username,carlicense,vip from Car,User where user.userid=car.userid and carlicense=?1",nativeQuery = true)
     CarDetail findDetailByCarlicense(String carlicense);
     @Query(value = "select count(distinct carlicense) from car" , nativeQuery = true)

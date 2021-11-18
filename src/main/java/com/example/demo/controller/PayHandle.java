@@ -33,9 +33,9 @@ public class PayHandle {
     @Autowired
     private UserRepository userRepository;
     @GetMapping("/findAll/{page}/{size}")
-    public Page<Pay> findAll(@PathVariable("page") Integer page, @PathVariable("size") Integer size){
+    public Page<PayDetail> findAll(@PathVariable("page") Integer page, @PathVariable("size") Integer size){
         Pageable pageable= PageRequest.of(page,size);
-        return payRepository.findAll(pageable);
+        return payRepository.find(pageable);
     }
     @SystemLog("添加缴费记录")
     @ApiOperation(value = "添加缴费记录")
