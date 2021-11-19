@@ -25,6 +25,9 @@ public class FeedbackHandle {
     @ApiOperation("分页查找")
     @GetMapping("/findAll/{page}/{size}")
     public Page<Feedback> findAll(@PathVariable("page") Integer page, @PathVariable("size") Integer size){
+        if(page < 0){
+            page =0;
+        }
         Pageable pageable= PageRequest.of(page,size);
         return feedbackRepository.findAll(pageable);
     }
@@ -32,15 +35,21 @@ public class FeedbackHandle {
     @ApiOperation("分页查找")
     @GetMapping("/findNotOperate/{page}/{size}")
     public Page<Feedback> findNotOperate(@PathVariable("page") Integer page, @PathVariable("size") Integer size){
+        if(page < 0){
+            page =0;
+        }
         Pageable pageable= PageRequest.of(page,size);
-        return feedbackRepository.findAll(pageable);
+        return feedbackRepository.findByIsRead(pageable,0);
     }
     @SystemLog("分页查找已处理feedback信息")
     @ApiOperation("分页查找")
     @GetMapping("/findOperate/{page}/{size}")
     public Page<Feedback> findOperate(@PathVariable("page") Integer page, @PathVariable("size") Integer size){
+        if(page < 0){
+            page =0;
+        }
         Pageable pageable= PageRequest.of(page,size);
-        return feedbackRepository.findAll(pageable);
+        return feedbackRepository.findByIsRead(pageable,2);
     }
     @ApiOperation(value = "添加反馈信息 ")
     @PostMapping("/saveAll")
@@ -57,6 +66,7 @@ public class FeedbackHandle {
     public boolean processed(@PathVariable("id") Integer feedbackid){
         Feedback feedback = see_details(feedbackid);
         feedback.setIsRead(2);
+        feedbackRepository.save(feedback);
         return true;
     }
     @ApiOperation(value = "修改为未解决")
@@ -64,6 +74,7 @@ public class FeedbackHandle {
     public boolean processing(@PathVariable("id") Integer feedbackid){
         Feedback feedback = see_details(feedbackid);
         feedback.setIsRead(0);
+        feedbackRepository.save(feedback);
         return true;
     }
     @ApiOperation(value = "查看详情")
