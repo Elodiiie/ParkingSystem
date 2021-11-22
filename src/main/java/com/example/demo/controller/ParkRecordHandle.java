@@ -27,6 +27,7 @@ import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 /**
  * @Author: Elodie
@@ -224,13 +225,12 @@ public class ParkRecordHandle {
     @SystemLog("删除停车记录")
     @DeleteMapping("/deleteById/{id}")
     public void deletecarById(@PathVariable("id") Integer id){
-        parkRecordRepository.deleteById(id);
-        ParkRecord parkRecord = parkRecordRepository.findById(id).get();
-        Integer userid=carRepository.getUserid(parkRecord.getCarid());
-        if(userid == null){
-
-        }else{
-            pointsHandle.minusPoints(userid,parkRecord.getFare().intValue());
+        Optional<ParkRecord> optional = parkRecordRepository.findById(id);
+        if(optional!=null&&optional.isPresent()){
+            System.out.println("==============================================");
+            Integer userid=carRepository.getUserid(optional.get().getCarid());
+            parkRecordRepository.deleteById(id);
+            pointsHandle.minusPoints(userid,optional.get().getFare().intValue());
         }
     }
     /***

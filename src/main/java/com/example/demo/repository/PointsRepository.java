@@ -8,5 +8,4 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @Date: 2021/11/22 20:40
  */
 public interface PointsRepository extends JpaRepository<Points,Integer> {
-    Points findByUserid(int userid);
 }

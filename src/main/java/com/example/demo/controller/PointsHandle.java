@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Optional;
+
 /**
  * @Author: Elodie
  * @Date: 2021/11/22 20:42
@@ -32,11 +34,13 @@ public class PointsHandle {
         Pageable pageable= PageRequest.of(page,size);
         return pointsRepository.findAll(pageable);
     }
-    public boolean isExist(int userid){
-        if(pointsRepository.findByUserid(userid)!=null){
-            return false;
-        }else {
+    @GetMapping("/isExist/{userid}")
+    public boolean isExist(@PathVariable("userid") Integer userid){
+        Optional<Points> optional = pointsRepository.findById(userid);
+        if(optional!=null&&optional.isPresent()){
             return true;
+        }else {
+            return false;
         }
     }
     @SystemLog("添加积分")
@@ -45,7 +49,8 @@ public class PointsHandle {
         ResultResponse resultResponse = new ResultResponse();
         Points res;
        if(isExist(userid)){
-           Points points1 = pointsRepository.findByUserid(userid);
+           System.out.println("添加积分");
+           Points points1 = pointsRepository.findById(userid).get();
            points1.setPoints(points1.getPoints()+ points);
            res = pointsRepository.save(points1);
        }else{
@@ -71,7 +76,7 @@ public class PointsHandle {
         ResultResponse resultResponse = new ResultResponse();
         Points res;
         if(isExist(userid)){
-            Points points1 = pointsRepository.findByUserid(userid);
+            Points points1 = pointsRepository.findById(userid).get();
             points1.setPoints(points1.getPoints()- points);
             res = pointsRepository.save(points1);
         }else{

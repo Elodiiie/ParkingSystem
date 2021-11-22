@@ -16,8 +16,4 @@ import static org.junit.jupiter.api.Assertions.*;
 class PointsRepositoryTest {
     @Autowired
     private PointsRepository pointsRepository;
-    @Test
-    public void findByUserid(){
-        System.out.println(pointsRepository.findByUserid(2));
-    }
 }
