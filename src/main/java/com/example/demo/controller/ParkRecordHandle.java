@@ -22,6 +22,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
 import org.springframework.web.bind.annotation.*;
 
+
 import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.List;
@@ -41,6 +42,10 @@ public class ParkRecordHandle {
     private UserRepository userRepository;
     @Autowired
     private CarRepository carRepository;
+    @Autowired
+    private PointsHandle pointsHandle;
+
+
     //短信
     ZhenziSmsClient client = new ZhenziSmsClient("https://sms_developer.zhenzikj.com", "110280", "90e77681-d2e7-4b9a-8f81-f90694ff2c5e");
     @ApiOperation(value = "获取停车记录信息")
@@ -79,6 +84,7 @@ public class ParkRecordHandle {
             if(new_balance.compareTo(zero)>-1){
                 ParkRecord result = parkRecordRepository.save(parkRecord);
                 Integer res = userRepository.updateBalance(userid,new_balance);
+                pointsHandle.addPoints(userid,parkRecord.getFare().intValue());
                 if(result != null&&res!=0){
                     return true;
                 }else{
@@ -171,6 +177,7 @@ public class ParkRecordHandle {
         if(new_balance.compareTo(zero)>-1){
             ParkRecord result = parkRecordRepository.save(parkRecord);
             Integer res = userRepository.updateBalance(userid,new_balance);
+            pointsHandle.addPoints(userid,minux.intValue());
             if(result != null&&res!=0){
                 resultResponse.setMessage("success");
                 resultResponse.setData("success");
@@ -218,6 +225,13 @@ public class ParkRecordHandle {
     @DeleteMapping("/deleteById/{id}")
     public void deletecarById(@PathVariable("id") Integer id){
         parkRecordRepository.deleteById(id);
+        ParkRecord parkRecord = parkRecordRepository.findById(id).get();
+        Integer userid=carRepository.getUserid(parkRecord.getCarid());
+        if(userid == null){
+
+        }else{
+            pointsHandle.minusPoints(userid,parkRecord.getFare().intValue());
+        }
     }
     /***
      * 获取停车记录数量
