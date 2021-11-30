@@ -1,6 +1,7 @@
 package com.example.demo.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import io.swagger.annotations.ApiModel;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -17,6 +18,7 @@ import java.util.Date;
 @Entity
 @Data
 @NoArgsConstructor
+@ApiModel(value = "停车记录")
 public class ParkRecord {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

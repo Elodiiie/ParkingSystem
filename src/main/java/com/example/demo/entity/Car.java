@@ -1,5 +1,6 @@
 package com.example.demo.entity;
 
+import io.swagger.annotations.ApiModel;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -10,6 +11,7 @@ import javax.persistence.*;
  */
 @Entity
 @Data
+@ApiModel(value = "车辆")
 public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

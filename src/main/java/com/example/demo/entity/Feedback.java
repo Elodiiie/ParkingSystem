@@ -1,5 +1,6 @@
 package com.example.demo.entity;
 
+import io.swagger.annotations.ApiModel;
 import lombok.Data;
 
 import javax.persistence.Entity;
@@ -13,6 +14,7 @@ import javax.persistence.Id;
  */
 @Entity
 @Data
+@ApiModel(value = "问题反馈")
 public class Feedback {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

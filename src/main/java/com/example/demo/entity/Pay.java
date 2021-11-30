@@ -1,6 +1,7 @@
 package com.example.demo.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import io.swagger.annotations.ApiModel;
 import lombok.Data;
 
 import javax.persistence.Entity;
@@ -15,6 +16,7 @@ import java.util.Date;
  */
 @Entity
 @Data
+@ApiModel(value = "缴费")
 public class Pay {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -41,7 +42,7 @@ public class KaptchaController {
      * @param httpServletResponse
      * @throws Exception
      */
-    @RequestMapping("/defaultKaptcha")
+    @GetMapping("/defaultKaptcha")
     public void defaultKaptcha(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse)
             throws Exception {
         byte[] captchaChallengeAsJpeg = null;
@@ -80,7 +81,7 @@ public class KaptchaController {
      * @param httpServletResponse
      * @return
      */
-    @RequestMapping("/imgvrifyControllerDefaultKaptcha/{tryCode}")
+    @GetMapping("/imgvrifyControllerDefaultKaptcha/{tryCode}")
     @ResponseBody
     public Boolean imgvrifyControllerDefaultKaptcha(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, @PathVariable("tryCode") String tryCode) throws IOException {
         String rightCode = (String) httpServletRequest.getSession(false).getAttribute("rightCode");
@@ -95,7 +96,7 @@ public class KaptchaController {
         }
     }
 
-    @RequestMapping("/toIndex")
+    @GetMapping("/toIndex")
     public String toIndex() {
         return "index";
     }

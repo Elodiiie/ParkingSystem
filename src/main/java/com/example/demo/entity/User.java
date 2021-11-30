@@ -23,16 +23,16 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-@ApiModel(value = "用户对象")
+@ApiModel(value = "用户")
 public class User implements java.io.Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer userid;
 //    private BigDecimal balance;
-    @ApiModelProperty(notes = "nickname of the user",name = "name",required = true,value = "姓名")
+//    @ApiModelProperty(notes = "nickname of the user",name = "name",required = true,value = "姓名")
     private String username;
-    //@JsonIgnore// 序列化成json的时候，该属性不能序列化
-    @ApiModelProperty(notes = "password of the user",name = "password",required = true,value = "密码")
+//    //@JsonIgnore// 序列化成json的时候，该属性不能序列化
+//    @ApiModelProperty(notes = "password of the user",name = "password",required = true,value = "密码")
     private String password;
     private Integer sex;
     private String phone;
