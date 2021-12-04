@@ -53,12 +53,16 @@ public class EchartsHandle {
         List<String> monthLists = currentMonth6();
         List<EntranceCount> list = parkRecordRepository.getEntranceCount();
         List<Integer> countlist = new ArrayList<>();
-        int list_index=0;
-        for(int i =0;i<6;i++){
-            if(monthLists.get(i).equals(list.get(list_index).getMonths())){
-                countlist.add(list.get(list_index).getEntrancecount());
-                list_index++;
-            }else{
+        for (int i = 0; i < 6; i++) {
+            boolean flag =false;//未找到当月数据
+            for (int j = 0; j < list.size(); j++) {
+                if (list.get(j).getMonths().equals(monthLists.get(i))) {
+                    flag=true;
+                    countlist.add(list.get(j).getEntrancecount());
+                    break;
+                }
+            }
+            if(!flag){
                 countlist.add(0);
             }
         }
@@ -71,12 +75,16 @@ public class EchartsHandle {
         List<String> monthLists = currentMonth6();
         List<ExitCount> list = parkRecordRepository.getExitCount();
         List<Integer> countlist = new ArrayList<>();
-        int list_index=0;
         for(int i =0;i<6;i++){
-            if(monthLists.get(i).equals(list.get(list_index).getMonths())){
-                countlist.add(list.get(list_index).getExitcount());
-                list_index++;
-            }else{
+            boolean flag =false;//未找到当月数据
+            for (int j = 0; j < list.size(); j++) {
+                if (list.get(j).getMonths().equals(monthLists.get(i))) {
+                    flag=true;
+                    countlist.add(list.get(j).getExitcount());
+                    break;
+                }
+            }
+            if(!flag){
                 countlist.add(0);
             }
         }
@@ -99,12 +107,16 @@ public class EchartsHandle {
         List<String> monthLists = currentMonth6();
         List<FareCount> list = fareCount;
         List<Integer> countlist = new ArrayList<>();
-        int list_index=0;
         for(int i =0;i<6;i++){
-            if(monthLists.get(i).equals(list.get(list_index).getMonths())){
-                countlist.add(list.get(list_index).getFarecount());
-                list_index++;
-            }else{
+            boolean flag =false;//未找到当月数据
+            for (int j = 0; j < list.size(); j++) {
+                if (list.get(j).getMonths().equals(monthLists.get(i))) {
+                    flag=true;
+                    countlist.add(list.get(j).getFarecount());
+                    break;
+                }
+            }
+            if(!flag){
                 countlist.add(0);
             }
         }
