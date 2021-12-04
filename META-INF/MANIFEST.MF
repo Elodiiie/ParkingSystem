@@ -1,0 +1,43 @@
+Manifest-Version: 1.0
+Class-Path: spring-jcl-5.3.8.jar jackson-datatype-jdk8-2.12.3.jar lett
+ uce-core-6.1.2.RELEASE.jar spring-boot-starter-tomcat-2.5.1.jar sprin
+ g-aspects-5.3.8.jar snakeyaml-1.28.jar jakarta.transaction-api-1.3.3.
+ jar mysql-connector-java-8.0.25.jar spring-core-5.3.8.jar spring-oxm-
+ 5.3.8.jar jakarta.xml.bind-api-2.3.3.jar reactive-streams-1.0.3.jar s
+ pringfox-swagger-ui-2.9.2.jar spring-boot-starter-json-2.5.1.jar jack
+ son-module-parameter-names-2.12.3.jar spring-boot-starter-jdbc-2.5.1.
+ jar jakarta.annotation-api-1.3.5.jar jsqlparser-3.1.jar spring-aop-5.
+ 3.8.jar spring-boot-starter-web-2.5.1.jar aspectjweaver-1.9.6.jar spr
+ ing-boot-starter-2.5.1.jar jakarta.activation-api-1.2.2.jar mapstruct
+ -1.2.0.Final.jar spring-boot-autoconfigure-2.5.1.jar tomcat-embed-cor
+ e-9.0.46.jar spring-boot-2.5.1.jar spring-data-redis-2.5.1.jar spring
+ -beans-5.3.8.jar antlr-2.7.7.jar spring-orm-5.3.8.jar spring-webmvc-5
+ .3.8.jar txw2-2.3.4.jar tomcat-embed-el-9.0.46.jar spring-boot-starte
+ r-aop-2.5.1.jar dom4j-2.1.3.jar springfox-swagger2-2.9.2.jar classmat
+ e-1.5.1.jar netty-transport-4.1.65.Final.jar javassist-3.27.0-GA.jar 
+ slf4j-api-1.7.30.jar spring-boot-starter-logging-2.5.1.jar swagger-mo
+ dels-1.5.22.jar spring-context-support-5.3.8.jar HikariCP-4.0.3.jar s
+ pring-expression-5.3.8.jar byte-buddy-1.10.22.jar lombok-1.18.20.jar 
+ spring-plugin-metadata-1.2.0.RELEASE.jar jackson-datatype-jsr310-2.12
+ .3.jar netty-resolver-4.1.65.Final.jar commons-codec-1.15.jar spring-
+ data-jpa-2.5.1.jar spring-data-commons-2.5.1.jar springfox-swagger-co
+ mmon-2.9.2.jar guava-20.0.jar jaxb-runtime-2.3.4.jar netty-buffer-4.1
+ .65.Final.jar jandex-2.2.3.Final.jar springfox-spi-2.9.2.jar istack-c
+ ommons-runtime-3.0.12.jar springfox-schema-2.9.2.jar jboss-logging-3.
+ 4.2.Final.jar spring-jdbc-5.3.8.jar mybatis-plus-core-3.3.1.jar jul-t
+ o-slf4j-1.7.30.jar spring-boot-starter-data-redis-2.5.1.jar jakarta.a
+ ctivation-1.2.2.jar zhenzisms-2.0.2.jar jakarta.persistence-api-2.2.3
+ .jar spring-tx-5.3.8.jar springfox-spring-web-2.9.2.jar spring-contex
+ t-5.3.8.jar gson-2.8.1.jar hibernate-core-5.4.32.Final.jar netty-comm
+ on-4.1.65.Final.jar filters-2.0.235.jar netty-codec-4.1.65.Final.jar 
+ log4j-api-2.14.1.jar jackson-core-2.12.3.jar jackson-databind-2.12.3.
+ jar swagger-annotations-1.5.22.jar reactor-core-3.4.6.jar spring-plug
+ in-core-1.2.0.RELEASE.jar tomcat-embed-websocket-9.0.46.jar mybatis-3
+ .5.3.jar log4j-to-slf4j-2.14.1.jar logback-classic-1.2.3.jar kaptcha-
+ 0.0.9.jar logback-core-1.2.3.jar spring-boot-starter-data-jpa-2.5.1.j
+ ar spring-web-5.3.8.jar springfox-core-2.9.2.jar spring-data-keyvalue
+ -2.5.1.jar netty-handler-4.1.65.Final.jar mybatis-plus-annotation-3.3
+ .1.jar jackson-annotations-2.12.3.jar java-jwt-3.5.0.jar hibernate-co
+ mmons-annotations-5.1.2.Final.jar
+Main-Class: com.example.demo.DemoApplication
+
