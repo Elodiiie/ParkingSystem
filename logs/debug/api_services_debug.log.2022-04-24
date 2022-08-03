@@ -1,0 +1,503 @@
+2022-04-24-15-59 [main] [com.example.demo.DemoApplication] [INFO] - Starting DemoApplication using Java 1.8.0_291 on LAPTOP-8KM3UQQU with PID 21744 (D:\Park\target\classes started by glx in D:\Park)
+  2022-04-24-15-59 [main] [com.example.demo.DemoApplication] [INFO] - No active profile set, falling back to default profiles: default
+  2022-04-24-15-59 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Multiple Spring Data modules found, entering strict repository configuration mode!
+  2022-04-24-15-59 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+  2022-04-24-15-59 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 68 ms. Found 8 JPA repository interfaces.
+  2022-04-24-15-59 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Multiple Spring Data modules found, entering strict repository configuration mode!
+  2022-04-24-15-59 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+  2022-04-24-15-59 [main] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [INFO] - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.AccountSessionRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+  2022-04-24-15-59 [main] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [INFO] - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.CarRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+  2022-04-24-15-59 [main] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [INFO] - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.FeedbackRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+  2022-04-24-15-59 [main] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [INFO] - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ParkRecordRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+  2022-04-24-15-59 [main] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [INFO] - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ParkingRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+  2022-04-24-15-59 [main] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [INFO] - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.PayRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+  2022-04-24-15-59 [main] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [INFO] - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.PointsRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+  2022-04-24-15-59 [main] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [INFO] - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+  2022-04-24-15-59 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+  2022-04-24-15-59 [main] [com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor] [INFO] - Post-processing PropertySource instances
+  2022-04-24-15-59 [main] [com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter] [INFO] - Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+  2022-04-24-15-59 [main] [com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter] [INFO] - Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+  2022-04-24-15-59 [main] [com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter] [INFO] - Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+  2022-04-24-15-59 [main] [com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter] [INFO] - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+  2022-04-24-15-59 [main] [com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter] [INFO] - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+  2022-04-24-15-59 [main] [com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter] [INFO] - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+  2022-04-24-15-59 [main] [com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter] [INFO] - Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+  2022-04-24-15-59 [main] [com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter] [INFO] - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+  2022-04-24-15-59 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+  2022-04-24-15-59 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO] - Root WebApplicationContext: initialization completed in 1930 ms
+  2022-04-24-15-59 [main] [com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver] [INFO] - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+  2022-04-24-15-59 [main] [com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector] [INFO] - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+  2022-04-24-15-59 [main] [com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor] [INFO] - String Encryptor custom Bean not found with name 'jasyptStringEncryptor'. Initializing Default String Encryptor
+  2022-04-24-15-59 [main] [com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor] [INFO] - Encryptor config not found for property jasypt.encryptor.keyObtentionIterations, using default value: 1000
+  2022-04-24-15-59 [main] [com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor] [INFO] - Encryptor config not found for property jasypt.encryptor.poolSize, using default value: 1
+  2022-04-24-15-59 [main] [com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor] [INFO] - Encryptor config not found for property jasypt.encryptor.providerName, using default value: null
+  2022-04-24-15-59 [main] [com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor] [INFO] - Encryptor config not found for property jasypt.encryptor.providerClassName, using default value: null
+  2022-04-24-15-59 [main] [com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor] [INFO] - Encryptor config not found for property jasypt.encryptor.saltGeneratorClassname, using default value: org.jasypt.salt.RandomSaltGenerator
+  2022-04-24-15-59 [main] [com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor] [INFO] - Encryptor config not found for property jasypt.encryptor.ivGeneratorClassname, using default value: org.jasypt.salt.NoOpIVGenerator
+  2022-04-24-15-59 [main] [com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor] [INFO] - Encryptor config not found for property jasypt.encryptor.stringOutputType, using default value: base64
+  2022-04-24-15-59 [main] [com.zaxxer.hikari.HikariDataSource] [INFO] - HikariPool-1 - Starting...
+  2022-04-24-15-59 [main] [com.zaxxer.hikari.HikariDataSource] [INFO] - HikariPool-1 - Start completed.
+  2022-04-24-15-59 [main] [org.hibernate.jpa.internal.util.LogHelper] [INFO] - HHH000204: Processing PersistenceUnitInfo [name: default]
+  2022-04-24-15-59 [main] [org.hibernate.Version] [INFO] - HHH000412: Hibernate ORM core version 5.4.32.Final
+  2022-04-24-15-59 [main] [org.hibernate.annotations.common.Version] [INFO] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+  2022-04-24-15-59 [main] [org.hibernate.dialect.Dialect] [INFO] - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+  2022-04-24-15-59 [main] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [INFO] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+  2022-04-24-15-59 [main] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+  2022-04-24-15-59 [main] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [WARN] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+  2022-04-24-15-59 [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [INFO] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+  2022-04-24-15-59 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+  2022-04-24-15-59 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Context refreshed
+  2022-04-24-15-59 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Found 1 custom documentation plugin(s)
+  2022-04-24-15-59 [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [INFO] - Scanning for api listing references
+  2022-04-24-16-00 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findAllUsingGET_1
+  2022-04-24-16-00 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: saveUsingPOST_1
+  2022-04-24-16-00 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findAllUsingGET_2
+  2022-04-24-16-00 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findByIdUsingGET_1
+  2022-04-24-16-00 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findDetailByCarIdUsingGET_1
+  2022-04-24-16-00 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: getCountUsingGET_1
+  2022-04-24-16-00 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: getNumByUserIdUsingGET_1
+  2022-04-24-16-00 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: saveUsingPOST_2
+  2022-04-24-16-00 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findAllUsingGET_3
+  2022-04-24-16-00 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: getCountUsingGET_2
+  2022-04-24-16-00 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: sendMessUsingPOST_1
+  2022-04-24-16-00 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: deleteByIdUsingDELETE_1
+  2022-04-24-16-00 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findAllUsingGET_4
+  2022-04-24-16-00 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findByIdUsingGET_2
+  2022-04-24-16-00 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: saveUsingPOST_3
+  2022-04-24-16-00 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: updateUsingPOST_1
+  2022-04-24-16-00 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findAllUsingGET_5
+  2022-04-24-16-00 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findUsingGET_1
+  2022-04-24-16-00 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findAllUsingGET_6
+  2022-04-24-16-00 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findByIdUsingGET_3
+  2022-04-24-16-00 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findByPhoneUsingGET_1
+  2022-04-24-16-00 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: getCountUsingGET_3
+  2022-04-24-16-00 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: loginUsingPOST_1
+  2022-04-24-16-00 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: saveUsingPOST_4
+  2022-04-24-16-00 [main] [com.example.demo.DemoApplication] [INFO] - Started DemoApplication in 5.863 seconds (JVM running for 6.754)
+  2022-04-24-16-03 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+  2022-04-24-16-03 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 1 ms
+  2022-04-24-16-03 [http-nio-8080-exec-1] [com.example.demo.controller.KaptchaController] [INFO] - 获取验证码成功>>>>>> wdnp
+  2022-04-24-16-03 [http-nio-8080-exec-1] [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver] [WARN] - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: No converter for [class java.util.LinkedHashMap] with preset Content-Type 'image/jpeg']
+  2022-04-24-16-03 [http-nio-8080-exec-4] [com.example.demo.controller.KaptchaController] [INFO] - 验证码正确=======>>>>>> 
+  2022-04-24-16-03 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/user/login
+  2022-04-24-16-03 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : POST
+  2022-04-24-16-03 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-24-16-03 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.LoginHandle.login
+  2022-04-24-16-03 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : [UserAndPasswd(username=user1, password=0c534ed3fff7d2bfd32ee19d84644e3f)]
+  2022-04-24-16-03 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=500, message=The user name and password do not match, data=false)
+  2022-04-24-16-03 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 87
+  2022-04-24-16-03 [http-nio-8080-exec-2] [com.example.demo.repository.SysLogService] [INFO] - 用户登录
+  2022-04-24-16-03 [http-nio-8080-exec-2] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-24 04:03:51
+  2022-04-24-16-03 [http-nio-8080-exec-2] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.LoginHandle
+  2022-04-24-16-03 [http-nio-8080-exec-2] [com.example.demo.repository.SysLogService] [INFO] - login
+  2022-04-24-16-03 [http-nio-8080-exec-2] [com.example.demo.repository.SysLogService] [INFO] - [{"username":"user1","password":"0c534ed3fff7d2bfd32ee19d84644e3f"}]
+  2022-04-24-16-03 [http-nio-8080-exec-5] [com.example.demo.controller.KaptchaController] [INFO] - 验证码正确=======>>>>>> 
+  2022-04-24-16-03 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/user/login
+  2022-04-24-16-03 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : POST
+  2022-04-24-16-03 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-24-16-03 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.LoginHandle.login
+  2022-04-24-16-03 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : [UserAndPasswd(username=user1, password=6ad14ba9986e3615423dfca256d04e3f)]
+  2022-04-24-16-03 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=VoToken(token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbk5hbWUiOiJ1c2VyMSIsImV4cCI6MTY1MDg3MzgzNiwidXNlcklkIjoiMSJ9.OPi0hEoe0OUlRbkhWf-J27s97sdUidTxqsvqL-zNojU))
+  2022-04-24-16-03 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 89
+  2022-04-24-16-03 [http-nio-8080-exec-6] [com.example.demo.repository.SysLogService] [INFO] - 用户登录
+  2022-04-24-16-03 [http-nio-8080-exec-6] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-24 04:03:56
+  2022-04-24-16-03 [http-nio-8080-exec-6] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.LoginHandle
+  2022-04-24-16-03 [http-nio-8080-exec-6] [com.example.demo.repository.SysLogService] [INFO] - login
+  2022-04-24-16-03 [http-nio-8080-exec-6] [com.example.demo.repository.SysLogService] [INFO] - [{"username":"user1","password":"6ad14ba9986e3615423dfca256d04e3f"}]
+  2022-04-24-16-03 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/car/getCount
+  2022-04-24-16-03 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/charts/recordFareCount
+  2022-04-24-16-03 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-24-16-03 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-24-16-03 [http-nio-8080-exec-9] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/parking/getCount
+  2022-04-24-16-03 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.EchartsHandle.findFareCount
+  2022-04-24-16-03 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-24-16-03 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-24-16-03 [http-nio-8080-exec-9] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-24-16-03 [http-nio-8080-exec-9] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-24-16-03 [http-nio-8080-exec-9] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.ParkingHandle.getCount
+  2022-04-24-16-03 [http-nio-8080-exec-9] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-24-16-03 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-24-16-03 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.CarHandle.getCount
+  2022-04-24-16-03 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-24-16-03 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=10)
+  2022-04-24-16-03 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 22
+  2022-04-24-16-03 [http-nio-8080-exec-7] [com.example.demo.repository.SysLogService] [INFO] - 获取车辆数量
+  2022-04-24-16-03 [http-nio-8080-exec-7] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-24 04:03:57
+  2022-04-24-16-03 [http-nio-8080-exec-7] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.CarHandle
+  2022-04-24-16-03 [http-nio-8080-exec-7] [com.example.demo.repository.SysLogService] [INFO] - getCount
+  2022-04-24-16-03 [http-nio-8080-exec-7] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-24-16-03 [http-nio-8080-exec-9] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=7)
+  2022-04-24-16-03 [http-nio-8080-exec-9] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 24
+  2022-04-24-16-03 [http-nio-8080-exec-9] [com.example.demo.repository.SysLogService] [INFO] - 获取正在使用中的车位数
+  2022-04-24-16-03 [http-nio-8080-exec-9] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-24 04:03:57
+  2022-04-24-16-03 [http-nio-8080-exec-9] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.ParkingHandle
+  2022-04-24-16-03 [http-nio-8080-exec-9] [com.example.demo.repository.SysLogService] [INFO] - getCount
+  2022-04-24-16-03 [http-nio-8080-exec-9] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-24-16-03 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=[15, 30, 45, 15, 55, 225])
+  2022-04-24-16-03 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 36
+  2022-04-24-16-03 [http-nio-8080-exec-10] [com.example.demo.repository.SysLogService] [INFO] - 获取图数据财务扣费信息
+  2022-04-24-16-03 [http-nio-8080-exec-10] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-24 04:03:57
+  2022-04-24-16-03 [http-nio-8080-exec-10] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.EchartsHandle
+  2022-04-24-16-03 [http-nio-8080-exec-10] [com.example.demo.repository.SysLogService] [INFO] - findFareCount
+  2022-04-24-16-03 [http-nio-8080-exec-10] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-24-16-03 [http-nio-8080-exec-3] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/charts/recordEntranceCount
+  2022-04-24-16-03 [http-nio-8080-exec-3] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-24-16-03 [http-nio-8080-exec-3] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-24-16-03 [http-nio-8080-exec-3] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.EchartsHandle.findEntranceCount
+  2022-04-24-16-03 [http-nio-8080-exec-3] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-24-16-03 [http-nio-8080-exec-3] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=[9, 2, 4, 2, 7, 2])
+  2022-04-24-16-03 [http-nio-8080-exec-3] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 2
+  2022-04-24-16-03 [http-nio-8080-exec-3] [com.example.demo.repository.SysLogService] [INFO] - 获取图数据进场车辆信息
+  2022-04-24-16-03 [http-nio-8080-exec-3] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-24 04:03:57
+  2022-04-24-16-03 [http-nio-8080-exec-3] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.EchartsHandle
+  2022-04-24-16-03 [http-nio-8080-exec-3] [com.example.demo.repository.SysLogService] [INFO] - findEntranceCount
+  2022-04-24-16-03 [http-nio-8080-exec-3] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-24-16-03 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/charts/recordExitCount
+  2022-04-24-16-03 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-24-16-03 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-24-16-03 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.EchartsHandle.findExitCount
+  2022-04-24-16-03 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-24-16-03 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=[1, 2, 3, 1, 4, 15])
+  2022-04-24-16-03 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 5
+  2022-04-24-16-03 [http-nio-8080-exec-2] [com.example.demo.repository.SysLogService] [INFO] - 获取图数据离场车辆信息
+  2022-04-24-16-03 [http-nio-8080-exec-2] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-24 04:03:57
+  2022-04-24-16-03 [http-nio-8080-exec-2] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.EchartsHandle
+  2022-04-24-16-03 [http-nio-8080-exec-2] [com.example.demo.repository.SysLogService] [INFO] - findExitCount
+  2022-04-24-16-03 [http-nio-8080-exec-2] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-24-16-04 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/parking/getCount
+  2022-04-24-16-04 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-24-16-04 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-24-16-04 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.ParkingHandle.getCount
+  2022-04-24-16-04 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-24-16-04 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=7)
+  2022-04-24-16-04 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 2
+  2022-04-24-16-04 [http-nio-8080-exec-1] [com.example.demo.repository.SysLogService] [INFO] - 获取正在使用中的车位数
+  2022-04-24-16-04 [http-nio-8080-exec-1] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-24 04:04:40
+  2022-04-24-16-04 [http-nio-8080-exec-1] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.ParkingHandle
+  2022-04-24-16-04 [http-nio-8080-exec-1] [com.example.demo.repository.SysLogService] [INFO] - getCount
+  2022-04-24-16-04 [http-nio-8080-exec-1] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-24-16-04 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/charts/recordFareCount
+  2022-04-24-16-04 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-24-16-04 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-24-16-04 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.EchartsHandle.findFareCount
+  2022-04-24-16-04 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-24-16-04 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=[15, 30, 45, 15, 55, 225])
+  2022-04-24-16-04 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 4
+  2022-04-24-16-04 [http-nio-8080-exec-4] [com.example.demo.repository.SysLogService] [INFO] - 获取图数据财务扣费信息
+  2022-04-24-16-04 [http-nio-8080-exec-4] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-24 04:04:41
+  2022-04-24-16-04 [http-nio-8080-exec-4] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.EchartsHandle
+  2022-04-24-16-04 [http-nio-8080-exec-4] [com.example.demo.repository.SysLogService] [INFO] - findFareCount
+  2022-04-24-16-04 [http-nio-8080-exec-4] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-24-16-04 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/charts/recordPayCount
+  2022-04-24-16-04 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-24-16-04 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-24-16-04 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.EchartsHandle.findPayCount
+  2022-04-24-16-04 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-24-16-04 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=[60, 0, 0, 100, 10, 60])
+  2022-04-24-16-04 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 6
+  2022-04-24-16-04 [http-nio-8080-exec-6] [com.example.demo.repository.SysLogService] [INFO] - 获取图数据财务用户缴费信息
+  2022-04-24-16-04 [http-nio-8080-exec-6] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-24 04:04:41
+  2022-04-24-16-04 [http-nio-8080-exec-6] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.EchartsHandle
+  2022-04-24-16-04 [http-nio-8080-exec-6] [com.example.demo.repository.SysLogService] [INFO] - findPayCount
+  2022-04-24-16-04 [http-nio-8080-exec-6] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-24-16-06 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/charts/recordFareCount
+  2022-04-24-16-06 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-24-16-06 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-24-16-06 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.EchartsHandle.findFareCount
+  2022-04-24-16-06 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-24-16-06 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=[15, 30, 45, 15, 55, 225])
+  2022-04-24-16-06 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 2
+  2022-04-24-16-06 [http-nio-8080-exec-2] [com.example.demo.repository.SysLogService] [INFO] - 获取图数据财务扣费信息
+  2022-04-24-16-06 [http-nio-8080-exec-2] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-24 04:06:56
+  2022-04-24-16-06 [http-nio-8080-exec-2] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.EchartsHandle
+  2022-04-24-16-06 [http-nio-8080-exec-2] [com.example.demo.repository.SysLogService] [INFO] - findFareCount
+  2022-04-24-16-06 [http-nio-8080-exec-2] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-24-16-06 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/charts/recordEntranceCount
+  2022-04-24-16-06 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-24-16-06 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-24-16-06 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.EchartsHandle.findEntranceCount
+  2022-04-24-16-06 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-24-16-06 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=[9, 2, 4, 2, 7, 2])
+  2022-04-24-16-06 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 2
+  2022-04-24-16-06 [http-nio-8080-exec-6] [com.example.demo.repository.SysLogService] [INFO] - 获取图数据进场车辆信息
+  2022-04-24-16-06 [http-nio-8080-exec-6] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-24 04:06:56
+  2022-04-24-16-06 [http-nio-8080-exec-6] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.EchartsHandle
+  2022-04-24-16-06 [http-nio-8080-exec-6] [com.example.demo.repository.SysLogService] [INFO] - findEntranceCount
+  2022-04-24-16-06 [http-nio-8080-exec-6] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-24-16-06 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/charts/recordExitCount
+  2022-04-24-16-06 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-24-16-06 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-24-16-06 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.EchartsHandle.findExitCount
+  2022-04-24-16-06 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-24-16-06 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=[1, 2, 3, 1, 4, 15])
+  2022-04-24-16-06 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 3
+  2022-04-24-16-06 [http-nio-8080-exec-7] [com.example.demo.repository.SysLogService] [INFO] - 获取图数据离场车辆信息
+  2022-04-24-16-06 [http-nio-8080-exec-7] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-24 04:06:56
+  2022-04-24-16-06 [http-nio-8080-exec-7] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.EchartsHandle
+  2022-04-24-16-06 [http-nio-8080-exec-7] [com.example.demo.repository.SysLogService] [INFO] - findExitCount
+  2022-04-24-16-06 [http-nio-8080-exec-7] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-24-16-07 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/charts/recordFareCount
+  2022-04-24-16-07 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-24-16-07 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-24-16-07 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.EchartsHandle.findFareCount
+  2022-04-24-16-07 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-24-16-07 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=[15, 30, 45, 15, 55, 240])
+  2022-04-24-16-07 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 2
+  2022-04-24-16-07 [http-nio-8080-exec-1] [com.example.demo.repository.SysLogService] [INFO] - 获取图数据财务扣费信息
+  2022-04-24-16-07 [http-nio-8080-exec-1] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-24 04:07:41
+  2022-04-24-16-07 [http-nio-8080-exec-1] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.EchartsHandle
+  2022-04-24-16-07 [http-nio-8080-exec-1] [com.example.demo.repository.SysLogService] [INFO] - findFareCount
+  2022-04-24-16-07 [http-nio-8080-exec-1] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-24-16-07 [http-nio-8080-exec-8] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/charts/recordPayCount
+  2022-04-24-16-07 [http-nio-8080-exec-8] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-24-16-07 [http-nio-8080-exec-8] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-24-16-07 [http-nio-8080-exec-8] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.EchartsHandle.findPayCount
+  2022-04-24-16-07 [http-nio-8080-exec-8] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-24-16-07 [http-nio-8080-exec-8] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=[60, 0, 0, 100, 10, 60])
+  2022-04-24-16-07 [http-nio-8080-exec-8] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 5
+  2022-04-24-16-07 [http-nio-8080-exec-8] [com.example.demo.repository.SysLogService] [INFO] - 获取图数据财务用户缴费信息
+  2022-04-24-16-07 [http-nio-8080-exec-8] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-24 04:07:41
+  2022-04-24-16-07 [http-nio-8080-exec-8] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.EchartsHandle
+  2022-04-24-16-07 [http-nio-8080-exec-8] [com.example.demo.repository.SysLogService] [INFO] - findPayCount
+  2022-04-24-16-07 [http-nio-8080-exec-8] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-24-16-09 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/charts/recordFareCount
+  2022-04-24-16-09 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-24-16-09 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-24-16-09 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.EchartsHandle.findFareCount
+  2022-04-24-16-09 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-24-16-09 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=[15, 30, 45, 15, 55, 15])
+  2022-04-24-16-09 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 2
+  2022-04-24-16-09 [http-nio-8080-exec-4] [com.example.demo.repository.SysLogService] [INFO] - 获取图数据财务扣费信息
+  2022-04-24-16-09 [http-nio-8080-exec-4] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-24 04:09:56
+  2022-04-24-16-09 [http-nio-8080-exec-4] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.EchartsHandle
+  2022-04-24-16-09 [http-nio-8080-exec-4] [com.example.demo.repository.SysLogService] [INFO] - findFareCount
+  2022-04-24-16-09 [http-nio-8080-exec-4] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-24-16-09 [http-nio-8080-exec-3] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/charts/recordEntranceCount
+  2022-04-24-16-09 [http-nio-8080-exec-3] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-24-16-09 [http-nio-8080-exec-3] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-24-16-09 [http-nio-8080-exec-3] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.EchartsHandle.findEntranceCount
+  2022-04-24-16-09 [http-nio-8080-exec-3] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-24-16-09 [http-nio-8080-exec-3] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=[9, 2, 4, 2, 7, 5])
+  2022-04-24-16-09 [http-nio-8080-exec-3] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 2
+  2022-04-24-16-09 [http-nio-8080-exec-3] [com.example.demo.repository.SysLogService] [INFO] - 获取图数据进场车辆信息
+  2022-04-24-16-09 [http-nio-8080-exec-3] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-24 04:09:56
+  2022-04-24-16-09 [http-nio-8080-exec-3] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.EchartsHandle
+  2022-04-24-16-09 [http-nio-8080-exec-3] [com.example.demo.repository.SysLogService] [INFO] - findEntranceCount
+  2022-04-24-16-09 [http-nio-8080-exec-3] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-24-16-09 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/charts/recordExitCount
+  2022-04-24-16-09 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-24-16-09 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-24-16-09 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.EchartsHandle.findExitCount
+  2022-04-24-16-09 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-24-16-09 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=[1, 2, 3, 1, 4, 18])
+  2022-04-24-16-09 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 2
+  2022-04-24-16-09 [http-nio-8080-exec-2] [com.example.demo.repository.SysLogService] [INFO] - 获取图数据离场车辆信息
+  2022-04-24-16-09 [http-nio-8080-exec-2] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-24 04:09:56
+  2022-04-24-16-09 [http-nio-8080-exec-2] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.EchartsHandle
+  2022-04-24-16-09 [http-nio-8080-exec-2] [com.example.demo.repository.SysLogService] [INFO] - findExitCount
+  2022-04-24-16-09 [http-nio-8080-exec-2] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-24-16-10 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/charts/recordFareCount
+  2022-04-24-16-10 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-24-16-10 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-24-16-10 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.EchartsHandle.findFareCount
+  2022-04-24-16-10 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-24-16-10 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=[15, 30, 45, 15, 55, 15])
+  2022-04-24-16-10 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 2
+  2022-04-24-16-10 [http-nio-8080-exec-7] [com.example.demo.repository.SysLogService] [INFO] - 获取图数据财务扣费信息
+  2022-04-24-16-10 [http-nio-8080-exec-7] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-24 04:10:41
+  2022-04-24-16-10 [http-nio-8080-exec-7] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.EchartsHandle
+  2022-04-24-16-10 [http-nio-8080-exec-7] [com.example.demo.repository.SysLogService] [INFO] - findFareCount
+  2022-04-24-16-10 [http-nio-8080-exec-7] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-24-16-10 [http-nio-8080-exec-9] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/charts/recordPayCount
+  2022-04-24-16-10 [http-nio-8080-exec-9] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-24-16-10 [http-nio-8080-exec-9] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-24-16-10 [http-nio-8080-exec-9] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.EchartsHandle.findPayCount
+  2022-04-24-16-10 [http-nio-8080-exec-9] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-24-16-10 [http-nio-8080-exec-9] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=[60, 0, 0, 100, 10, 60])
+  2022-04-24-16-10 [http-nio-8080-exec-9] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 3
+  2022-04-24-16-10 [http-nio-8080-exec-9] [com.example.demo.repository.SysLogService] [INFO] - 获取图数据财务用户缴费信息
+  2022-04-24-16-10 [http-nio-8080-exec-9] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-24 04:10:41
+  2022-04-24-16-10 [http-nio-8080-exec-9] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.EchartsHandle
+  2022-04-24-16-10 [http-nio-8080-exec-9] [com.example.demo.repository.SysLogService] [INFO] - findPayCount
+  2022-04-24-16-10 [http-nio-8080-exec-9] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-24-16-12 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/charts/recordFareCount
+  2022-04-24-16-12 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-24-16-12 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-24-16-12 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.EchartsHandle.findFareCount
+  2022-04-24-16-12 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-24-16-12 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=[15, 30, 45, 15, 55, 15])
+  2022-04-24-16-12 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 6
+  2022-04-24-16-12 [http-nio-8080-exec-10] [com.example.demo.repository.SysLogService] [INFO] - 获取图数据财务扣费信息
+  2022-04-24-16-12 [http-nio-8080-exec-10] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-24 04:12:56
+  2022-04-24-16-12 [http-nio-8080-exec-10] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.EchartsHandle
+  2022-04-24-16-12 [http-nio-8080-exec-10] [com.example.demo.repository.SysLogService] [INFO] - findFareCount
+  2022-04-24-16-12 [http-nio-8080-exec-10] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-24-16-12 [http-nio-8080-exec-5] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/charts/recordEntranceCount
+  2022-04-24-16-12 [http-nio-8080-exec-5] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-24-16-12 [http-nio-8080-exec-5] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-24-16-12 [http-nio-8080-exec-5] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.EchartsHandle.findEntranceCount
+  2022-04-24-16-12 [http-nio-8080-exec-5] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-24-16-12 [http-nio-8080-exec-5] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=[9, 2, 4, 2, 7, 5])
+  2022-04-24-16-12 [http-nio-8080-exec-5] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 4
+  2022-04-24-16-12 [http-nio-8080-exec-5] [com.example.demo.repository.SysLogService] [INFO] - 获取图数据进场车辆信息
+  2022-04-24-16-12 [http-nio-8080-exec-5] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-24 04:12:57
+  2022-04-24-16-12 [http-nio-8080-exec-5] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.EchartsHandle
+  2022-04-24-16-12 [http-nio-8080-exec-5] [com.example.demo.repository.SysLogService] [INFO] - findEntranceCount
+  2022-04-24-16-12 [http-nio-8080-exec-5] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-24-16-12 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/charts/recordExitCount
+  2022-04-24-16-12 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-24-16-12 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-24-16-12 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.EchartsHandle.findExitCount
+  2022-04-24-16-12 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-24-16-12 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=[1, 2, 3, 1, 4, 18])
+  2022-04-24-16-12 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 7
+  2022-04-24-16-12 [http-nio-8080-exec-4] [com.example.demo.repository.SysLogService] [INFO] - 获取图数据离场车辆信息
+  2022-04-24-16-12 [http-nio-8080-exec-4] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-24 04:12:57
+  2022-04-24-16-12 [http-nio-8080-exec-4] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.EchartsHandle
+  2022-04-24-16-12 [http-nio-8080-exec-4] [com.example.demo.repository.SysLogService] [INFO] - findExitCount
+  2022-04-24-16-12 [http-nio-8080-exec-4] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-24-16-13 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/charts/recordFareCount
+  2022-04-24-16-13 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-24-16-13 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-24-16-13 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.EchartsHandle.findFareCount
+  2022-04-24-16-13 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-24-16-13 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=[15, 30, 45, 15, 55, 15])
+  2022-04-24-16-13 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 1
+  2022-04-24-16-13 [http-nio-8080-exec-2] [com.example.demo.repository.SysLogService] [INFO] - 获取图数据财务扣费信息
+  2022-04-24-16-13 [http-nio-8080-exec-2] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-24 04:13:41
+  2022-04-24-16-13 [http-nio-8080-exec-2] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.EchartsHandle
+  2022-04-24-16-13 [http-nio-8080-exec-2] [com.example.demo.repository.SysLogService] [INFO] - findFareCount
+  2022-04-24-16-13 [http-nio-8080-exec-2] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-24-16-13 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/charts/recordPayCount
+  2022-04-24-16-13 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-24-16-13 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-24-16-13 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.EchartsHandle.findPayCount
+  2022-04-24-16-13 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-24-16-13 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=[60, 0, 0, 100, 10, 60])
+  2022-04-24-16-13 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 1
+  2022-04-24-16-13 [http-nio-8080-exec-6] [com.example.demo.repository.SysLogService] [INFO] - 获取图数据财务用户缴费信息
+  2022-04-24-16-13 [http-nio-8080-exec-6] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-24 04:13:41
+  2022-04-24-16-13 [http-nio-8080-exec-6] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.EchartsHandle
+  2022-04-24-16-13 [http-nio-8080-exec-6] [com.example.demo.repository.SysLogService] [INFO] - findPayCount
+  2022-04-24-16-13 [http-nio-8080-exec-6] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-24-16-15 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/charts/recordFareCount
+  2022-04-24-16-15 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-24-16-15 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-24-16-15 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.EchartsHandle.findFareCount
+  2022-04-24-16-15 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-24-16-15 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=[15, 30, 45, 15, 55, 15])
+  2022-04-24-16-15 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 2
+  2022-04-24-16-15 [http-nio-8080-exec-1] [com.example.demo.repository.SysLogService] [INFO] - 获取图数据财务扣费信息
+  2022-04-24-16-15 [http-nio-8080-exec-1] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-24 04:15:57
+  2022-04-24-16-15 [http-nio-8080-exec-1] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.EchartsHandle
+  2022-04-24-16-15 [http-nio-8080-exec-1] [com.example.demo.repository.SysLogService] [INFO] - findFareCount
+  2022-04-24-16-15 [http-nio-8080-exec-1] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-24-16-15 [http-nio-8080-exec-8] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/charts/recordEntranceCount
+  2022-04-24-16-15 [http-nio-8080-exec-8] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-24-16-15 [http-nio-8080-exec-8] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-24-16-15 [http-nio-8080-exec-8] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.EchartsHandle.findEntranceCount
+  2022-04-24-16-15 [http-nio-8080-exec-8] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-24-16-15 [http-nio-8080-exec-8] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=[9, 2, 4, 2, 7, 5])
+  2022-04-24-16-15 [http-nio-8080-exec-8] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 2
+  2022-04-24-16-15 [http-nio-8080-exec-8] [com.example.demo.repository.SysLogService] [INFO] - 获取图数据进场车辆信息
+  2022-04-24-16-15 [http-nio-8080-exec-8] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-24 04:15:57
+  2022-04-24-16-15 [http-nio-8080-exec-8] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.EchartsHandle
+  2022-04-24-16-15 [http-nio-8080-exec-8] [com.example.demo.repository.SysLogService] [INFO] - findEntranceCount
+  2022-04-24-16-15 [http-nio-8080-exec-8] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-24-16-15 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/charts/recordExitCount
+  2022-04-24-16-15 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-24-16-15 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-24-16-15 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.EchartsHandle.findExitCount
+  2022-04-24-16-15 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-24-16-15 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=[1, 2, 3, 1, 4, 18])
+  2022-04-24-16-15 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 2
+  2022-04-24-16-15 [http-nio-8080-exec-10] [com.example.demo.repository.SysLogService] [INFO] - 获取图数据离场车辆信息
+  2022-04-24-16-15 [http-nio-8080-exec-10] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-24 04:15:57
+  2022-04-24-16-15 [http-nio-8080-exec-10] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.EchartsHandle
+  2022-04-24-16-15 [http-nio-8080-exec-10] [com.example.demo.repository.SysLogService] [INFO] - findExitCount
+  2022-04-24-16-15 [http-nio-8080-exec-10] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-24-16-16 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/charts/recordFareCount
+  2022-04-24-16-16 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-24-16-16 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-24-16-16 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.EchartsHandle.findFareCount
+  2022-04-24-16-16 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-24-16-16 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=[15, 30, 45, 15, 55, 15])
+  2022-04-24-16-16 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 2
+  2022-04-24-16-16 [http-nio-8080-exec-4] [com.example.demo.repository.SysLogService] [INFO] - 获取图数据财务扣费信息
+  2022-04-24-16-16 [http-nio-8080-exec-4] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-24 04:16:42
+  2022-04-24-16-16 [http-nio-8080-exec-4] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.EchartsHandle
+  2022-04-24-16-16 [http-nio-8080-exec-4] [com.example.demo.repository.SysLogService] [INFO] - findFareCount
+  2022-04-24-16-16 [http-nio-8080-exec-4] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-24-16-16 [http-nio-8080-exec-3] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/charts/recordPayCount
+  2022-04-24-16-16 [http-nio-8080-exec-3] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-24-16-16 [http-nio-8080-exec-3] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-24-16-16 [http-nio-8080-exec-3] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.EchartsHandle.findPayCount
+  2022-04-24-16-16 [http-nio-8080-exec-3] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-24-16-16 [http-nio-8080-exec-3] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=[60, 0, 0, 100, 10, 60])
+  2022-04-24-16-16 [http-nio-8080-exec-3] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 2
+  2022-04-24-16-16 [http-nio-8080-exec-3] [com.example.demo.repository.SysLogService] [INFO] - 获取图数据财务用户缴费信息
+  2022-04-24-16-16 [http-nio-8080-exec-3] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-24 04:16:42
+  2022-04-24-16-16 [http-nio-8080-exec-3] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.EchartsHandle
+  2022-04-24-16-16 [http-nio-8080-exec-3] [com.example.demo.repository.SysLogService] [INFO] - findPayCount
+  2022-04-24-16-16 [http-nio-8080-exec-3] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-24-16-18 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/charts/recordFareCount
+  2022-04-24-16-18 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-24-16-18 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-24-16-18 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.EchartsHandle.findFareCount
+  2022-04-24-16-18 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-24-16-18 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=[15, 30, 45, 15, 55, 15])
+  2022-04-24-16-18 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 2
+  2022-04-24-16-18 [http-nio-8080-exec-7] [com.example.demo.repository.SysLogService] [INFO] - 获取图数据财务扣费信息
+  2022-04-24-16-18 [http-nio-8080-exec-7] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-24 04:18:57
+  2022-04-24-16-18 [http-nio-8080-exec-7] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.EchartsHandle
+  2022-04-24-16-18 [http-nio-8080-exec-7] [com.example.demo.repository.SysLogService] [INFO] - findFareCount
+  2022-04-24-16-18 [http-nio-8080-exec-7] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-24-16-18 [http-nio-8080-exec-9] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/charts/recordEntranceCount
+  2022-04-24-16-18 [http-nio-8080-exec-9] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-24-16-18 [http-nio-8080-exec-9] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-24-16-18 [http-nio-8080-exec-9] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.EchartsHandle.findEntranceCount
+  2022-04-24-16-18 [http-nio-8080-exec-9] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-24-16-18 [http-nio-8080-exec-9] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=[9, 2, 4, 2, 7, 5])
+  2022-04-24-16-18 [http-nio-8080-exec-9] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 2
+  2022-04-24-16-18 [http-nio-8080-exec-9] [com.example.demo.repository.SysLogService] [INFO] - 获取图数据进场车辆信息
+  2022-04-24-16-18 [http-nio-8080-exec-9] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-24 04:18:57
+  2022-04-24-16-18 [http-nio-8080-exec-9] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.EchartsHandle
+  2022-04-24-16-18 [http-nio-8080-exec-9] [com.example.demo.repository.SysLogService] [INFO] - findEntranceCount
+  2022-04-24-16-18 [http-nio-8080-exec-9] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-24-16-18 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/charts/recordExitCount
+  2022-04-24-16-18 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-24-16-18 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-24-16-18 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.EchartsHandle.findExitCount
+  2022-04-24-16-18 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-24-16-18 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=[1, 2, 3, 1, 4, 18])
+  2022-04-24-16-18 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 2
+  2022-04-24-16-18 [http-nio-8080-exec-1] [com.example.demo.repository.SysLogService] [INFO] - 获取图数据离场车辆信息
+  2022-04-24-16-18 [http-nio-8080-exec-1] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-24 04:18:57
+  2022-04-24-16-18 [http-nio-8080-exec-1] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.EchartsHandle
+  2022-04-24-16-18 [http-nio-8080-exec-1] [com.example.demo.repository.SysLogService] [INFO] - findExitCount
+  2022-04-24-16-18 [http-nio-8080-exec-1] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-24-16-19 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/charts/recordFareCount
+  2022-04-24-16-19 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-24-16-19 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-24-16-19 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.EchartsHandle.findFareCount
+  2022-04-24-16-19 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-24-16-19 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=[15, 30, 45, 15, 55, 15])
+  2022-04-24-16-19 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 2
+  2022-04-24-16-19 [http-nio-8080-exec-10] [com.example.demo.repository.SysLogService] [INFO] - 获取图数据财务扣费信息
+  2022-04-24-16-19 [http-nio-8080-exec-10] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-24 04:19:42
+  2022-04-24-16-19 [http-nio-8080-exec-10] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.EchartsHandle
+  2022-04-24-16-19 [http-nio-8080-exec-10] [com.example.demo.repository.SysLogService] [INFO] - findFareCount
+  2022-04-24-16-19 [http-nio-8080-exec-10] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-24-16-19 [http-nio-8080-exec-5] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/charts/recordPayCount
+  2022-04-24-16-19 [http-nio-8080-exec-5] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-24-16-19 [http-nio-8080-exec-5] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-24-16-19 [http-nio-8080-exec-5] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.EchartsHandle.findPayCount
+  2022-04-24-16-19 [http-nio-8080-exec-5] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-24-16-19 [http-nio-8080-exec-5] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=[60, 0, 0, 100, 10, 60])
+  2022-04-24-16-19 [http-nio-8080-exec-5] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 2
+  2022-04-24-16-19 [http-nio-8080-exec-5] [com.example.demo.repository.SysLogService] [INFO] - 获取图数据财务用户缴费信息
+  2022-04-24-16-19 [http-nio-8080-exec-5] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-24 04:19:42
+  2022-04-24-16-19 [http-nio-8080-exec-5] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.EchartsHandle
+  2022-04-24-16-19 [http-nio-8080-exec-5] [com.example.demo.repository.SysLogService] [INFO] - findPayCount
+  2022-04-24-16-19 [http-nio-8080-exec-5] [com.example.demo.repository.SysLogService] [INFO] - []
+  

@@ -1,6 +1,8 @@
 package com.example.demo.repository;
 
 import com.example.demo.entity.Feedback;
+import com.example.demo.vo.CarDetail;
+import com.example.demo.vo.FeedbackVo;
 import lombok.Data;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,8 +21,16 @@ import static org.junit.jupiter.api.Assertions.*;
 class FeedbackRepositoryTest {
     @Autowired
     private FeedbackRepository feedbackRepository;
+    @Autowired
+    private CarRepository carRepository;
     @Test
     void findByIsRead(){
-        Page<Feedback> feedbacks = feedbackRepository.findByIsRead(PageRequest.of(0,8),0);
+        Page<FeedbackVo> feedbacks = feedbackRepository.findByIsRead(PageRequest.of(0,8),0);
+//        System.out.println(feedbacks.getContent().get(0).get);
+    }
+
+    @Test
+    void find(){
+        Page<FeedbackVo> feedbacks = feedbackRepository.findAll1(PageRequest.of(0,8));
     }
 }

@@ -19,5 +19,6 @@ public class Car {
     private Integer userid;
     private String Carlicense;
     private Integer vip;
+    private Integer existToUser;//用户删除则改为0
 
 }

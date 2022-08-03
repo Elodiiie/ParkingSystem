@@ -18,7 +18,7 @@ class CarRepositoryTest {
     private CarRepository carRepository;
     @Test
     void findByCarlicense(){
-        Integer carid = carRepository.getCarid("粤C972K1");
+        Integer carid = carRepository.getCarid("粤AWO54");
         System.out.println(carid);
     }
     @Test

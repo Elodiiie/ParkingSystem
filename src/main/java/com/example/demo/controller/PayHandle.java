@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import com.example.demo.annotation.SystemLog;
+import com.example.demo.annotation.SystemLogAspect;
 import com.example.demo.vo.PayDetail;
 import com.example.demo.vo.ResultResponse;
 import com.example.demo.entity.Pay;
@@ -9,6 +10,8 @@ import com.example.demo.repository.UserRepository;
 import com.example.demo.utils.Constants;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -20,6 +23,8 @@ import org.springframework.web.bind.annotation.*;
 import java.math.BigDecimal;
 import java.util.List;
 
+import static com.example.demo.utils.Constants.MESSAGE_FAIL;
+
 /**
  * @Author: Elodie
  * @Date: 2021/10/20 21:21
@@ -28,84 +33,74 @@ import java.util.List;
 @RestController
 @RequestMapping("/pay")
 public class PayHandle {
+
     @Autowired
     private PayRepository payRepository;
+
     @Autowired
     private UserRepository userRepository;
+
+    private final static String LACK_OF_BALANCE = "Lack of Balance";
+    private static final Logger logger = LoggerFactory.getLogger(SystemLogAspect.class);
     @GetMapping("/findAll/{page}/{size}")
-    public Page<PayDetail> findAll(@PathVariable("page") Integer page, @PathVariable("size") Integer size){
+    public ResultResponse findAll(@PathVariable("page") Integer page, @PathVariable("size") Integer size){
         Pageable pageable= PageRequest.of(page,size);
-        return payRepository.find(pageable);
+        return new ResultResponse(Constants.STATUS_OK,Constants.MESSAGE_OK,payRepository.find(pageable));
     }
     @SystemLog("添加缴费记录")
     @ApiOperation(value = "添加缴费记录")
     @PostMapping("/addRecord")
     @Transactional(rollbackFor = Exception.class)
     public ResultResponse save(@RequestBody Pay pay){
-        ResultResponse resultResponse = new ResultResponse();
         try {
-            Pay result = payRepository.save(pay);
-            int userid= pay.getUserid();
-            BigDecimal old_balance=userRepository.getBalance(userid);
+            payRepository.save(pay);
+            int userId= pay.getUserid();
+            BigDecimal old_balance=userRepository.getBalance(userId);
             BigDecimal new_balance=old_balance.add(new BigDecimal(pay.getFare()));
-            Integer res = userRepository.updateBalance(userid,new_balance);
+            userRepository.updateBalance(userId,new_balance);
         }catch (Exception e){
-            System.out.println("异常=====" + e);
-            //手动强制回滚事务，这里一定要第一时间处理
+            logger.error("异常=====" + e);
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
-            resultResponse.setMessage("异常，交易失败"+e);
-            resultResponse.setData("fail");
-            resultResponse.setCode(Constants.STATUS_FAIL);
-            return resultResponse;
+            return new ResultResponse(Constants.BUSINESS_FAIL,String.valueOf(e),MESSAGE_FAIL);
         }
-        resultResponse.setMessage("success");
-        resultResponse.setData("success");
-        resultResponse.setCode(Constants.STATUS_OK);
-        return resultResponse;
+        return new ResultResponse(Constants.STATUS_OK,Constants.MESSAGE_OK,Boolean.TRUE);
     }
     @SystemLog("修改缴费记录")
     @ApiOperation(value = "修改缴费记录")
     @PostMapping("/updateRecord")
     @Transactional(rollbackFor = Exception.class)
     public ResultResponse update(@RequestBody Pay pay){
-        ResultResponse resultResponse = new ResultResponse();
         try {
             double old_fare=payRepository.getFareByPayid(pay.getPayid());
-            int userid= pay.getUserid();
-            BigDecimal old_balance=userRepository.getBalance(userid);
+            int userId= pay.getUserid();
+            BigDecimal old_balance=userRepository.getBalance(userId);
             BigDecimal new_balance=old_balance.add(new BigDecimal(pay.getFare()-old_fare));
             BigDecimal zero=new BigDecimal(0);
             if(new_balance.compareTo(zero)>-1){
                 Pay result = payRepository.save(pay);
-                Integer res = userRepository.updateBalance(userid,new_balance);
+                Integer res = userRepository.updateBalance(userId,new_balance);
             }else{
-                resultResponse.setMessage("账户余额不足，请重新继续缴费，交易失败");
-                resultResponse.setData("fail");
-                resultResponse.setCode(Constants.STATUS_FAIL);
-                return resultResponse;
+                return new ResultResponse(Constants.BUSINESS_FAIL,LACK_OF_BALANCE,MESSAGE_FAIL);
             }
         }catch (Exception e){
-            System.out.println("异常=====" + e);
+            logger.error("异常=====" + e);
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
-            resultResponse.setMessage("error"+e);
-            resultResponse.setData("fail");
-            resultResponse.setCode(Constants.STATUS_FAIL);
-            return resultResponse;
+            return new ResultResponse(Constants.BUSINESS_FAIL,String.valueOf(e),MESSAGE_FAIL);
         }
-        resultResponse.setMessage("success");
-        resultResponse.setData("success");
-        resultResponse.setCode(Constants.STATUS_OK);
-        return resultResponse;
+        return new ResultResponse(Constants.STATUS_OK,Constants.MESSAGE_OK,Boolean.TRUE);
     }
     @DeleteMapping("/deleteById/{id}")
-    public void deletecarById(@PathVariable("id") Integer id){
+    public ResultResponse deleteById(@PathVariable("id") Integer id){
         payRepository.deleteById(id);
+        return new ResultResponse(Constants.STATUS_OK,Constants.MESSAGE_OK,Constants.MESSAGE_OK);
     }
     @GetMapping("/findById/{id}")
-    public Pay findById(@PathVariable("id") Integer id){
-        return payRepository.findById(id).get();
+    public ResultResponse findById(@PathVariable("id") Integer id){
+         return new ResultResponse(Constants.STATUS_OK,Constants.MESSAGE_OK,payRepository.findById(id).get());
     }
     @GetMapping("/getPayDetialBywx_overall/{userid}")
-    public List<PayDetail> getPayDetialBywx_overall(@PathVariable("userid") Integer userid){return payRepository.getByUserid(userid);}
+    public ResultResponse getPayDetialBywx_overall(@PathVariable("userid") Integer userid){
+        return new ResultResponse(Constants.STATUS_OK,Constants.MESSAGE_OK,payRepository.getByUserid(userid));
+    }
 
 }

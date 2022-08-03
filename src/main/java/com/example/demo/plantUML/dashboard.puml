@@ -1,0 +1,32 @@
+@startuml
+hide footbox
+actor       admin       as Admin
+
+Admin -> ParkRecordHandle : getCount
+activate ParkRecordHandle
+ParkRecordHandle --> Admin : entrancrCount
+deactivate ParkRecordHandle
+
+Admin -> UserHandle: getCount
+activate UserHandle
+UserHandle --> Admin : userCount
+deactivate UserHandle
+
+Admin -> CarHandle : getCount
+activate CarHandle
+CarHandle --> Admin : carCount
+deactivate CarHandle
+
+Admin -> ParkingHandle : getCount
+activate ParkingHandle
+ParkingHandle --> Admin : parkingCount
+deactivate ParkingHandle
+
+Admin -> EchartsHandle : getSixMonths
+activate EchartsHandle
+EchartsHandle --> Admin : monthsDetail
+Admin -> EchartsHandle : getCountByMonths
+EchartsHandle --> Admin : countByMonths
+deactivate EchartsHandle
+
+@enduml

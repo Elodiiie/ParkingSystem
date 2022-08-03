@@ -1,0 +1,46 @@
+@startuml
+hide footbox
+actor       admin       as Admin
+autonumber
+Admin -> ParkRecordHandle : findAll
+activate ParkRecordHandle
+ParkRecordHandle --> Admin : carDetail(isParking)
+deactivate ParkRecordHandle
+
+autonumber
+Admin -> ParkRecordHandle : addParkRecord
+activate ParkRecordHandle
+ParkRecordHandle -> CarHandle :getUserid
+activate CarHandle
+CarHandle -->ParkRecordHandle :userid
+deactivate CarHandle
+alt userid != null
+    ParkRecordHandle -> UserHandle : getBalance
+    activate UserHandle
+    alt balance-fare >= 0
+	ParkRecordHandle -> UserHandle: updateBalance
+	UserHandle --> ParkRecordHandle:updateResult
+	deactivate UserHandle
+        ParkRecordHandle -\\ ZhenziSmsClient :sendMessage
+	autonumber stop
+        ParkRecordHandle --> Admin: addResult
+    else
+    	ParkRecordHandle --> Admin:noSufficientBalanceResult
+    end
+else
+    autonumber 4
+    ParkRecordHandle -->Admin :falseResult
+end
+deactivate ParkRecordHandle
+
+autonumber
+Admin -> ParkRecordHandle : findByMonth(e.g.2021-01)
+activate ParkRecordHandle
+ParkRecordHandle -> ParkRecordHandle:getEndTime
+ParkRecordHandle -> UserHandle :getCarid
+activate UserHandle
+UserHandle --> ParkRecordHandle :carid
+deactivate UserHandle
+ParkRecordHandle --> Admin:parkDetailBymonth
+deactivate ParkRecordHandle
+@enduml

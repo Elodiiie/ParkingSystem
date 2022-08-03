@@ -10,5 +10,5 @@ public interface CarDetail {
     String getUsername();
     String getCarlicense();
     Integer getVip();
-
+    String getPhone();
 }

@@ -38,9 +38,9 @@ public class PointsHandle {
     public boolean isExist(@PathVariable("userid") Integer userid){
         Optional<Points> optional = pointsRepository.findById(userid);
         if(optional!=null&&optional.isPresent()){
-            return true;
+            return Boolean.TRUE;
         }else {
-            return false;
+            return Boolean.FALSE;
         }
     }
     @SystemLog("添加积分")

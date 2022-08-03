@@ -46,7 +46,7 @@ public class JwtUtil {
     }
 
 
-    public static String verity(String token){
+    public static String verify(String token){
         String result = TOKEN_SUCCESS;
         try {
             Algorithm algorithm = Algorithm.HMAC256(TOKEN_SECRET);

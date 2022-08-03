@@ -1,0 +1,646 @@
+2022-04-12-13-22 [HikariPool-1 housekeeper] [com.zaxxer.hikari.pool.HikariPool] [WARN] - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13h24m7s688ms903µs800ns).
+  2022-04-12-14-55 [HikariPool-1 housekeeper] [com.zaxxer.hikari.pool.HikariPool] [WARN] - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=39m23s146ms210µs300ns).
+  2022-04-12-16-15 [http-nio-8080-exec-5] [com.example.demo.controller.KaptchaController] [INFO] - 获取验证码成功>>>>>> 6nw5
+  2022-04-12-16-15 [http-nio-8080-exec-5] [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver] [WARN] - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: No converter for [class java.util.LinkedHashMap] with preset Content-Type 'image/jpeg']
+  2022-04-12-16-15 [http-nio-8080-exec-2] [com.example.demo.controller.KaptchaController] [INFO] - 验证码正确=======>>>>>> 
+  2022-04-12-16-15 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/user/login
+  2022-04-12-16-15 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : POST
+  2022-04-12-16-15 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-12-16-15 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.LoginHandle.login
+  2022-04-12-16-15 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : [UserAndPasswd(username=user1, password=0c534ed3fff7d2bfd32ee19d84644e3f)]
+  2022-04-12-16-15 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=500, message=FAIL:username_and_password_do_not_match, data=false)
+  2022-04-12-16-15 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 6
+  2022-04-12-16-15 [http-nio-8080-exec-6] [com.example.demo.repository.SysLogService] [INFO] - 用户登录
+  2022-04-12-16-15 [http-nio-8080-exec-6] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-12 04:15:19
+  2022-04-12-16-15 [http-nio-8080-exec-6] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.LoginHandle
+  2022-04-12-16-15 [http-nio-8080-exec-6] [com.example.demo.repository.SysLogService] [INFO] - login
+  2022-04-12-16-15 [http-nio-8080-exec-6] [com.example.demo.repository.SysLogService] [INFO] - [{"username":"user1","password":"0c534ed3fff7d2bfd32ee19d84644e3f"}]
+  2022-04-12-16-15 [http-nio-8080-exec-8] [com.example.demo.controller.KaptchaController] [INFO] - 验证码正确=======>>>>>> 
+  2022-04-12-16-15 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/user/login
+  2022-04-12-16-15 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : POST
+  2022-04-12-16-15 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-12-16-15 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.LoginHandle.login
+  2022-04-12-16-15 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : [UserAndPasswd(username=user1, password=6ad14ba9986e3615423dfca256d04e3f)]
+  2022-04-12-16-15 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=VoToken(token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbk5hbWUiOiJ1c2VyMSIsImV4cCI6MTY0OTgzNzcyMywidXNlcklkIjoiMSJ9.IBTPg971671NxVHvRpXvgbIcmrPSwkTT2mC3iCSrpzo))
+  2022-04-12-16-15 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 27
+  2022-04-12-16-15 [http-nio-8080-exec-10] [com.example.demo.repository.SysLogService] [INFO] - 用户登录
+  2022-04-12-16-15 [http-nio-8080-exec-10] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-12 04:15:23
+  2022-04-12-16-15 [http-nio-8080-exec-10] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.LoginHandle
+  2022-04-12-16-15 [http-nio-8080-exec-10] [com.example.demo.repository.SysLogService] [INFO] - login
+  2022-04-12-16-15 [http-nio-8080-exec-10] [com.example.demo.repository.SysLogService] [INFO] - [{"username":"user1","password":"6ad14ba9986e3615423dfca256d04e3f"}]
+  2022-04-12-16-15 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/charts/recordFareCount
+  2022-04-12-16-15 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-12-16-15 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/parking/getCount
+  2022-04-12-16-15 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-12-16-15 [http-nio-8080-exec-9] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/car/getCount
+  2022-04-12-16-15 [http-nio-8080-exec-9] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-12-16-15 [http-nio-8080-exec-9] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-12-16-15 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-12-16-15 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.EchartsHandle.findFareCount
+  2022-04-12-16-15 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-12-16-15 [http-nio-8080-exec-9] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.CarHandle.getCount
+  2022-04-12-16-15 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-12-16-15 [http-nio-8080-exec-9] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-12-16-15 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.ParkingHandle.getCount
+  2022-04-12-16-15 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-12-16-15 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=[15, 30, 45, 15, 55, 225])
+  2022-04-12-16-15 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 6
+  2022-04-12-16-15 [http-nio-8080-exec-1] [com.example.demo.repository.SysLogService] [INFO] - 获取图数据财务扣费信息
+  2022-04-12-16-15 [http-nio-8080-exec-1] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-12 04:15:23
+  2022-04-12-16-15 [http-nio-8080-exec-1] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.EchartsHandle
+  2022-04-12-16-15 [http-nio-8080-exec-1] [com.example.demo.repository.SysLogService] [INFO] - findFareCount
+  2022-04-12-16-15 [http-nio-8080-exec-1] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-12-16-15 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=7)
+  2022-04-12-16-15 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 6
+  2022-04-12-16-15 [http-nio-8080-exec-4] [com.example.demo.repository.SysLogService] [INFO] - 获取正在使用中的车位数
+  2022-04-12-16-15 [http-nio-8080-exec-4] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-12 04:15:23
+  2022-04-12-16-15 [http-nio-8080-exec-9] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=10)
+  2022-04-12-16-15 [http-nio-8080-exec-9] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 6
+  2022-04-12-16-15 [http-nio-8080-exec-4] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.ParkingHandle
+  2022-04-12-16-15 [http-nio-8080-exec-4] [com.example.demo.repository.SysLogService] [INFO] - getCount
+  2022-04-12-16-15 [http-nio-8080-exec-4] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-12-16-15 [http-nio-8080-exec-9] [com.example.demo.repository.SysLogService] [INFO] - 获取车辆数量
+  2022-04-12-16-15 [http-nio-8080-exec-9] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-12 04:15:23
+  2022-04-12-16-15 [http-nio-8080-exec-9] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.CarHandle
+  2022-04-12-16-15 [http-nio-8080-exec-9] [com.example.demo.repository.SysLogService] [INFO] - getCount
+  2022-04-12-16-15 [http-nio-8080-exec-9] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-12-16-15 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/charts/recordEntranceCount
+  2022-04-12-16-15 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-12-16-15 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-12-16-15 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.EchartsHandle.findEntranceCount
+  2022-04-12-16-15 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-12-16-15 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=[9, 2, 4, 2, 7, 2])
+  2022-04-12-16-15 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 2
+  2022-04-12-16-15 [http-nio-8080-exec-2] [com.example.demo.repository.SysLogService] [INFO] - 获取图数据进场车辆信息
+  2022-04-12-16-15 [http-nio-8080-exec-2] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-12 04:15:23
+  2022-04-12-16-15 [http-nio-8080-exec-2] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.EchartsHandle
+  2022-04-12-16-15 [http-nio-8080-exec-2] [com.example.demo.repository.SysLogService] [INFO] - findEntranceCount
+  2022-04-12-16-15 [http-nio-8080-exec-2] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-12-16-15 [http-nio-8080-exec-8] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/charts/recordExitCount
+  2022-04-12-16-15 [http-nio-8080-exec-8] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-12-16-15 [http-nio-8080-exec-8] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-12-16-15 [http-nio-8080-exec-8] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.EchartsHandle.findExitCount
+  2022-04-12-16-15 [http-nio-8080-exec-8] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-12-16-15 [http-nio-8080-exec-8] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=[1, 2, 3, 1, 4, 15])
+  2022-04-12-16-15 [http-nio-8080-exec-8] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 2
+  2022-04-12-16-15 [http-nio-8080-exec-8] [com.example.demo.repository.SysLogService] [INFO] - 获取图数据离场车辆信息
+  2022-04-12-16-15 [http-nio-8080-exec-8] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-12 04:15:23
+  2022-04-12-16-15 [http-nio-8080-exec-8] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.EchartsHandle
+  2022-04-12-16-15 [http-nio-8080-exec-8] [com.example.demo.repository.SysLogService] [INFO] - findExitCount
+  2022-04-12-16-15 [http-nio-8080-exec-8] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-12-16-15 [http-nio-8080-exec-5] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/parking/getCount
+  2022-04-12-16-15 [http-nio-8080-exec-5] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-12-16-15 [http-nio-8080-exec-5] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-12-16-15 [http-nio-8080-exec-5] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.ParkingHandle.getCount
+  2022-04-12-16-15 [http-nio-8080-exec-5] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-12-16-15 [http-nio-8080-exec-5] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=7)
+  2022-04-12-16-15 [http-nio-8080-exec-5] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 2
+  2022-04-12-16-15 [http-nio-8080-exec-5] [com.example.demo.repository.SysLogService] [INFO] - 获取正在使用中的车位数
+  2022-04-12-16-15 [http-nio-8080-exec-5] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-12 04:15:26
+  2022-04-12-16-15 [http-nio-8080-exec-5] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.ParkingHandle
+  2022-04-12-16-15 [http-nio-8080-exec-5] [com.example.demo.repository.SysLogService] [INFO] - getCount
+  2022-04-12-16-15 [http-nio-8080-exec-5] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-12-16-15 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/charts/recordFareCount
+  2022-04-12-16-15 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-12-16-15 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-12-16-15 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.EchartsHandle.findFareCount
+  2022-04-12-16-15 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-12-16-15 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=[15, 30, 45, 15, 55, 225])
+  2022-04-12-16-15 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 2
+  2022-04-12-16-15 [http-nio-8080-exec-7] [com.example.demo.repository.SysLogService] [INFO] - 获取图数据财务扣费信息
+  2022-04-12-16-15 [http-nio-8080-exec-7] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-12 04:15:27
+  2022-04-12-16-15 [http-nio-8080-exec-7] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.EchartsHandle
+  2022-04-12-16-15 [http-nio-8080-exec-7] [com.example.demo.repository.SysLogService] [INFO] - findFareCount
+  2022-04-12-16-15 [http-nio-8080-exec-7] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-12-16-15 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/charts/recordPayCount
+  2022-04-12-16-15 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-12-16-15 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-12-16-15 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.EchartsHandle.findPayCount
+  2022-04-12-16-15 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-12-16-15 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=[60, 0, 0, 100, 10, 60])
+  2022-04-12-16-15 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 3
+  2022-04-12-16-15 [http-nio-8080-exec-10] [com.example.demo.repository.SysLogService] [INFO] - 获取图数据财务用户缴费信息
+  2022-04-12-16-15 [http-nio-8080-exec-10] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-12 04:15:27
+  2022-04-12-16-15 [http-nio-8080-exec-10] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.EchartsHandle
+  2022-04-12-16-15 [http-nio-8080-exec-10] [com.example.demo.repository.SysLogService] [INFO] - findPayCount
+  2022-04-12-16-15 [http-nio-8080-exec-10] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-12-16-15 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/feedback/findAll/0/8
+  2022-04-12-16-15 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-12-16-15 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-12-16-15 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.FeedbackHandle.findAll
+  2022-04-12-16-15 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : [0, 8]
+  2022-04-12-16-15 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=Page 1 of 1 containing com.sun.proxy.$Proxy168 instances)
+  2022-04-12-16-15 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 2
+  2022-04-12-16-15 [http-nio-8080-exec-1] [com.example.demo.repository.SysLogService] [INFO] - 分页查找feedback信息
+  2022-04-12-16-15 [http-nio-8080-exec-1] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-12 04:15:35
+  2022-04-12-16-15 [http-nio-8080-exec-1] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.FeedbackHandle
+  2022-04-12-16-15 [http-nio-8080-exec-1] [com.example.demo.repository.SysLogService] [INFO] - findAll
+  2022-04-12-16-15 [http-nio-8080-exec-1] [com.example.demo.repository.SysLogService] [INFO] - [0, 8]
+  2022-04-12-16-15 [http-nio-8080-exec-9] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/feedback/findAll/0/8
+  2022-04-12-16-15 [http-nio-8080-exec-9] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-12-16-15 [http-nio-8080-exec-9] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-12-16-15 [http-nio-8080-exec-9] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.FeedbackHandle.findAll
+  2022-04-12-16-15 [http-nio-8080-exec-9] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : [0, 8]
+  2022-04-12-16-15 [http-nio-8080-exec-9] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=Page 1 of 1 containing com.sun.proxy.$Proxy168 instances)
+  2022-04-12-16-15 [http-nio-8080-exec-9] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 2
+  2022-04-12-16-15 [http-nio-8080-exec-9] [com.example.demo.repository.SysLogService] [INFO] - 分页查找feedback信息
+  2022-04-12-16-15 [http-nio-8080-exec-9] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-12 04:15:56
+  2022-04-12-16-15 [http-nio-8080-exec-9] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.FeedbackHandle
+  2022-04-12-16-15 [http-nio-8080-exec-9] [com.example.demo.repository.SysLogService] [INFO] - findAll
+  2022-04-12-16-15 [http-nio-8080-exec-9] [com.example.demo.repository.SysLogService] [INFO] - [0, 8]
+  2022-04-12-16-16 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/feedback/findOperate//0/8
+  2022-04-12-16-16 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-12-16-16 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-12-16-16 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.FeedbackHandle.findOperate
+  2022-04-12-16-16 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : [0, 8]
+  2022-04-12-16-16 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=Page 1 of 1 containing com.sun.proxy.$Proxy168 instances)
+  2022-04-12-16-16 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 2
+  2022-04-12-16-16 [http-nio-8080-exec-2] [com.example.demo.repository.SysLogService] [INFO] - 分页查找已处理feedback信息
+  2022-04-12-16-16 [http-nio-8080-exec-2] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-12 04:16:00
+  2022-04-12-16-16 [http-nio-8080-exec-2] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.FeedbackHandle
+  2022-04-12-16-16 [http-nio-8080-exec-2] [com.example.demo.repository.SysLogService] [INFO] - findOperate
+  2022-04-12-16-16 [http-nio-8080-exec-2] [com.example.demo.repository.SysLogService] [INFO] - [0, 8]
+  2022-04-12-16-16 [http-nio-8080-exec-8] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/feedback/findAll//0/8
+  2022-04-12-16-16 [http-nio-8080-exec-8] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-12-16-16 [http-nio-8080-exec-8] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-12-16-16 [http-nio-8080-exec-8] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.FeedbackHandle.findAll
+  2022-04-12-16-16 [http-nio-8080-exec-8] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : [0, 8]
+  2022-04-12-16-16 [http-nio-8080-exec-8] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=Page 1 of 1 containing com.sun.proxy.$Proxy168 instances)
+  2022-04-12-16-16 [http-nio-8080-exec-8] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 1
+  2022-04-12-16-16 [http-nio-8080-exec-8] [com.example.demo.repository.SysLogService] [INFO] - 分页查找feedback信息
+  2022-04-12-16-16 [http-nio-8080-exec-8] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-12 04:16:15
+  2022-04-12-16-16 [http-nio-8080-exec-8] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.FeedbackHandle
+  2022-04-12-16-16 [http-nio-8080-exec-8] [com.example.demo.repository.SysLogService] [INFO] - findAll
+  2022-04-12-16-16 [http-nio-8080-exec-8] [com.example.demo.repository.SysLogService] [INFO] - [0, 8]
+  2022-04-12-18-53 [main] [com.example.demo.DemoApplication] [INFO] - Starting DemoApplication using Java 1.8.0_291 on LAPTOP-8KM3UQQU with PID 3316 (D:\Park\target\classes started by glx in D:\Park)
+  2022-04-12-18-53 [main] [com.example.demo.DemoApplication] [INFO] - No active profile set, falling back to default profiles: default
+  2022-04-12-18-53 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Multiple Spring Data modules found, entering strict repository configuration mode!
+  2022-04-12-18-53 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+  2022-04-12-18-53 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 63 ms. Found 8 JPA repository interfaces.
+  2022-04-12-18-53 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Multiple Spring Data modules found, entering strict repository configuration mode!
+  2022-04-12-18-53 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+  2022-04-12-18-53 [main] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [INFO] - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.AccountSessionRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+  2022-04-12-18-53 [main] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [INFO] - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.CarRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+  2022-04-12-18-53 [main] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [INFO] - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.FeedbackRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+  2022-04-12-18-53 [main] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [INFO] - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ParkRecordRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+  2022-04-12-18-53 [main] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [INFO] - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ParkingRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+  2022-04-12-18-53 [main] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [INFO] - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.PayRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+  2022-04-12-18-53 [main] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [INFO] - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.PointsRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+  2022-04-12-18-53 [main] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [INFO] - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+  2022-04-12-18-53 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+  2022-04-12-18-53 [main] [com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor] [INFO] - Post-processing PropertySource instances
+  2022-04-12-18-53 [main] [com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter] [INFO] - Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+  2022-04-12-18-53 [main] [com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter] [INFO] - Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+  2022-04-12-18-53 [main] [com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter] [INFO] - Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+  2022-04-12-18-53 [main] [com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter] [INFO] - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+  2022-04-12-18-53 [main] [com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter] [INFO] - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+  2022-04-12-18-53 [main] [com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter] [INFO] - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+  2022-04-12-18-53 [main] [com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter] [INFO] - Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+  2022-04-12-18-53 [main] [com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter] [INFO] - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+  2022-04-12-18-53 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+  2022-04-12-18-53 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO] - Root WebApplicationContext: initialization completed in 1848 ms
+  2022-04-12-18-53 [main] [com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver] [INFO] - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+  2022-04-12-18-53 [main] [com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector] [INFO] - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+  2022-04-12-18-53 [main] [com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor] [INFO] - String Encryptor custom Bean not found with name 'jasyptStringEncryptor'. Initializing Default String Encryptor
+  2022-04-12-18-53 [main] [com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor] [INFO] - Encryptor config not found for property jasypt.encryptor.keyObtentionIterations, using default value: 1000
+  2022-04-12-18-53 [main] [com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor] [INFO] - Encryptor config not found for property jasypt.encryptor.poolSize, using default value: 1
+  2022-04-12-18-53 [main] [com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor] [INFO] - Encryptor config not found for property jasypt.encryptor.providerName, using default value: null
+  2022-04-12-18-53 [main] [com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor] [INFO] - Encryptor config not found for property jasypt.encryptor.providerClassName, using default value: null
+  2022-04-12-18-53 [main] [com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor] [INFO] - Encryptor config not found for property jasypt.encryptor.saltGeneratorClassname, using default value: org.jasypt.salt.RandomSaltGenerator
+  2022-04-12-18-53 [main] [com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor] [INFO] - Encryptor config not found for property jasypt.encryptor.ivGeneratorClassname, using default value: org.jasypt.salt.NoOpIVGenerator
+  2022-04-12-18-53 [main] [com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor] [INFO] - Encryptor config not found for property jasypt.encryptor.stringOutputType, using default value: base64
+  2022-04-12-18-53 [main] [com.zaxxer.hikari.HikariDataSource] [INFO] - HikariPool-1 - Starting...
+  2022-04-12-18-53 [main] [com.zaxxer.hikari.HikariDataSource] [INFO] - HikariPool-1 - Start completed.
+  2022-04-12-18-53 [main] [org.hibernate.jpa.internal.util.LogHelper] [INFO] - HHH000204: Processing PersistenceUnitInfo [name: default]
+  2022-04-12-18-53 [main] [org.hibernate.Version] [INFO] - HHH000412: Hibernate ORM core version 5.4.32.Final
+  2022-04-12-18-53 [main] [org.hibernate.annotations.common.Version] [INFO] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+  2022-04-12-18-53 [main] [org.hibernate.dialect.Dialect] [INFO] - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+  2022-04-12-18-53 [main] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [INFO] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+  2022-04-12-18-53 [main] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+  2022-04-12-18-53 [main] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [WARN] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+  2022-04-12-18-53 [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [INFO] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+  2022-04-12-18-53 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+  2022-04-12-18-53 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Context refreshed
+  2022-04-12-18-53 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Found 1 custom documentation plugin(s)
+  2022-04-12-18-53 [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [INFO] - Scanning for api listing references
+  2022-04-12-18-53 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findAllUsingGET_1
+  2022-04-12-18-53 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: saveUsingPOST_1
+  2022-04-12-18-53 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findAllUsingGET_2
+  2022-04-12-18-53 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findByIdUsingGET_1
+  2022-04-12-18-53 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findDetailByCarIdUsingGET_1
+  2022-04-12-18-53 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: getCountUsingGET_1
+  2022-04-12-18-53 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: getNumByUserIdUsingGET_1
+  2022-04-12-18-53 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: saveUsingPOST_2
+  2022-04-12-18-53 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findAllUsingGET_3
+  2022-04-12-18-53 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: getCountUsingGET_2
+  2022-04-12-18-53 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: sendMessUsingPOST_1
+  2022-04-12-18-53 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: deleteByIdUsingDELETE_1
+  2022-04-12-18-53 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findAllUsingGET_4
+  2022-04-12-18-53 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findByIdUsingGET_2
+  2022-04-12-18-53 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: saveUsingPOST_3
+  2022-04-12-18-53 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: updateUsingPOST_1
+  2022-04-12-18-53 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findAllUsingGET_5
+  2022-04-12-18-53 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findUsingGET_1
+  2022-04-12-18-53 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findAllUsingGET_6
+  2022-04-12-18-53 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findByIdUsingGET_3
+  2022-04-12-18-53 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findByPhoneUsingGET_1
+  2022-04-12-18-53 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: getCountUsingGET_3
+  2022-04-12-18-53 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: loginUsingPOST_1
+  2022-04-12-18-53 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: saveUsingPOST_4
+  2022-04-12-18-53 [main] [com.example.demo.DemoApplication] [INFO] - Started DemoApplication in 5.586 seconds (JVM running for 6.307)
+  2022-04-12-19-20 [HikariPool-1 housekeeper] [com.zaxxer.hikari.pool.HikariPool] [WARN] - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m12s195ms370µs200ns).
+  2022-04-12-23-29 [main] [com.example.demo.DemoApplication] [INFO] - Starting DemoApplication using Java 1.8.0_291 on LAPTOP-8KM3UQQU with PID 30464 (D:\Park\target\classes started by glx in D:\Park)
+  2022-04-12-23-29 [main] [com.example.demo.DemoApplication] [INFO] - No active profile set, falling back to default profiles: default
+  2022-04-12-23-29 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Multiple Spring Data modules found, entering strict repository configuration mode!
+  2022-04-12-23-29 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+  2022-04-12-23-29 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 67 ms. Found 8 JPA repository interfaces.
+  2022-04-12-23-29 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Multiple Spring Data modules found, entering strict repository configuration mode!
+  2022-04-12-23-29 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+  2022-04-12-23-29 [main] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [INFO] - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.AccountSessionRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+  2022-04-12-23-29 [main] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [INFO] - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.CarRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+  2022-04-12-23-29 [main] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [INFO] - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.FeedbackRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+  2022-04-12-23-29 [main] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [INFO] - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ParkRecordRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+  2022-04-12-23-29 [main] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [INFO] - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ParkingRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+  2022-04-12-23-29 [main] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [INFO] - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.PayRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+  2022-04-12-23-29 [main] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [INFO] - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.PointsRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+  2022-04-12-23-29 [main] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [INFO] - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+  2022-04-12-23-29 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+  2022-04-12-23-29 [main] [com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor] [INFO] - Post-processing PropertySource instances
+  2022-04-12-23-29 [main] [com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter] [INFO] - Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+  2022-04-12-23-29 [main] [com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter] [INFO] - Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+  2022-04-12-23-29 [main] [com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter] [INFO] - Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+  2022-04-12-23-29 [main] [com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter] [INFO] - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+  2022-04-12-23-29 [main] [com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter] [INFO] - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+  2022-04-12-23-29 [main] [com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter] [INFO] - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+  2022-04-12-23-29 [main] [com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter] [INFO] - Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+  2022-04-12-23-29 [main] [com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter] [INFO] - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+  2022-04-12-23-29 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+  2022-04-12-23-29 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO] - Root WebApplicationContext: initialization completed in 1570 ms
+  2022-04-12-23-29 [main] [com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver] [INFO] - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+  2022-04-12-23-29 [main] [com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector] [INFO] - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+  2022-04-12-23-29 [main] [com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor] [INFO] - String Encryptor custom Bean not found with name 'jasyptStringEncryptor'. Initializing Default String Encryptor
+  2022-04-12-23-29 [main] [com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor] [INFO] - Encryptor config not found for property jasypt.encryptor.keyObtentionIterations, using default value: 1000
+  2022-04-12-23-29 [main] [com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor] [INFO] - Encryptor config not found for property jasypt.encryptor.poolSize, using default value: 1
+  2022-04-12-23-29 [main] [com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor] [INFO] - Encryptor config not found for property jasypt.encryptor.providerName, using default value: null
+  2022-04-12-23-29 [main] [com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor] [INFO] - Encryptor config not found for property jasypt.encryptor.providerClassName, using default value: null
+  2022-04-12-23-29 [main] [com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor] [INFO] - Encryptor config not found for property jasypt.encryptor.saltGeneratorClassname, using default value: org.jasypt.salt.RandomSaltGenerator
+  2022-04-12-23-29 [main] [com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor] [INFO] - Encryptor config not found for property jasypt.encryptor.ivGeneratorClassname, using default value: org.jasypt.salt.NoOpIVGenerator
+  2022-04-12-23-29 [main] [com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor] [INFO] - Encryptor config not found for property jasypt.encryptor.stringOutputType, using default value: base64
+  2022-04-12-23-29 [main] [com.zaxxer.hikari.HikariDataSource] [INFO] - HikariPool-1 - Starting...
+  2022-04-12-23-29 [main] [com.zaxxer.hikari.HikariDataSource] [INFO] - HikariPool-1 - Start completed.
+  2022-04-12-23-29 [main] [org.hibernate.jpa.internal.util.LogHelper] [INFO] - HHH000204: Processing PersistenceUnitInfo [name: default]
+  2022-04-12-23-29 [main] [org.hibernate.Version] [INFO] - HHH000412: Hibernate ORM core version 5.4.32.Final
+  2022-04-12-23-29 [main] [org.hibernate.annotations.common.Version] [INFO] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+  2022-04-12-23-29 [main] [org.hibernate.dialect.Dialect] [INFO] - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+  2022-04-12-23-29 [main] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [INFO] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+  2022-04-12-23-29 [main] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+  2022-04-12-23-29 [main] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [WARN] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+  2022-04-12-23-29 [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [INFO] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+  2022-04-12-23-29 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+  2022-04-12-23-29 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Context refreshed
+  2022-04-12-23-29 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Found 1 custom documentation plugin(s)
+  2022-04-12-23-29 [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [INFO] - Scanning for api listing references
+  2022-04-12-23-29 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findAllUsingGET_1
+  2022-04-12-23-29 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: saveUsingPOST_1
+  2022-04-12-23-29 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findAllUsingGET_2
+  2022-04-12-23-29 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findByIdUsingGET_1
+  2022-04-12-23-29 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findDetailByCarIdUsingGET_1
+  2022-04-12-23-29 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: getCountUsingGET_1
+  2022-04-12-23-29 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: getNumByUserIdUsingGET_1
+  2022-04-12-23-29 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: saveUsingPOST_2
+  2022-04-12-23-29 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findAllUsingGET_3
+  2022-04-12-23-29 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: getCountUsingGET_2
+  2022-04-12-23-29 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: sendMessUsingPOST_1
+  2022-04-12-23-29 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: deleteByIdUsingDELETE_1
+  2022-04-12-23-29 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findAllUsingGET_4
+  2022-04-12-23-29 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findByIdUsingGET_2
+  2022-04-12-23-29 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: saveUsingPOST_3
+  2022-04-12-23-29 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: updateUsingPOST_1
+  2022-04-12-23-29 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findAllUsingGET_5
+  2022-04-12-23-29 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findUsingGET_1
+  2022-04-12-23-29 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findAllUsingGET_6
+  2022-04-12-23-29 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findByIdUsingGET_3
+  2022-04-12-23-29 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findByPhoneUsingGET_1
+  2022-04-12-23-29 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: getCountUsingGET_3
+  2022-04-12-23-29 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: loginUsingPOST_1
+  2022-04-12-23-29 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: saveUsingPOST_4
+  2022-04-12-23-29 [main] [com.example.demo.DemoApplication] [INFO] - Started DemoApplication in 5.403 seconds (JVM running for 6.197)
+  2022-04-12-23-33 [main] [com.example.demo.DemoApplication] [INFO] - Starting DemoApplication using Java 1.8.0_291 on LAPTOP-8KM3UQQU with PID 11860 (D:\Park\target\classes started by glx in D:\Park)
+  2022-04-12-23-33 [main] [com.example.demo.DemoApplication] [INFO] - No active profile set, falling back to default profiles: default
+  2022-04-12-23-33 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Multiple Spring Data modules found, entering strict repository configuration mode!
+  2022-04-12-23-33 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+  2022-04-12-23-33 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 73 ms. Found 8 JPA repository interfaces.
+  2022-04-12-23-33 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Multiple Spring Data modules found, entering strict repository configuration mode!
+  2022-04-12-23-33 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+  2022-04-12-23-33 [main] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [INFO] - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.AccountSessionRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+  2022-04-12-23-33 [main] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [INFO] - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.CarRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+  2022-04-12-23-33 [main] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [INFO] - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.FeedbackRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+  2022-04-12-23-33 [main] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [INFO] - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ParkRecordRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+  2022-04-12-23-33 [main] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [INFO] - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ParkingRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+  2022-04-12-23-33 [main] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [INFO] - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.PayRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+  2022-04-12-23-33 [main] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [INFO] - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.PointsRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+  2022-04-12-23-33 [main] [org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [INFO] - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+  2022-04-12-23-33 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+  2022-04-12-23-33 [main] [com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor] [INFO] - Post-processing PropertySource instances
+  2022-04-12-23-33 [main] [com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter] [INFO] - Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+  2022-04-12-23-33 [main] [com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter] [INFO] - Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+  2022-04-12-23-33 [main] [com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter] [INFO] - Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+  2022-04-12-23-33 [main] [com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter] [INFO] - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+  2022-04-12-23-33 [main] [com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter] [INFO] - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+  2022-04-12-23-33 [main] [com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter] [INFO] - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+  2022-04-12-23-33 [main] [com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter] [INFO] - Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+  2022-04-12-23-33 [main] [com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter] [INFO] - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+  2022-04-12-23-33 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+  2022-04-12-23-33 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO] - Root WebApplicationContext: initialization completed in 1825 ms
+  2022-04-12-23-33 [main] [com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver] [INFO] - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+  2022-04-12-23-33 [main] [com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector] [INFO] - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+  2022-04-12-23-33 [main] [com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor] [INFO] - String Encryptor custom Bean not found with name 'jasyptStringEncryptor'. Initializing Default String Encryptor
+  2022-04-12-23-33 [main] [com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor] [INFO] - Encryptor config not found for property jasypt.encryptor.keyObtentionIterations, using default value: 1000
+  2022-04-12-23-33 [main] [com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor] [INFO] - Encryptor config not found for property jasypt.encryptor.poolSize, using default value: 1
+  2022-04-12-23-33 [main] [com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor] [INFO] - Encryptor config not found for property jasypt.encryptor.providerName, using default value: null
+  2022-04-12-23-33 [main] [com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor] [INFO] - Encryptor config not found for property jasypt.encryptor.providerClassName, using default value: null
+  2022-04-12-23-33 [main] [com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor] [INFO] - Encryptor config not found for property jasypt.encryptor.saltGeneratorClassname, using default value: org.jasypt.salt.RandomSaltGenerator
+  2022-04-12-23-33 [main] [com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor] [INFO] - Encryptor config not found for property jasypt.encryptor.ivGeneratorClassname, using default value: org.jasypt.salt.NoOpIVGenerator
+  2022-04-12-23-33 [main] [com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor] [INFO] - Encryptor config not found for property jasypt.encryptor.stringOutputType, using default value: base64
+  2022-04-12-23-33 [main] [com.zaxxer.hikari.HikariDataSource] [INFO] - HikariPool-1 - Starting...
+  2022-04-12-23-33 [main] [com.zaxxer.hikari.HikariDataSource] [INFO] - HikariPool-1 - Start completed.
+  2022-04-12-23-33 [main] [org.hibernate.jpa.internal.util.LogHelper] [INFO] - HHH000204: Processing PersistenceUnitInfo [name: default]
+  2022-04-12-23-33 [main] [org.hibernate.Version] [INFO] - HHH000412: Hibernate ORM core version 5.4.32.Final
+  2022-04-12-23-33 [main] [org.hibernate.annotations.common.Version] [INFO] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+  2022-04-12-23-33 [main] [org.hibernate.dialect.Dialect] [INFO] - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+  2022-04-12-23-33 [main] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [INFO] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+  2022-04-12-23-33 [main] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+  2022-04-12-23-33 [main] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [WARN] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+  2022-04-12-23-33 [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [INFO] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+  2022-04-12-23-33 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+  2022-04-12-23-33 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Context refreshed
+  2022-04-12-23-33 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Found 1 custom documentation plugin(s)
+  2022-04-12-23-33 [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [INFO] - Scanning for api listing references
+  2022-04-12-23-33 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findAllUsingGET_1
+  2022-04-12-23-33 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: saveUsingPOST_1
+  2022-04-12-23-33 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findAllUsingGET_2
+  2022-04-12-23-33 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findByIdUsingGET_1
+  2022-04-12-23-33 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findDetailByCarIdUsingGET_1
+  2022-04-12-23-33 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: getCountUsingGET_1
+  2022-04-12-23-33 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: getNumByUserIdUsingGET_1
+  2022-04-12-23-33 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: saveUsingPOST_2
+  2022-04-12-23-33 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findAllUsingGET_3
+  2022-04-12-23-33 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: getCountUsingGET_2
+  2022-04-12-23-33 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: sendMessUsingPOST_1
+  2022-04-12-23-33 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: deleteByIdUsingDELETE_1
+  2022-04-12-23-33 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findAllUsingGET_4
+  2022-04-12-23-33 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findByIdUsingGET_2
+  2022-04-12-23-33 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: saveUsingPOST_3
+  2022-04-12-23-33 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: updateUsingPOST_1
+  2022-04-12-23-33 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findAllUsingGET_5
+  2022-04-12-23-33 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findUsingGET_1
+  2022-04-12-23-33 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findAllUsingGET_6
+  2022-04-12-23-33 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findByIdUsingGET_3
+  2022-04-12-23-33 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: findByPhoneUsingGET_1
+  2022-04-12-23-33 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: getCountUsingGET_3
+  2022-04-12-23-33 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: loginUsingPOST_1
+  2022-04-12-23-33 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: saveUsingPOST_4
+  2022-04-12-23-33 [main] [com.example.demo.DemoApplication] [INFO] - Started DemoApplication in 5.541 seconds (JVM running for 6.349)
+  2022-04-12-23-34 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+  2022-04-12-23-34 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 1 ms
+  2022-04-12-23-34 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/car/getCount
+  2022-04-12-23-34 [http-nio-8080-exec-3] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/charts/recordFareCount
+  2022-04-12-23-34 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/parking/getCount
+  2022-04-12-23-34 [http-nio-8080-exec-3] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-12-23-34 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-12-23-34 [http-nio-8080-exec-3] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-12-23-34 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-12-23-34 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-12-23-34 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-12-23-34 [http-nio-8080-exec-3] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.EchartsHandle.findFareCount
+  2022-04-12-23-34 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.CarHandle.getCount
+  2022-04-12-23-34 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.ParkingHandle.getCount
+  2022-04-12-23-34 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-12-23-34 [http-nio-8080-exec-3] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-12-23-34 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-12-23-34 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=10)
+  2022-04-12-23-34 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 14
+  2022-04-12-23-34 [http-nio-8080-exec-1] [com.example.demo.repository.SysLogService] [INFO] - 获取车辆数量
+  2022-04-12-23-34 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=7)
+  2022-04-12-23-34 [http-nio-8080-exec-1] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-12 11:34:10
+  2022-04-12-23-34 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 14
+  2022-04-12-23-34 [http-nio-8080-exec-1] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.CarHandle
+  2022-04-12-23-34 [http-nio-8080-exec-1] [com.example.demo.repository.SysLogService] [INFO] - getCount
+  2022-04-12-23-34 [http-nio-8080-exec-1] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-12-23-34 [http-nio-8080-exec-4] [com.example.demo.repository.SysLogService] [INFO] - 获取正在使用中的车位数
+  2022-04-12-23-34 [http-nio-8080-exec-4] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-12 11:34:10
+  2022-04-12-23-34 [http-nio-8080-exec-4] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.ParkingHandle
+  2022-04-12-23-34 [http-nio-8080-exec-4] [com.example.demo.repository.SysLogService] [INFO] - getCount
+  2022-04-12-23-34 [http-nio-8080-exec-4] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-12-23-34 [http-nio-8080-exec-3] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=[15, 30, 45, 15, 55, 225])
+  2022-04-12-23-34 [http-nio-8080-exec-3] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 21
+  2022-04-12-23-34 [http-nio-8080-exec-3] [com.example.demo.repository.SysLogService] [INFO] - 获取图数据财务扣费信息
+  2022-04-12-23-34 [http-nio-8080-exec-3] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-12 11:34:10
+  2022-04-12-23-34 [http-nio-8080-exec-3] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.EchartsHandle
+  2022-04-12-23-34 [http-nio-8080-exec-3] [com.example.demo.repository.SysLogService] [INFO] - findFareCount
+  2022-04-12-23-34 [http-nio-8080-exec-3] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-12-23-34 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/charts/recordEntranceCount
+  2022-04-12-23-34 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-12-23-34 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-12-23-34 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.EchartsHandle.findEntranceCount
+  2022-04-12-23-34 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-12-23-34 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=[9, 2, 4, 2, 7, 2])
+  2022-04-12-23-34 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 3
+  2022-04-12-23-34 [http-nio-8080-exec-6] [com.example.demo.repository.SysLogService] [INFO] - 获取图数据进场车辆信息
+  2022-04-12-23-34 [http-nio-8080-exec-6] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-12 11:34:10
+  2022-04-12-23-34 [http-nio-8080-exec-6] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.EchartsHandle
+  2022-04-12-23-34 [http-nio-8080-exec-6] [com.example.demo.repository.SysLogService] [INFO] - findEntranceCount
+  2022-04-12-23-34 [http-nio-8080-exec-6] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-12-23-34 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/charts/recordExitCount
+  2022-04-12-23-34 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-12-23-34 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-12-23-34 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.EchartsHandle.findExitCount
+  2022-04-12-23-34 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-12-23-34 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=[1, 2, 3, 1, 4, 15])
+  2022-04-12-23-34 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 5
+  2022-04-12-23-34 [http-nio-8080-exec-7] [com.example.demo.repository.SysLogService] [INFO] - 获取图数据离场车辆信息
+  2022-04-12-23-34 [http-nio-8080-exec-7] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-12 11:34:10
+  2022-04-12-23-34 [http-nio-8080-exec-7] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.EchartsHandle
+  2022-04-12-23-34 [http-nio-8080-exec-7] [com.example.demo.repository.SysLogService] [INFO] - findExitCount
+  2022-04-12-23-34 [http-nio-8080-exec-7] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-12-23-34 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/user/findAll/0/8
+  2022-04-12-23-34 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-12-23-34 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-12-23-34 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.UserHandle.findAll
+  2022-04-12-23-34 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : [0, 8]
+  2022-04-12-23-34 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=Page 1 of 3 containing com.example.demo.entity.User instances)
+  2022-04-12-23-34 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 38
+  2022-04-12-23-34 [http-nio-8080-exec-4] [com.example.demo.repository.SysLogService] [INFO] - 分页查找user信息
+  2022-04-12-23-34 [http-nio-8080-exec-4] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-12 11:34:11
+  2022-04-12-23-34 [http-nio-8080-exec-4] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.UserHandle
+  2022-04-12-23-34 [http-nio-8080-exec-4] [com.example.demo.repository.SysLogService] [INFO] - findAll
+  2022-04-12-23-34 [http-nio-8080-exec-4] [com.example.demo.repository.SysLogService] [INFO] - [0, 8]
+  2022-04-12-23-34 [http-nio-8080-exec-8] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/car/findAll1/0/8
+  2022-04-12-23-34 [http-nio-8080-exec-8] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-12-23-34 [http-nio-8080-exec-8] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-12-23-34 [http-nio-8080-exec-8] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.CarHandle.findAll1
+  2022-04-12-23-34 [http-nio-8080-exec-8] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : [0, 8]
+  2022-04-12-23-34 [http-nio-8080-exec-8] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=Page 1 of 2 containing com.sun.proxy.$Proxy164 instances)
+  2022-04-12-23-34 [http-nio-8080-exec-8] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 7
+  2022-04-12-23-34 [http-nio-8080-exec-8] [com.example.demo.repository.SysLogService] [INFO] - 获取车辆记录信息1
+  2022-04-12-23-34 [http-nio-8080-exec-8] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-12 11:34:12
+  2022-04-12-23-34 [http-nio-8080-exec-8] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.CarHandle
+  2022-04-12-23-34 [http-nio-8080-exec-8] [com.example.demo.repository.SysLogService] [INFO] - findAll1
+  2022-04-12-23-34 [http-nio-8080-exec-8] [com.example.demo.repository.SysLogService] [INFO] - [0, 8]
+  2022-04-12-23-34 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/parking/getCount
+  2022-04-12-23-34 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-12-23-34 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-12-23-34 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.ParkingHandle.getCount
+  2022-04-12-23-34 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-12-23-34 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=7)
+  2022-04-12-23-34 [http-nio-8080-exec-2] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 2
+  2022-04-12-23-34 [http-nio-8080-exec-2] [com.example.demo.repository.SysLogService] [INFO] - 获取正在使用中的车位数
+  2022-04-12-23-34 [http-nio-8080-exec-2] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-12 11:34:15
+  2022-04-12-23-34 [http-nio-8080-exec-2] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.ParkingHandle
+  2022-04-12-23-34 [http-nio-8080-exec-2] [com.example.demo.repository.SysLogService] [INFO] - getCount
+  2022-04-12-23-34 [http-nio-8080-exec-2] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-12-23-34 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/charts/recordFareCount
+  2022-04-12-23-34 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-12-23-34 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-12-23-34 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.EchartsHandle.findFareCount
+  2022-04-12-23-34 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-12-23-34 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=[15, 30, 45, 15, 55, 225])
+  2022-04-12-23-34 [http-nio-8080-exec-1] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 3
+  2022-04-12-23-34 [http-nio-8080-exec-1] [com.example.demo.repository.SysLogService] [INFO] - 获取图数据财务扣费信息
+  2022-04-12-23-34 [http-nio-8080-exec-1] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-12 11:34:16
+  2022-04-12-23-34 [http-nio-8080-exec-1] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.EchartsHandle
+  2022-04-12-23-34 [http-nio-8080-exec-1] [com.example.demo.repository.SysLogService] [INFO] - findFareCount
+  2022-04-12-23-34 [http-nio-8080-exec-1] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-12-23-34 [http-nio-8080-exec-3] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/charts/recordPayCount
+  2022-04-12-23-34 [http-nio-8080-exec-3] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-12-23-34 [http-nio-8080-exec-3] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-12-23-34 [http-nio-8080-exec-3] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.EchartsHandle.findPayCount
+  2022-04-12-23-34 [http-nio-8080-exec-3] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-12-23-34 [http-nio-8080-exec-3] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=[60, 0, 0, 100, 10, 60])
+  2022-04-12-23-34 [http-nio-8080-exec-3] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 5
+  2022-04-12-23-34 [http-nio-8080-exec-3] [com.example.demo.repository.SysLogService] [INFO] - 获取图数据财务用户缴费信息
+  2022-04-12-23-34 [http-nio-8080-exec-3] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-12 11:34:16
+  2022-04-12-23-34 [http-nio-8080-exec-3] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.EchartsHandle
+  2022-04-12-23-34 [http-nio-8080-exec-3] [com.example.demo.repository.SysLogService] [INFO] - findPayCount
+  2022-04-12-23-34 [http-nio-8080-exec-3] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-12-23-34 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/feedback/findAll/0/8
+  2022-04-12-23-34 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-12-23-34 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-12-23-34 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.FeedbackHandle.findAll
+  2022-04-12-23-34 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : [0, 8]
+  2022-04-12-23-34 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=Page 1 of 1 containing com.sun.proxy.$Proxy167 instances)
+  2022-04-12-23-34 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 5
+  2022-04-12-23-34 [http-nio-8080-exec-6] [com.example.demo.repository.SysLogService] [INFO] - 分页查找feedback信息
+  2022-04-12-23-34 [http-nio-8080-exec-6] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-12 11:34:19
+  2022-04-12-23-34 [http-nio-8080-exec-6] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.FeedbackHandle
+  2022-04-12-23-34 [http-nio-8080-exec-6] [com.example.demo.repository.SysLogService] [INFO] - findAll
+  2022-04-12-23-34 [http-nio-8080-exec-6] [com.example.demo.repository.SysLogService] [INFO] - [0, 8]
+  2022-04-12-23-34 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/feedback/findAll/0/8
+  2022-04-12-23-34 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-12-23-34 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-12-23-34 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.FeedbackHandle.findAll
+  2022-04-12-23-34 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : [0, 8]
+  2022-04-12-23-34 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=Page 1 of 1 containing com.sun.proxy.$Proxy167 instances)
+  2022-04-12-23-34 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 2
+  2022-04-12-23-34 [http-nio-8080-exec-7] [com.example.demo.repository.SysLogService] [INFO] - 分页查找feedback信息
+  2022-04-12-23-34 [http-nio-8080-exec-7] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-12 11:34:55
+  2022-04-12-23-34 [http-nio-8080-exec-7] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.FeedbackHandle
+  2022-04-12-23-34 [http-nio-8080-exec-7] [com.example.demo.repository.SysLogService] [INFO] - findAll
+  2022-04-12-23-34 [http-nio-8080-exec-7] [com.example.demo.repository.SysLogService] [INFO] - [0, 8]
+  2022-04-12-23-37 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/feedback/findOperate//0/8
+  2022-04-12-23-37 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-12-23-37 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-12-23-37 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.FeedbackHandle.findOperate
+  2022-04-12-23-37 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : [0, 8]
+  2022-04-12-23-37 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=Page 1 of 1 containing com.sun.proxy.$Proxy167 instances)
+  2022-04-12-23-37 [http-nio-8080-exec-6] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 2
+  2022-04-12-23-37 [http-nio-8080-exec-6] [com.example.demo.repository.SysLogService] [INFO] - 分页查找已处理feedback信息
+  2022-04-12-23-37 [http-nio-8080-exec-6] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-12 11:37:17
+  2022-04-12-23-37 [http-nio-8080-exec-6] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.FeedbackHandle
+  2022-04-12-23-37 [http-nio-8080-exec-6] [com.example.demo.repository.SysLogService] [INFO] - findOperate
+  2022-04-12-23-37 [http-nio-8080-exec-6] [com.example.demo.repository.SysLogService] [INFO] - [0, 8]
+  2022-04-12-23-38 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/charts/recordFareCount
+  2022-04-12-23-38 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-12-23-38 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-12-23-38 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.EchartsHandle.findFareCount
+  2022-04-12-23-38 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-12-23-38 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=[15, 30, 45, 15, 55, 225])
+  2022-04-12-23-38 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 3
+  2022-04-12-23-38 [http-nio-8080-exec-4] [com.example.demo.repository.SysLogService] [INFO] - 获取图数据财务扣费信息
+  2022-04-12-23-38 [http-nio-8080-exec-4] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-12 11:38:18
+  2022-04-12-23-38 [http-nio-8080-exec-4] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.EchartsHandle
+  2022-04-12-23-38 [http-nio-8080-exec-4] [com.example.demo.repository.SysLogService] [INFO] - findFareCount
+  2022-04-12-23-38 [http-nio-8080-exec-4] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-12-23-38 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/charts/recordPayCount
+  2022-04-12-23-38 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-12-23-38 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-12-23-38 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.EchartsHandle.findPayCount
+  2022-04-12-23-38 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-12-23-38 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=[60, 0, 0, 100, 10, 60])
+  2022-04-12-23-38 [http-nio-8080-exec-10] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 2
+  2022-04-12-23-38 [http-nio-8080-exec-10] [com.example.demo.repository.SysLogService] [INFO] - 获取图数据财务用户缴费信息
+  2022-04-12-23-38 [http-nio-8080-exec-10] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-12 11:38:18
+  2022-04-12-23-38 [http-nio-8080-exec-10] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.EchartsHandle
+  2022-04-12-23-38 [http-nio-8080-exec-10] [com.example.demo.repository.SysLogService] [INFO] - findPayCount
+  2022-04-12-23-38 [http-nio-8080-exec-10] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-12-23-38 [http-nio-8080-exec-5] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/parking/getCount
+  2022-04-12-23-38 [http-nio-8080-exec-5] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-12-23-38 [http-nio-8080-exec-8] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/car/getCount
+  2022-04-12-23-38 [http-nio-8080-exec-5] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-12-23-38 [http-nio-8080-exec-8] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-12-23-38 [http-nio-8080-exec-5] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.ParkingHandle.getCount
+  2022-04-12-23-38 [http-nio-8080-exec-8] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-12-23-38 [http-nio-8080-exec-5] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-12-23-38 [http-nio-8080-exec-8] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.CarHandle.getCount
+  2022-04-12-23-38 [http-nio-8080-exec-8] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-12-23-38 [http-nio-8080-exec-9] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/charts/recordFareCount
+  2022-04-12-23-38 [http-nio-8080-exec-9] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-12-23-38 [http-nio-8080-exec-9] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-12-23-38 [http-nio-8080-exec-9] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.EchartsHandle.findFareCount
+  2022-04-12-23-38 [http-nio-8080-exec-9] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-12-23-38 [http-nio-8080-exec-5] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=7)
+  2022-04-12-23-38 [http-nio-8080-exec-5] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 3
+  2022-04-12-23-38 [http-nio-8080-exec-5] [com.example.demo.repository.SysLogService] [INFO] - 获取正在使用中的车位数
+  2022-04-12-23-38 [http-nio-8080-exec-5] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-12 11:38:20
+  2022-04-12-23-38 [http-nio-8080-exec-5] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.ParkingHandle
+  2022-04-12-23-38 [http-nio-8080-exec-5] [com.example.demo.repository.SysLogService] [INFO] - getCount
+  2022-04-12-23-38 [http-nio-8080-exec-5] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-12-23-38 [http-nio-8080-exec-8] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=10)
+  2022-04-12-23-38 [http-nio-8080-exec-8] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 4
+  2022-04-12-23-38 [http-nio-8080-exec-8] [com.example.demo.repository.SysLogService] [INFO] - 获取车辆数量
+  2022-04-12-23-38 [http-nio-8080-exec-8] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-12 11:38:20
+  2022-04-12-23-38 [http-nio-8080-exec-8] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.CarHandle
+  2022-04-12-23-38 [http-nio-8080-exec-8] [com.example.demo.repository.SysLogService] [INFO] - getCount
+  2022-04-12-23-38 [http-nio-8080-exec-8] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-12-23-38 [http-nio-8080-exec-9] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=[15, 30, 45, 15, 55, 225])
+  2022-04-12-23-38 [http-nio-8080-exec-9] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 4
+  2022-04-12-23-38 [http-nio-8080-exec-9] [com.example.demo.repository.SysLogService] [INFO] - 获取图数据财务扣费信息
+  2022-04-12-23-38 [http-nio-8080-exec-9] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-12 11:38:20
+  2022-04-12-23-38 [http-nio-8080-exec-9] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.EchartsHandle
+  2022-04-12-23-38 [http-nio-8080-exec-9] [com.example.demo.repository.SysLogService] [INFO] - findFareCount
+  2022-04-12-23-38 [http-nio-8080-exec-9] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-12-23-38 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/charts/recordEntranceCount
+  2022-04-12-23-38 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-12-23-38 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-12-23-38 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.EchartsHandle.findEntranceCount
+  2022-04-12-23-38 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-12-23-38 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=[9, 2, 4, 2, 7, 2])
+  2022-04-12-23-38 [http-nio-8080-exec-4] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 1
+  2022-04-12-23-38 [http-nio-8080-exec-4] [com.example.demo.repository.SysLogService] [INFO] - 获取图数据进场车辆信息
+  2022-04-12-23-38 [http-nio-8080-exec-4] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-12 11:38:20
+  2022-04-12-23-38 [http-nio-8080-exec-4] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.EchartsHandle
+  2022-04-12-23-38 [http-nio-8080-exec-4] [com.example.demo.repository.SysLogService] [INFO] - findEntranceCount
+  2022-04-12-23-38 [http-nio-8080-exec-4] [com.example.demo.repository.SysLogService] [INFO] - []
+  2022-04-12-23-38 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - URL : http://localhost:8080/charts/recordExitCount
+  2022-04-12-23-38 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - HTTP_METHOD : GET
+  2022-04-12-23-38 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - IP : 0:0:0:0:0:0:0:1
+  2022-04-12-23-38 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - CLASS_METHOD : com.example.demo.controller.EchartsHandle.findExitCount
+  2022-04-12-23-38 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - ARGS : []
+  2022-04-12-23-38 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - RESPONSE : ResultResponse(code=20000, message=SUCCESS, data=[1, 2, 3, 1, 4, 15])
+  2022-04-12-23-38 [http-nio-8080-exec-7] [com.example.demo.annotation.SystemLogAspect] [INFO] - SPEND TIME : 2
+  2022-04-12-23-38 [http-nio-8080-exec-7] [com.example.demo.repository.SysLogService] [INFO] - 获取图数据离场车辆信息
+  2022-04-12-23-38 [http-nio-8080-exec-7] [com.example.demo.repository.SysLogService] [INFO] - 2022-04-12 11:38:20
+  2022-04-12-23-38 [http-nio-8080-exec-7] [com.example.demo.repository.SysLogService] [INFO] - com.example.demo.controller.EchartsHandle
+  2022-04-12-23-38 [http-nio-8080-exec-7] [com.example.demo.repository.SysLogService] [INFO] - findExitCount
+  2022-04-12-23-38 [http-nio-8080-exec-7] [com.example.demo.repository.SysLogService] [INFO] - []
+  

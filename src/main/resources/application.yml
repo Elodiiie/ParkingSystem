@@ -2,8 +2,8 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root
-    password: glx000630
+    username: ENC(PU+868DKCkBB2ltWNHDIcA==)
+    password: ENC(BW2rUWsVflKabBLnOtlAvt1xlgmJleyC)
     url: jdbc:mysql://127.0.0.1:3306/parkingtest?characterEncoding=utf-8&zeroDateTimeBehavior=CONVERT_TO_NULL
   jpa:
     show-sql: true
@@ -28,5 +28,10 @@ server:
 spring.jackson.date-format: yyyy-MM-dd HH:mm:ss
 spring.jackson.time-zone: GMT+8
 spring.jpa.hibernate.naming.physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+jasypt:
+  encryptor:
+    algorithm: PBEWithMD5AndDES
+    iv-generator-classname: org.jasypt.iv.NoIvGenerator
+    password: XyO8frEh0i4dX14S
 
 

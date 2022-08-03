@@ -1,0 +1,51 @@
+@startuml
+hide footbox
+control     hyperlpr     as Hyperlpr
+Hyperlpr -> recognizeProgram :video
+activate recognizeProgram
+recognizeProgram -> recognizeProgram:getConfidence
+
+loop 每5帧取一次
+    opt 有效数据
+	alt 系统不存在该车辆
+	    opt repeat_shortPeriod != 0
+		recognizeProgram-> Exceptioncar:addExceptioncar
+		activate Exceptioncar
+		deactivate Exceptioncar
+	    end
+	else 系统存在该车辆
+	alt repeat_shortPeriod == 0
+	    recognizeProgram-> recognizeProgram:updateLatestRecognize
+    	else 有效数据
+	    recognizeProgram -> CarHandle :getCarid
+	    activate CarHandle
+	    CarHandle --> recognizeProgram :carid
+	    deactivate CarHandle
+	    recognizeProgram -> ParkingHandle :existParkingRecord
+	    activate ParkingHandle
+	    ParkingHandle --> recognizeProgram :existResult
+	    alt existResult == 0 车辆入场
+		recognizeProgram -> ParkingHandle :addParkingRecord
+		recognizeProgram -> ParkRecordHandle : addParkRecord
+		activate ParkRecordHandle
+		deactivate ParkRecordHandle
+		recognizeProgram -\\ ZhenziSmsClient :sendMessage
+	    else 车辆离场
+                recognizeProgram -> ParkingHandle :deleteParkingRecord
+		recognizeProgram -> ParkRecordHandle : updateParkRecord
+		activate ParkRecordHandle
+		deactivate ParkRecordHandle
+		recognizeProgram -> PointsHandle : addPoints
+		activate PointsHandle
+		PointsHandle -> PointsHandle :getPoints
+		PointsHandle -->recognizeProgram :pointsResult
+		deactivate PointsHandle
+		recognizeProgram -\\ ZhenziSmsClient :sendMessage
+	    end
+	    deactivate ParkingHandle
+	end
+	end
+    end
+end
+deactivate recognizeProgram
+@enduml

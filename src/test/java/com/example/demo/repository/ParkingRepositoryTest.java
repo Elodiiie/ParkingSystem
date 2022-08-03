@@ -73,7 +73,7 @@ class ParkingRepositoryTest {//!车牌数据设为unique
     @Test
     void findParkingDetailByCarlicense(){
 //        ParkingDetail detail = parkingRepository.findParkingDetailByCarlicense("粤CLS54Q");
-        ParkingDetail detail = parkingRepository.findParkingDetailByCarlicense("粤CLS54A");
+        ParkingDetail detail = parkingRepository.findParkingDetailByCarlicense("粤B78ALW");
         if(detail!=null){
             System.out.println(detail.getCarlicense());
             System.out.println(detail.getEntrancetime());
@@ -92,6 +92,7 @@ class ParkingRepositoryTest {//!车牌数据设为unique
     }
     @Test
     void getCarDetialBywx_overall(){
-        System.out.println(parkingRepository.getCarDetialBywx_overall("粤C546WA").getTime());
+        System.out.println(parkingRepository.getCarDetailByWx_in("粤CLS54Q").getTime());
+        System.out.println(parkingRepository.getCarDetailByWx_out("粤B78ALW").getTime());
     }
 }

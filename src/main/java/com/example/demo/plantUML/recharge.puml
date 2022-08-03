@@ -1,0 +1,21 @@
+@startuml
+hide footbox
+actor       user       as user
+autonumber
+user -> PayHandle : find
+activate PayHandle
+PayHandle --> user : balance
+deactivate PayHandle
+
+autonumber
+user -> PayHandle : recharge
+activate PayHandle
+PayHandle -> UserHandle:getUserinfo
+activate UserHandle
+UserHandle --> PayHandle:userinfo
+PayHandle ->UserHandle:updateBalance
+UserHandle --> PayHandle:updateResult
+deactivate UserHandle
+PayHandle -->user:rechargeResult
+deactivate PayHandle
+@enduml

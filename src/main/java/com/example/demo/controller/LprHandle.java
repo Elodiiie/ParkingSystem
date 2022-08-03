@@ -31,49 +31,6 @@ import java.util.HashMap;
 @Controller
 @RequestMapping("/recognition")
 public class LprHandle {
-    @ApiOperation(value = "车牌识别",notes = "调用本地python识别")
-    @PostMapping("/lpr")
-    @Async
-    public int main(String[] args){
-        try{
-            System.out.println("start");
-            Process pr = Runtime.getRuntime().exec("cmd /k start D:\\Anaconda\\anaconda3\\envs\\hyperLPR\\python.exe D:\\hyperlpr\\HyperLPR-Meow-master\\lpr_video.py C:\\Users\\98379\\Desktop\\202108021555.mp4");
-            BufferedReader in = new BufferedReader(new
-                    InputStreamReader(pr.getInputStream()));
-            String line;
-            System.out.println(pr.getInputStream());
-            while ((line = in.readLine()) != null) {
-            }
-            in.close();
-            pr.waitFor();
-            System.out.println("end");
-            return 1;
-        } catch (Exception e){
-            e.printStackTrace();
-            return 2;
-        }
-
-    }
-//    @GetMapping("/test/{license}/{date}")
-//    @ResponseBody
-//    public String[] test(@PathVariable("license") String[] license,@PathVariable("date") String[] date){
-//        System.out.println(license.length);
-//        for(int i=0;i<license.length;i++) {
-//            System.out.println(license[i]);
-//            System.out.println(date[i]);
-//        }
-//
-//        return license;
-//    }
-//    @PostMapping("/test")
-//    @ResponseBody
-//    public String[] test(@RequestParam("license") String[] license){
-//        System.out.println(license.length);
-//        for(int i=0;i<license.length;i++) {
-//            System.out.println(license[i]);
-//        }
-//        return license;
-//    }
     @Autowired
     private UserRepository userRepository;
     @Autowired
@@ -105,7 +62,7 @@ public class LprHandle {
                 if(count<=3){//为了保证不受误识别的影响，连续出现三次则作为确定出现车辆。
                     parkingmap.replace(license[i],count+1);
                 }else{
-                    if(parkingRepository.existsByCarlicense(license[i])==0){//车辆不在停车场内
+                    if(!parkingRepository.existsByCarlicense(license[i])){//车辆不在停车场内
                         parkingRepository.save(lpr);
                     }
                 }
@@ -136,7 +93,7 @@ public class LprHandle {
                 if(count<=3){//为了保证不受误识别的影响，连续出现三次则作为确定出现车辆。
                     parkingmap.replace(license[i],count+1);
                 }else{
-                    if(parkingRepository.existsByCarlicense(license[i])==1){//车辆在停车场内
+                    if(parkingRepository.existsByCarlicense(license[i])){//车辆在停车场内
                         int id = parkingRepository.findByCarlicense(license[i]).getParkingid();
                         Date entranceTime = parkingRepository.findByCarlicense(license[i]).getEntrancetime();
                         parkingRepository.deleteById(id);
@@ -195,6 +152,26 @@ public class LprHandle {
             return 1;
         }else{
             return 0;
+        }
+    }
+    @ApiOperation(value = "车牌识别",notes = "调用本地python识别")
+    @PostMapping("/lpr")
+    public int main(){
+        try{
+            System.out.println("start");
+            Process pr = Runtime.getRuntime().exec("cmd /k start D:\\Anaconda\\anaconda3\\envs\\hyperLPR\\python.exe D:\\hyperlpr\\HyperLPR-Meow-master\\lpr_video.py C:\\Users\\98379\\Desktop\\test.mp4");
+            BufferedReader in = new BufferedReader(new
+                    InputStreamReader(pr.getInputStream()));
+            String line;
+            System.out.println(pr.getInputStream());
+            while ((line = in.readLine()) != null) {
+            }
+            in.close();
+            pr.waitFor();
+            return 1;
+        } catch (Exception e){
+            e.printStackTrace();
+            return 2;
         }
     }
 

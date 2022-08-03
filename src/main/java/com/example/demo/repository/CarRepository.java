@@ -24,6 +24,8 @@ public interface CarRepository extends JpaRepository<Car,Integer> {
     CarDetail findDetailByCarid(int carid);
     @Query(value = "select carid,username,carlicense,vip from Car,User where user.userid=car.userid ",nativeQuery = true)
     Page<CarDetail> findAll1(Pageable pageable);
+    @Query(value = "select carid,username,phone,carlicense,vip from Car,User where user.userid=car.userid ",nativeQuery = true)
+    List<CarDetail> find();
     @Query(value = "select carid,username,carlicense,vip from Car,User where user.userid=car.userid and carlicense=?1",nativeQuery = true)
     CarDetail findDetailByCarlicense(String carlicense);
     @Query(value = "select count(distinct carlicense) from car" , nativeQuery = true)
@@ -33,4 +35,11 @@ public interface CarRepository extends JpaRepository<Car,Integer> {
     //查看用户车辆数
     @Query(value = "select count(distinct carid) from car where userid=?1",nativeQuery = true)
     Integer countByUserid(int userid);
+    //去除用户自身删除车辆
+    @Query(value = "select count(distinct carid) from car where userid=?1 and existToUser = 1",nativeQuery = true)
+    Integer countByUseridByUser(int userid);
+
+    Car findByCaridIs(int carid);
+    @Query(value = "select count(distinct carid) from car where carlicense=?1 and existToUser = ?2",nativeQuery = true)
+    Integer findByCarlicenseEqualsAndAndExistToUserEquals(String carlicense,int existToUser);
 }

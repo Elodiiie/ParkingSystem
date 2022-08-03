@@ -1,0 +1,47 @@
+@startuml
+hide footbox
+actor       admin       as Admin
+
+autonumber
+Admin -> PayHandle : findAll
+activate PayHandle
+PayHandle--> Admin : payDetail
+deactivate PayHandle
+
+autonumber
+Admin -> PayHandle: addPayDetail
+activate PayHandle
+PayHandle ->UserHandle: getBalance
+activate UserHandle
+UserHandle --> PayHandle: oldBalance
+PayHandle -> UserHandle: updateBalance
+UserHandle --> PayHandle: updateResult
+deactivate UserHandle
+deactivate PayHandle
+
+autonumber
+Admin -> PayHandle: updatePayDetail
+activate PayHandle
+PayHandle ->UserHandle: getLastFare
+activate UserHandle
+UserHandle --> PayHandle: lastFare
+PayHandle ->UserHandle: getBalance
+UserHandle --> PayHandle: oldBalance
+PayHandle -> UserHandle: updateBalance
+UserHandle --> PayHandle: updateResult
+deactivate UserHandle
+deactivate PayHandle
+
+autonumber
+Admin -> EchartsHandle:findPayCount
+activate EchartsHandle
+EchartsHandle -> EchartsHandle:getCurrentMonth6
+EchartsHandle -> PayHandle:getFareCount
+activate PayHandle
+PayHandle --> EchartsHandle:fareCount
+deactivate PayHandle
+EchartsHandle--> Admin:graphData
+deactivate EchartsHandle
+
+deactivate PayHandle
+@enduml

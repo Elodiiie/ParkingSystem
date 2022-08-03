@@ -1,4 +1,4 @@
-package com.example.demo.vo;
+package com.example.demo.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,13 +7,14 @@ import lombok.ToString;
 
 /**
  * @Author: Elodie
- * @Date: 2021/10/24 22:40
+ * @Date: 2021/9/17 21:50
  */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class UserAndPhone {
+public class UserAndPasswd {
     private String username;
-    private String phone;
+    //@JsonIgnore// 序列化成json的时候，该属性不能序列化
+    private String password;
 }

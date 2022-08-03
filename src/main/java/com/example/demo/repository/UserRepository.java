@@ -49,23 +49,13 @@ public interface UserRepository extends JpaRepository<User,Integer> {
     List<User> findByPhoneIsLike(String phone);
     // 手机具体查找
     User findByPhone(String phone);
+    Boolean existsByPhoneIs(String phone);
     // 统计用户
     @Query(value = "select count(distinct username) from user" , nativeQuery = true)
     Integer getCount();
 
-    //添加用户
-//    public int addUser(User user);
-//    //返回userId
-//    public List<User> searchUserInfo(String userName);
-//    //注销用户
-//    public int deleteUser(Integer userId);
-//    //返回用户信息
-//    public List<User> searchUser(Integer userId);
-//    //更新用户电话
-//    public int updateUser(User user);
-//    //修改邮箱
-//    public int updateUserEmail(User user);
-//    更改密码
+    User getUserByUsernameIsAndPasswordIs(String username,String password);
+
     @Modifying
     @Transactional
     @Query(value = "update User set password = ?2 where userid=?1",nativeQuery = true)

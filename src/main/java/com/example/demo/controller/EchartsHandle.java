@@ -1,11 +1,13 @@
 package com.example.demo.controller;
 
 import com.example.demo.annotation.SystemLog;
+import com.example.demo.utils.Constants;
 import com.example.demo.vo.EntranceCount;
 import com.example.demo.vo.ExitCount;
 import com.example.demo.vo.FareCount;
 import com.example.demo.repository.ParkRecordRepository;
 import com.example.demo.repository.PayRepository;
+import com.example.demo.vo.ResultResponse;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +24,7 @@ import java.util.*;
  */
 @Api(value = "图数据")
 @RestController
-@RequestMapping("/echarts")
+@RequestMapping("/charts")
 public class EchartsHandle {
     @Autowired
     private ParkRecordRepository parkRecordRepository;
@@ -31,7 +33,7 @@ public class EchartsHandle {
 
     @ApiOperation(value = "获取当前日期的前六个月")
     @GetMapping("/getSixMonths")
-    public List<String> currentMonth6(){
+    public ResultResponse currentMonth6(){
         Calendar cal = Calendar.getInstance();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM");
         Date date = new Date();
@@ -44,20 +46,21 @@ public class EchartsHandle {
             cal.add(Calendar.MONTH, -1);
         }
         Collections.reverse(rqList);
-        return rqList;
+        return new ResultResponse(Constants.STATUS_OK,Constants.MESSAGE_OK,rqList);
     }
+
     @SystemLog("获取图数据进场车辆信息")
     @ApiOperation(value = "获取图数据进场车辆信息")
-    @GetMapping("/recordentrancecount")
-    public List<Integer> findEntranceCount(){
-        List<String> monthLists = currentMonth6();
+    @GetMapping("/recordEntranceCount")
+    public ResultResponse findEntranceCount(){
+        List<String> monthLists = (List<String>) currentMonth6().getData();
         List<EntranceCount> list = parkRecordRepository.getEntranceCount();
         List<Integer> countlist = new ArrayList<>();
         for (int i = 0; i < 6; i++) {
-            boolean flag =false;//未找到当月数据
+            boolean flag =Boolean.FALSE;//未找到当月数据
             for (int j = 0; j < list.size(); j++) {
                 if (list.get(j).getMonths().equals(monthLists.get(i))) {
-                    flag=true;
+                    flag=Boolean.TRUE;
                     countlist.add(list.get(j).getEntrancecount());
                     break;
                 }
@@ -66,20 +69,21 @@ public class EchartsHandle {
                 countlist.add(0);
             }
         }
-        return countlist;
+        return new ResultResponse(Constants.STATUS_OK,Constants.MESSAGE_OK,countlist);
     }
+
     @SystemLog("获取图数据离场车辆信息")
     @ApiOperation(value = "获取图数据离场车辆信息")
-    @GetMapping("/recordexitcount")
-    public List<Integer> findExitCount(){
-        List<String> monthLists = currentMonth6();
+    @GetMapping("/recordExitCount")
+    public ResultResponse findExitCount(){
+        List<String> monthLists = (List<String>) currentMonth6().getData();
         List<ExitCount> list = parkRecordRepository.getExitCount();
         List<Integer> countlist = new ArrayList<>();
         for(int i =0;i<6;i++){
-            boolean flag =false;//未找到当月数据
+            boolean flag =Boolean.FALSE;//未找到当月数据
             for (int j = 0; j < list.size(); j++) {
                 if (list.get(j).getMonths().equals(monthLists.get(i))) {
-                    flag=true;
+                    flag=Boolean.TRUE;
                     countlist.add(list.get(j).getExitcount());
                     break;
                 }
@@ -88,30 +92,32 @@ public class EchartsHandle {
                 countlist.add(0);
             }
         }
-        return countlist;
+        return new ResultResponse(Constants.STATUS_OK,Constants.MESSAGE_OK,countlist);
     }
+
     @SystemLog("获取图数据财务扣费信息")
     @ApiOperation(value = "获取图数据财务扣费信息")
-    @GetMapping("/recordfarecount")
-    public List<Integer> findFareCount(){
-        return getfarecount(parkRecordRepository.getFareCount());
+    @GetMapping("/recordFareCount")
+    public ResultResponse findFareCount(){
+        return new ResultResponse(Constants.STATUS_OK,Constants.MESSAGE_OK,getfarecount(parkRecordRepository.getFareCount()));
     }
+
     @SystemLog("获取图数据财务用户缴费信息")
     @ApiOperation(value = "获取图数据财务用户缴费信息")
-    @GetMapping("/recordpaycount")
-    public List<Integer> findPayCount(){
-        return getfarecount(payRepository.getFareCount());
+    @GetMapping("/recordPayCount")
+    public ResultResponse findPayCount(){
+        return new ResultResponse(Constants.STATUS_OK,Constants.MESSAGE_OK,getfarecount(payRepository.getFareCount()));
     }
 
     private List<Integer> getfarecount(List<FareCount> fareCount) {
-        List<String> monthLists = currentMonth6();
+        List<String> monthLists = (List<String>) currentMonth6().getData();
         List<FareCount> list = fareCount;
         List<Integer> countlist = new ArrayList<>();
         for(int i =0;i<6;i++){
-            boolean flag =false;//未找到当月数据
+            boolean flag =Boolean.FALSE;//未找到当月数据
             for (int j = 0; j < list.size(); j++) {
                 if (list.get(j).getMonths().equals(monthLists.get(i))) {
-                    flag=true;
+                    flag=Boolean.TRUE;
                     countlist.add(list.get(j).getFarecount());
                     break;
                 }

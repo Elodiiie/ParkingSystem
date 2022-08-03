@@ -7,9 +7,12 @@ import com.example.demo.entity.ParkRecord;
 import com.example.demo.vo.ParkRecordDetail;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Query;
 
+import javax.persistence.criteria.Predicate;
 import java.math.BigDecimal;
 import java.util.List;
 
@@ -18,7 +21,10 @@ import java.util.List;
  * @Date: 2021/6/20 14:24
  */
 
-public interface ParkRecordRepository extends JpaRepository<ParkRecord,Integer> {
+public interface ParkRecordRepository extends JpaRepository<ParkRecord,Integer> , JpaSpecificationExecutor<ParkRecord> {
+    @Query(value = "select parkrecordid,user.username,car.carlicense,entrancetime,exittime,fare from car,user,parkrecord where parkrecord.carid = car.carid " +
+            "and car.userid = user.userid",nativeQuery = true)
+    List<ParkRecordDetail> find();
     @Query(value ="select DATEDIFF(exitTime,entranceTime) from parkrecord where parkrecordid = ?1", nativeQuery = true)
     Integer getDayDifference(int parkrecordid);
     @Query(value="select TIMESTAMPDIFF(hour,entranceTime,exitTime) from parkrecord where parkrecordid = ?1",nativeQuery = true)
@@ -41,13 +47,17 @@ public interface ParkRecordRepository extends JpaRepository<ParkRecord,Integer> 
     @Query(value = "select parkrecordid,user.username,car.carlicense,entrancetime,exittime,fare from car,user,parkrecord where parkrecord.carid = car.carid " +
             "and car.userid = user.userid and parkrecord.carid = ?1 and DATE_FORMAT(exittime,'%Y-%m-%d') between ?2 and ?3",nativeQuery = true)
     List<ParkRecordDetail> findDetailByCaridAndMonth(int carid,String starttime,String endtime);
+    //分页
+    @Query(value = "select parkrecordid,user.username,car.carlicense,entrancetime,exittime,fare from car,user,parkrecord where parkrecord.carid = car.carid " +
+            "and car.userid = user.userid and parkrecord.carid = ?1 and DATE_FORMAT(exittime,'%Y-%m-%d') between ?2 and ?3",nativeQuery = true)
+    Page<List<ParkRecordDetail>> findDetailByCarAndMonth(int carid,String starttime,String endtime,Pageable pageable);
     //修改 根据userid得到所有car
     @Query(value = "select parkrecordid,user.username,car.carlicense,entrancetime,exittime,fare from car,user,parkrecord where parkrecord.carid = car.carid " +
-            "and car.userid = user.userid and user.userid = ?1 order by exittime desc",nativeQuery = true)
+            "and car.userid = user.userid and user.userid = ?1 and car.existToUser = 1 order by exittime desc",nativeQuery = true)
     List<ParkRecordDetail> findDetailByUserid(int userid);
     //再判断月份
     @Query(value = "select parkrecordid,user.username,car.carlicense,entrancetime,exittime,fare from car,user,parkrecord where parkrecord.carid = car.carid " +
-            "and car.userid = user.userid and user.userid = ?1 and DATE_FORMAT(exittime,'%Y-%m-%d') between ?2 and ?3 order by exittime desc",nativeQuery = true)
+            "and car.userid = user.userid and user.userid = ?1 and car.existToUser = 1 and DATE_FORMAT(exittime,'%Y-%m-%d') between ?2 and ?3 order by exittime desc",nativeQuery = true)
     List<ParkRecordDetail> findDetailByUseridAndMonth(int userid,String starttime,String endtime);
     @Query(value = "select parkrecordid,user.username,car.carlicense,entrancetime,exittime,fare from car,user,parkrecord where parkrecord.carid = car.carid " +
             "and car.userid = user.userid and car.carlicense = ?1",nativeQuery = true)
@@ -58,7 +68,7 @@ public interface ParkRecordRepository extends JpaRepository<ParkRecord,Integer> 
     Page<ParkRecordDetail> findDetailByCarlicense_Page(Pageable pageable,String carlicense);
     // 分页查询所有 返回ParkRecordDetail
     @Query(value = "select parkrecordid,user.username,car.carlicense,entrancetime,exittime,fare from car,user,parkrecord where parkrecord.carid = car.carid " +
-            "and car.userid = user.userid " ,nativeQuery = true)
+            "and car.userid = user.userid order by parkrecordid" ,nativeQuery = true)
     Page<ParkRecordDetail> findAll1(Pageable pageable1);
     // 统计总停车记录
     @Query(value = "select count(*) from parkrecord" , nativeQuery = true)
@@ -79,6 +89,8 @@ public interface ParkRecordRepository extends JpaRepository<ParkRecord,Integer> 
             "GROUP BY months" ,nativeQuery = true)
     List<FareCount> getFareCount();
     @Query(value = "select sum(fare) from car,user,parkrecord where parkrecord.carid = car.carid " +
-            "and car.userid = user.userid and user.userid=?1" ,nativeQuery = true)
+            "and car.userid = user.userid and user.userid=?1 and car.existToUser=1" ,nativeQuery = true)
     Double getFareByUserid(int userid);
+
+
 }

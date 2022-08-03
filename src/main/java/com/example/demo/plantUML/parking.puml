@@ -1,0 +1,22 @@
+@startuml
+hide footbox
+actor       admin       as Admin
+autonumber
+Admin -> ParkingHandle : findAll
+activate ParkingHandle
+ParkingHandle --> Admin : carDetail(isParking)
+deactivate ParkingHandle
+
+autonumber
+Admin -> ParkingHandle : :addParkingRecord
+activate ParkingHandle
+ParkingHandle -\\ ZhenziSmsClient :sendMessage
+ParkingHandle  --> Admin: addResult
+deactivate ParkingHandle
+
+autonumber
+Admin -> ParkingHandle : deletecar
+activate ParkingHandle
+ParkingHandle  --> Admin: deleteResult
+deactivate ParkingHandle
+@enduml

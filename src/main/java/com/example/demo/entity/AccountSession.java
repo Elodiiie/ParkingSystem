@@ -10,18 +10,15 @@ import javax.persistence.Id;
 
 /**
  * @Author: Elodie
- * @Date: 2021/11/18 15:15
+ * @Date: 2022/3/26 21:26
  */
 @Entity
 @Data
-@ApiModel(value = "问题反馈")
-public class Feedback {
+@ApiModel(value = "账户登陆信息")
+public class AccountSession {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer feedbackid;
-    private Integer userid;
-    private String content;
-    private String imageUrl;
-    private Integer isRead;
-    private Integer type;
+    private int accSessId;
+    private int userid;
+    private String sessionid;
 }

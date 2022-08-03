@@ -1,5 +1,7 @@
 package com.example.demo.controller;
 
+import com.example.demo.utils.Constants;
+import com.example.demo.vo.ResultResponse;
 import com.google.code.kaptcha.impl.DefaultKaptcha;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.annotation.Resource;
 import javax.imageio.ImageIO;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
@@ -24,17 +27,19 @@ import java.io.IOException;
 public class KaptchaController {
     private static final Logger logger = LoggerFactory.getLogger(KaptchaController.class);
 
-    @RequestMapping(value = "/index")
-    public String index() {
-        return "index";
-    }
+
 
     /**
      * 1、验证码工具
      */
-    @Autowired
+    @Resource
     DefaultKaptcha defaultKaptcha;
 
+    private final static String WRONG = "The verification code is incorrect";
+    @RequestMapping(value = "/index")
+    public String index() {
+        return "index";
+    }
     /**
      * 2、生成验证码
      *
@@ -43,7 +48,7 @@ public class KaptchaController {
      * @throws Exception
      */
     @GetMapping("/defaultKaptcha")
-    public void defaultKaptcha(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse)
+    public ResultResponse defaultKaptcha(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse)
             throws Exception {
         byte[] captchaChallengeAsJpeg = null;
         ByteArrayOutputStream jpegOutputStream = new ByteArrayOutputStream();
@@ -59,7 +64,7 @@ public class KaptchaController {
             e.printStackTrace();
             httpServletResponse.sendError(HttpServletResponse.SC_NOT_FOUND);
             logger.error("获取验证码失败>>>>>>> ", e);
-            return;
+            return new ResultResponse(Constants.STATUS_FAIL,Constants.MESSAGE_FAIL,Boolean.FALSE);
         }
 
         // 定义response输出类型为image/jpeg类型，使用response输出流输出图片的byte数组
@@ -72,6 +77,7 @@ public class KaptchaController {
         responseOutputStream.write(captchaChallengeAsJpeg);
         responseOutputStream.flush();
         responseOutputStream.close();
+        return new ResultResponse(Constants.STATUS_OK,Constants.MESSAGE_OK,Boolean.TRUE);
     }
 
     /**
@@ -81,18 +87,24 @@ public class KaptchaController {
      * @param httpServletResponse
      * @return
      */
-    @GetMapping("/imgvrifyControllerDefaultKaptcha/{tryCode}")
+    @GetMapping("/imgVerifyControllerDefaultKaptcha/{tryCode}")
     @ResponseBody
-    public Boolean imgvrifyControllerDefaultKaptcha(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, @PathVariable("tryCode") String tryCode) throws IOException {
-        String rightCode = (String) httpServletRequest.getSession(false).getAttribute("rightCode");
+    public ResultResponse imgVerifyControllerDefaultKaptcha(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, @PathVariable("tryCode") String tryCode) throws IOException {
+        String rightCode;
+        try{
+            rightCode = (String) httpServletRequest.getSession(Boolean.FALSE).getAttribute("rightCode");
+        }catch (Exception e){
+            logger.error("获取session验证码失败");
+            return new ResultResponse(Constants.STATUS_OK,Constants.MESSAGE_OK,Boolean.TRUE);
+        }
         System.out.println("rightCode"+rightCode);
         System.out.println("tryCode"+tryCode);
         if (!rightCode.equalsIgnoreCase(tryCode)) {
             logger.error("验证码错误=======>>>>>> ");
-            return false;
+            return new ResultResponse(Constants.BUSINESS_FAIL,WRONG,Boolean.FALSE);
         } else {
             logger.info("验证码正确=======>>>>>> ");
-            return true;
+            return new ResultResponse(Constants.STATUS_OK,Constants.MESSAGE_OK,Boolean.TRUE);
         }
     }
 

@@ -1,0 +1,17 @@
+@startuml
+hide footbox
+actor       user       as user
+autonumber
+user -> UserHandle: find
+activate UserHandle
+UserHandle--> user : userinfo
+deactivate UserHandle
+
+autonumber
+user ->  UserHandle: improve personal information
+activate  UserHandle
+UserHandle --> UserHandle:userinfo
+UserHandle ->UserHandle: newUserinfo
+UserHandle -->user :updateResult
+deactivate UserHandle
+@enduml

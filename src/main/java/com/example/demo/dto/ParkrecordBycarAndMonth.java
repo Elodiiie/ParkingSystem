@@ -1,4 +1,4 @@
-package com.example.demo.vo;
+package com.example.demo.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,13 +7,15 @@ import lombok.ToString;
 
 /**
  * @Author: Elodie
- * @Date: 2021/11/14 21:35
+ * @Date: 2022/3/18 15:53
  */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class Password {
-    private int userid;
-    private String password;
+public class ParkrecordBycarAndMonth {
+    private String carlicense;
+    private String month;
+
+    private int page;
 }
